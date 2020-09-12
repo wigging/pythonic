@@ -1,0 +1,21 @@
+.container {
+    max-width: 700px;
+}
+
+body {
+    background-color: #fffff8;
+}
+
+h1 {
+    margin-top: 60px;
+}
+
+hr {
+    background-color: #ccc;
+}
+
+pre code {
+    /* Make code blocks scroll horizontally */
+    white-space: pre;
+    word-wrap: normal;
+}

@@ -1,0 +1,101 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/pythonic/style.css">
+
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+
+    <!------------------------- Header ------------------------->
+
+    <div class="row">
+        <div class="col-md">
+            <h1>Pythonic Programming</h1>
+            <hr>
+            <p>This book is a collection of examples about using the Python programming language.</p>
+            <p>GitHub repository at <a href="https://github.com/wigging/pythonic"><b>wigging/pythonic</b></a>.</p>
+        </div>
+    </div>
+
+    <!------------------------- Contents ------------------------->
+
+    <div class="row">
+        <div class="col-md">
+            <h2 class="mt-4">Contents</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!-- Column 1 -->
+
+        <div class="col-md">
+            <h5>Getting started</h5>
+            <ul>
+            {% for post in site.categories.gettingstarted %}
+                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <h5>Types</h5>
+            <ul>
+            {% for post in site.categories.types %}
+                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Column 2 -->
+
+        <div class="col-md">
+            <h5>Command line</h5>
+            <ul>
+            {% for post in site.categories.commandline %}
+                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!------------------------- Contact ------------------------->
+
+    <div class="row">
+        <div class="col-md">
+            <h2 class="mt-4">Contact</h2>
+            <hr>
+            <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a> or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an Issue on the GitHub repository at <a href="https://github.com/wigging/pythonic">wigging/pythonic</a>.</p>
+        </div>
+    </div>
+
+    <!------------------------- Support ------------------------->
+
+    <div class="row">
+        <div class="col-md">
+            <h2 class="mt-4">Support</h2>
+            <hr>
+            <p>If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>.</p>
+        </div>
+    </div>
+
+    <!------------------------- Footer ------------------------->
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2020</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

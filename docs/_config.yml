@@ -1,0 +1,12 @@
+baseurl: /pythonic
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude: [README.md, Gemfile]
+
+permalink: /:title

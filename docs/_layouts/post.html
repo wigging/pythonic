@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/pythonic/style.css">
+    <link rel="stylesheet" href="/pythonic/syntax.css">
+
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+
+    <!------------------------- Post content ------------------------->
+
+    <div class="row">
+        <div class="col-md">
+            <h1>{{ page.title }}</h1>
+            <p>Posted on {{ page.date | date: '%B %d, %Y' }}</p>
+            <hr>
+            {{ content }}
+            <hr>
+            <p><a href="/pythonic/"><b>Back</b></a></p>
+        </div>
+    </div>
+
+    <!------------------------- Footer ------------------------->
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © {{ page.date | date: '%Y' }}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
