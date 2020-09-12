@@ -60,6 +60,13 @@
         <!-- Column 2 -->
 
         <div class="col-md">
+            <h5>File system</h5>
+            <ul>
+            {% for post in site.categories.filesystem %}
+                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+
             <h5>Command line</h5>
             <ul>
             {% for post in site.categories.commandline %}
