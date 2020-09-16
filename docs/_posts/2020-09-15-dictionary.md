@@ -1,5 +1,5 @@
 ---
-title: Dictionaries
+title: Dictionary
 category: types
 ---
 
