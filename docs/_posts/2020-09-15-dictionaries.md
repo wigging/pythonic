@@ -19,5 +19,4 @@ print('dict', d['item'])
 
 ## Further reading
 
-- Collections — Container Datatypes — Python 3.8.6rc1 Documentation. Accessed September 15, 2020.
- <https://docs.python.org/3/library/collections.html#collections.defaultdict>
+- Collections — Container Datatypes — Python 3.8.6rc1 Documentation. Accessed September 15, 2020. <https://docs.python.org/3/library/collections.html#collections.defaultdict>
