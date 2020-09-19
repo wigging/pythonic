@@ -1,6 +1,8 @@
 ---
 title: Pathlib
-category: filesystem
+slug: pathlib
+layout: section
+date: 2020-09-12
 ---
 
 The pathlib module handles file paths with support for different operating systems.

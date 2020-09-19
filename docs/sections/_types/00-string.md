@@ -1,6 +1,8 @@
 ---
 title: String
-category: types
+slug: string
+layout: section
+date: 2020-09-11
 ---
 
 Some basic examples of creating strings in Python.

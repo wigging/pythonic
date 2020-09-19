@@ -1,6 +1,8 @@
 ---
 title: List
-category: types
+slug: list
+layout: section
+date: 2020-09-16
 ---
 
 A list is used to group values together. It is written as a pair of square brackets containing comma-separated items. Several examples of a Python list are shown below.

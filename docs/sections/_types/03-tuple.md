@@ -1,6 +1,8 @@
 ---
 title: Tuple
-category: types
+slug: tuple
+layout: section
+date: 2020-09-17
 ---
 
 A tuple is a number of items separated by commas.

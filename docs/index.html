@@ -44,15 +44,15 @@
         <div class="col-md">
             <h5>Getting started</h5>
             <ul>
-            {% for post in site.categories.gettingstarted %}
-                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% for section in site.getting_started %}
+                <li><a href="/pythonic{{ section.url }}">{{ section.title }}</a></li>
             {% endfor %}
             </ul>
 
             <h5>Types</h5>
             <ul>
-            {% for post in site.categories.types %}
-                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% for section in site.types %}
+                <li><a href="/pythonic{{ section.url }}">{{ section.title }}</a></li>
             {% endfor %}
             </ul>
         </div>
@@ -62,15 +62,15 @@
         <div class="col-md">
             <h5>File system</h5>
             <ul>
-            {% for post in site.categories.filesystem %}
-                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% for section in site.file_system %}
+                <li><a href="/pythonic{{ section.url }}">{{ section.title }}</a></li>
             {% endfor %}
             </ul>
 
             <h5>Command line</h5>
             <ul>
-            {% for post in site.categories.commandline %}
-                <li><a href="/pythonic{{ post.url }}">{{ post.title }}</a></li>
+            {% for section in site.command_line %}
+                <li><a href="/pythonic{{ section.url }}">{{ section.title }}</a></li>
             {% endfor %}
             </ul>
         </div>

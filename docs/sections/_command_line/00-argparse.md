@@ -1,6 +1,8 @@
 ---
 title: Argparse
-category: commandline
+slug: argparse
+layout: section
+date: 2020-09-10
 ---
 
 The `argparse` module provides an interface to write command-line programs in Python. It is the recommended command-line parsing module available in the Python standard library. An example of using `argparse` is shown below.

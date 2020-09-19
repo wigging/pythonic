@@ -1,6 +1,8 @@
 ---
 title: Dictionary
-category: types
+slug: dictionary
+layout: section
+date: 2020-09-15
 ---
 
 The defaultdict is a specialized container type which supplies missing values based on the given default type.
