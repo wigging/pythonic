@@ -5,6 +5,13 @@ layout: section
 date: 2020-09-11
 ---
 
+**Contents**
+
+- [Basics](#basics)
+- [Further reading](#further-reading)
+
+## Basics
+
 Some basic examples of creating strings in Python.
 
 ```python

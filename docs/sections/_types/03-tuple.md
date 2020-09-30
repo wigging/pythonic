@@ -5,6 +5,13 @@ layout: section
 date: 2020-09-17
 ---
 
+**Contents**
+
+- [Basics](#basics)
+- [Further reading](#further-reading)
+
+## Basics
+
 A tuple is a number of items separated by commas.
 
 ```python

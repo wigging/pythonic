@@ -5,6 +5,14 @@ layout: section
 date: 2020-09-12
 ---
 
+**Contents**
+
+- [Basics](#basics)
+- [Read text](#read-text)
+- [Further reading](#further-reading)
+
+## Basics
+
 The pathlib module handles file paths with support for different operating systems.
 
 ## Read text

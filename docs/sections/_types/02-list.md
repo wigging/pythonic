@@ -2,96 +2,125 @@
 title: List
 slug: list
 layout: section
-date: 2020-09-16
+date: 2020-09-29
 ---
 
-A list is used to group values together. It is written as a pair of square brackets containing comma-separated items. Several examples of a Python list are shown below.
+**Contents**
+
+- [Basics](#basics)
+- [Reverse a list](#reverse-a-list)
+- [Further reading](#further-reading)
+
+## Basics
+
+A list is used to group values together. It is written as a pair of square brackets containing comma-separated items. For example, a list of five integers is shown below. Lists can contain items of different types.
 
 ```python
-# Ex 1 - create a list with square brackets
-# ----------------------------------------------------------------------------
+>>> mylist = [1, 2, 3, 4, 5]
+>>> mylist
+[1, 2, 3, 4, 5]
+```
 
-mylist = [1, 2, 3, 4, 5]
+Items in a list can be unpacked using comma separated variables. An `*` allows several variables to be unpacked into a single variable.
 
-# Ex 2 - unpack list values
-# ----------------------------------------------------------------------------
+```python
+# unpack items in a list
+>>> a, b, c, = [8, 9, 10]
+>>> a
+8
+>>> b
+9
+>>> a, b, c
+(8, 9, 10)
 
-a, b, c, = [8, 9, 10]
-print('a', a)
-print('b', b)
-print('c', c)
+# unpack several items into a single variable
+>>> first, *rest = [1, 2, 3, 4, 5, 6, 7]
+>>> first
+1
+>>> rest
+[2, 3, 4, 5, 6, 7]
 
-first, *rest = [1, 2, 3, 4, 5, 6, 7]
-print('first', first)
-print('rest', rest)
+# unpack middle items into a variable
+>>> first, *mid, last = [1, 2, 3, 4, 5, 6, 7]
+>>> first
+1
+>>> mid
+[2, 3, 4, 5, 6]
+>>> last
+7
+```
 
-first, *mid, last = [1, 2, 3, 4, 5, 6, 7]
-print('first', first)
-print('mid', mid)
-print('last', last)
+The enumerate function returns the index and the associated item from a list.
 
-# Ex 3 - enumerate a list to get index and value
-# ----------------------------------------------------------------------------
+```python
+>>> letters = ['a', 'b', 'c', 'd', 'e']
+>>> for i, x in enumerate(letters):
+...     print(f'index = {i} and letter = {x}')
+...
+index = 0 and letter = a
+index = 1 and letter = b
+index = 2 and letter = c
+index = 3 and letter = d
+index = 4 and letter = e
+```
 
-letters = ['a', 'b', 'c', 'd', 'e']
+The zip function can be used to iterate over two or more lists.
 
-for i, x in enumerate(letters):
-    print(f'index = {i} and letter = {x}')
-
-# Ex 4 - iterate over multiple lists
-# ----------------------------------------------------------------------------
-
-one = [1, 2, 3, 4, 5]
-two = [2, 3, 4, 5, 6]
-three = [3, 4, 5, 6, 7]
-
-for i, j, k in zip(one, two, three):
-    print('i', i, 'j', j, 'k', k)
+```python
+>>> one = [1, 2, 3, 4, 5]
+>>> two = [2, 3, 4, 5, 6]
+>>> three = [3, 4, 5, 6, 7]
+>>> for i, j, k in zip(one, two, three)
+...     print('i', i, 'j', j, 'k', k)
+...
+i 1 j 2 k 3
+i 2 j 3 k 4
+i 3 j 4 k 5
+i 4 j 5 k 6
+i 5 j 6 k 7
 
 # or use index to get each item from multiple lists
-n = len(one)
-for i in range(n):
-    print('i', one[i], 'j', two[i], 'k', three[i])
-
+>>> n = len(one)
+>>> for i in range(n):
+...     print('i', one[i], 'j', two[i], 'k', three[i])
+...
+i 1 j 2 k 3
+i 2 j 3 k 4
+i 3 j 4 k 5
+i 4 j 5 k 6
+i 5 j 6 k 7
 ```
 
 ## Reverse a list
 
-There are several ways to reverse a list.
+There are several ways to reverse items in a list. The first approach is to reverse the list in-place. This is fast and does not take up extra memory but it modifies the original list.
 
 ```python
-# Example 1
-# ----------------------------------------------------------------------------
+# reverse a list in-place
+>>> list_one = [1, 2, 3, 4, 5]
+>>> list_one.reverse()
+>>> list_one
+[5, 4, 3, 2, 1]
+```
 
-# Reverse a list in-place. Fast and does not take up extra memory. Modifies
-# original list.
+Slicing creates a reversed copy of the list. This takes up memory but doesn't modify the original list.
 
-list_one = [1, 2, 3, 4, 5]
-list_one.reverse()
+```python
+# create a reversed copy of a list
+>>> list_two = [6, 7, 8, 9, 10]
+>>> list_three = list_two[::-1]
+>>> list_three
+[10, 9, 8, 7, 6]
+```
 
-print('list_one\n', list_one)
+The reversed function returns an iterator that returns elements in reverse order. This does not modify the original list but the result needs to be converted into a new list object.
 
-# Example 2
-# ----------------------------------------------------------------------------
-
-# Slicing creates a reversed copy of the list. Takes up memory but doesn't
-# modify the original list.
-
-list_two = [6, 7, 8, 9, 10]
-list_three = list_two[::-1]
-
-print('list_three\n', list_three)
-
-# Example 3
-# ----------------------------------------------------------------------------
-
-# Returns an iterator that returns elements in reverse order. Does not modify
-# original list. Needs to be converted into a list object again.
-
-list_four = [11, 12, 13, 14, 15]
-list_five = list(reversed(list_four))
-
-print('list_five\n', list_five)
+```python
+# return elements in reverse order then convert to a new list
+>>> list_four = [11, 12, 13, 14, 15]
+>>> list_five = list(reversed(list_four))
+>>> list_five
+[15, 14, 13, 12, 11]
 ```
 
 ## Further reading
