@@ -2,7 +2,7 @@
 title: List
 slug: list
 layout: section
-date: 2020-09-29
+date: 2020-10-01
 ---
 
 **Contents**
@@ -19,6 +19,44 @@ A list is used to group values together. It is written as a pair of square brack
 >>> mylist = [1, 2, 3, 4, 5]
 >>> mylist
 [1, 2, 3, 4, 5]
+```
+
+Indexing returns an item from a list.
+
+```python
+# return the first item
+>>> mylist[0]
+1
+
+# return the second item
+>>> mylist[1]
+2
+
+# return the last item
+>>> mylist[-1]
+5
+
+# return the second to last item
+>>> mylist[-2]
+4
+```
+
+Slicing returns a new list from items in the original list.
+
+```python
+>>> mylist[1:]
+[2, 3, 4, 5]
+
+>>> mylist[1:3]
+[2, 3]
+```
+
+New items can be added to the end of a list using the append function.
+
+```python
+>>> mylist.append(9)
+>>> mylist
+[1, 2, 3, 4, 5, 9]
 ```
 
 Items in a list can be unpacked using comma separated variables. An `*` allows several variables to be unpacked into a single variable.
