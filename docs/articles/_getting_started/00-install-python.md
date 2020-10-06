@@ -1,7 +1,7 @@
 ---
 title: Installing Python
 slug: install-python
-layout: section
+layout: article
 date: 2020-09-12
 ---
 

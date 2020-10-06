@@ -1,6 +1,6 @@
 baseurl: /pythonic
 
-collections_dir: sections
+collections_dir: articles
 
 collections:
   getting_started:

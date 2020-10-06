@@ -1,7 +1,7 @@
 ---
 title: Argparse
 slug: argparse
-layout: section
+layout: article
 date: 2020-09-10
 ---
 

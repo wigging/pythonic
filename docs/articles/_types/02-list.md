@@ -1,7 +1,7 @@
 ---
 title: List
 slug: list
-layout: section
+layout: article
 date: 2020-10-05
 ---
 
