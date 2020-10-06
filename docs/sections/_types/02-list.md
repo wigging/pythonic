@@ -2,28 +2,52 @@
 title: List
 slug: list
 layout: section
-date: 2020-10-01
+date: 2020-10-05
 ---
 
 **Contents**
 
 - [Basics](#basics)
+- [Indexing](#indexing)
+- [Slicing](#slicing)
+- [Methods](#methods)
+- [Unpacking](#unpacking)
+- [Functions](#functions)
 - [Reverse a list](#reverse-a-list)
 - [Further reading](#further-reading)
 
 ## Basics
 
-A list is used to group values together. It is written as a pair of square brackets containing comma-separated items. For example, a list of five integers is shown below. Lists can contain items of different types.
+A list is used to group numbers, strings, or objects together. It is written as a pair of square brackets containing comma-separated items. A list typically contains items of similar type but it can contain items of different types too. Unlike tuples, lists are mutable therefore there content can be modified.
 
 ```python
+# create a list of integers
 >>> mylist = [1, 2, 3, 4, 5]
 >>> mylist
 [1, 2, 3, 4, 5]
+
+# create a list of different types
+>>> mixlist = [4.5, 'hello', 9, {'apples': 2, 'oranges': 1}]
+>>> mixlist[0]
+4.5
+>>> mixlist[3]['apples']
+2
+
+# modify the contents of a list
+>>> modlist = ['one', 'two', 'three']
+>>> modlist[2] = 'five'
+>>> modlist
+['one', 'two', 'five']
 ```
+
+## Indexing
 
 Indexing returns an item from a list.
 
 ```python
+# create a list
+>>> mylist = [1, 2, 3, 4, 5]
+
 # return the first item
 >>> mylist[0]
 1
@@ -41,6 +65,8 @@ Indexing returns an item from a list.
 4
 ```
 
+## Slicing
+
 Slicing returns a new list from items in the original list.
 
 ```python
@@ -51,6 +77,8 @@ Slicing returns a new list from items in the original list.
 [2, 3]
 ```
 
+## Methods
+
 New items can be added to the end of a list using the append function.
 
 ```python
@@ -58,6 +86,8 @@ New items can be added to the end of a list using the append function.
 >>> mylist
 [1, 2, 3, 4, 5, 9]
 ```
+
+## Unpacking
 
 Items in a list can be unpacked using comma separated variables. An `*` allows several variables to be unpacked into a single variable.
 
@@ -87,6 +117,8 @@ Items in a list can be unpacked using comma separated variables. An `*` allows s
 >>> last
 7
 ```
+
+## Functions
 
 The enumerate function returns the index and the associated item from a list.
 
@@ -163,4 +195,5 @@ The reversed function returns an iterator that returns elements in reverse order
 
 ## Further reading
 
-- An Informal Introduction to Python — Python 3.8.6rc1 Documentation. Accessed September 16, 2020. <https://docs.python.org/3/tutorial/introduction.html#lists>
+- An Informal Introduction to Python. Python Documentation. Accessed September 16, 2020. <https://docs.python.org/3/tutorial/introduction.html#lists>
+- Data Structures. Python Documentation. Accessed October 5, 2020. <https://docs.python.org/3/tutorial/datastructures.html>
