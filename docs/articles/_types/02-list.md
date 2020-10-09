@@ -2,23 +2,24 @@
 title: List
 slug: list
 layout: article
-date: 2020-10-05
+date: 2020-10-08
 ---
 
 **Contents**
 
-- [Basics](#basics)
+- [Introduction](#introduction)
 - [Indexing](#indexing)
 - [Slicing](#slicing)
+- [Combining lists](#combining-lists)
 - [Methods](#methods)
 - [Unpacking](#unpacking)
 - [Functions](#functions)
 - [Reverse a list](#reverse-a-list)
 - [Further reading](#further-reading)
 
-## Basics
+## Introduction
 
-A list is used to group numbers, strings, or objects together. It is written as a pair of square brackets containing comma-separated items. A list typically contains items of similar type but it can contain items of different types too. Unlike tuples, lists are mutable therefore there content can be modified.
+A list is used to group numbers, strings, or objects together. It is written as a pair of square brackets containing comma-separated items. A list typically contains items of similar type but it can contain items of different types too. Unlike tuples, lists are mutable therefore the content of a list can be modified.
 
 ```python
 # create a list of integers
@@ -77,14 +78,57 @@ Slicing returns a new list from items in the original list.
 [2, 3]
 ```
 
-## Methods
+## Combining lists
 
-New items can be added to the end of a list using the append function.
+Lists can be combined into a new list using the addition `+` operator.
 
 ```python
+>>> alist = [1, 2, 3]
+>>> blist = [4, 5, 6]
+>>> clist = alist + blist
+>>> clist
+[1, 2, 3, 4, 5, 6]
+```
+
+You can also upack lists to create a new list using the `*` expression.
+
+```python
+>>> alist = [1, 2, 3]
+>>> blist = [4, 5, 6]
+>>> clist = [*alist, *blist]
+>>> clist
+[1, 2, 3, 4, 5, 6]
+```
+
+Another approach is to use the `extend()` method to add a list to the end of an existing list.
+
+```python
+>>> alist = [1, 2, 3]
+>>> blist = [4, 5, 6]
+>>> alist.extend(blist)
+>>> alist
+[1, 2, 3, 4, 5, 6]
+```
+
+## Methods
+
+New items can be added to the end of a list using the `append()` method.
+
+```python
+>>> mylist = [1, 2, 3, 4, 5]
 >>> mylist.append(9)
 >>> mylist
 [1, 2, 3, 4, 5, 9]
+```
+
+The `extend()` method appends all items from an iterable.
+
+```python
+>>> mylist = [1, 2, 3, 4]
+>>> nums = (5, 6, 7)
+>>> mylist.extend(nums)
+>>> mylist
+[1, 2, 3, 4, 5, 6, 7]
 ```
 
 ## Unpacking
