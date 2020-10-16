@@ -2,7 +2,7 @@
 title: List
 slug: list
 layout: article
-date: 2020-10-08
+date: 2020-10-16
 ---
 
 **Contents**
@@ -112,7 +112,11 @@ Another approach is to use the `extend()` method to add a list to the end of an 
 
 ## Methods
 
-New items can be added to the end of a list using the `append()` method.
+A list object has several methods for interacting with its items. Below are examples of using these methods.
+
+#### append()
+
+New items can be added to the end of a list using the append method.
 
 ```python
 >>> mylist = [1, 2, 3, 4, 5]
@@ -121,7 +125,9 @@ New items can be added to the end of a list using the `append()` method.
 [1, 2, 3, 4, 5, 9]
 ```
 
-The `extend()` method appends all items from an iterable.
+#### extend()
+
+The extend method appends all items from an iterable.
 
 ```python
 >>> mylist = [1, 2, 3, 4]
@@ -129,6 +135,28 @@ The `extend()` method appends all items from an iterable.
 >>> mylist.extend(nums)
 >>> mylist
 [1, 2, 3, 4, 5, 6, 7]
+```
+
+#### insert()
+
+Insert an item at a given index using the insert method.
+
+```python
+>>> mylist = [1, 2, 3, 4]
+>>> mylist.insert(0, 'zero')
+>>> mylist
+['zero', 1, 2, 3, 4]
+```
+
+#### remove()
+
+Remove the first matching item in a list. This will throw an error if there is no matching item in the list.
+
+```python
+>>> thelist = ['apple', 'apple', 'orange', 'grape']
+>>> thelist.remove('apple')
+>>> thelist
+['apple', 'orange', 'grape']
 ```
 
 ## Unpacking
