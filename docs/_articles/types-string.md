@@ -1,7 +1,5 @@
 ---
 title: String
-slug: string
-layout: article
 date: 2020-09-11
 ---
 

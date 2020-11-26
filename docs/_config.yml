@@ -1,19 +1,15 @@
 baseurl: /pythonic
 
-collections_dir: articles
-
 collections:
-  getting_started:
+  articles:
     output: true
     permalink: /:title
-  types:
-    output: true
-    permalink: /:title
-  command_line:
-    output: true
-    permalink: /:title
-  file_system:
-    output: true
-    permalink: /:title
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
 
 exclude: [README.md, Gemfile]

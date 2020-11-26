@@ -1,7 +1,5 @@
 ---
 title: Dictionary
-slug: dictionary
-layout: article
 date: 2020-09-15
 ---
 

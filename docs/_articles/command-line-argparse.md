@@ -1,7 +1,5 @@
 ---
 title: Argparse
-slug: argparse
-layout: article
 date: 2020-09-10
 ---
 

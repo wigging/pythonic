@@ -1,7 +1,5 @@
 ---
 title: Pathlib
-slug: pathlib
-layout: article
 date: 2020-09-12
 ---
 

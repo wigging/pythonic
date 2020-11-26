@@ -1,7 +1,5 @@
 ---
 title: Tuple
-slug: tuple
-layout: article
 date: 2020-09-17
 ---
 

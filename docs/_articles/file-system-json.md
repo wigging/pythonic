@@ -1,7 +1,5 @@
 ---
 title: JSON with comments
-slug: json-comments
-layout: article
 date: 2020-10-04
 ---
 

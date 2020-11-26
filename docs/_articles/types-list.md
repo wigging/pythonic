@@ -1,7 +1,5 @@
 ---
 title: List
-slug: list
-layout: article
 date: 2020-10-16
 ---
 
