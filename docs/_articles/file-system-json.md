@@ -1,5 +1,5 @@
 ---
-title: JSON with comments
+title: JSON
 date: 2020-10-04
 ---
 

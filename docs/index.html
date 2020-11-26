@@ -6,10 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="/pythonic/style.css">
 
     <title>Pythonic</title>
@@ -45,16 +42,15 @@
         <div class="col-md">
             <h5>Getting started</h5>
             <ul>
-            {% for article in site.getting_started %}
-                <li><a href="/pythonic{{ article.url }}">{{ article.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _articles/get-started-python.md %}">Installing Python</a></li>
             </ul>
 
             <h5>Types</h5>
             <ul>
-            {% for article in site.types %}
-                <li><a href="/pythonic{{ article.url }}">{{ article.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _articles/types-dictionary.md %}">Dictionary</a></li>
+                <li><a href="{{ site.baseurl }}{% link _articles/types-list.md %}">List</a></li>
+                <li><a href="{{ site.baseurl }}{% link _articles/types-string.md %}">String</a></li>
+                <li><a href="{{ site.baseurl }}{% link _articles/types-tuple.md %}">Tuple</a></li>
             </ul>
         </div>
 
@@ -63,16 +59,13 @@
         <div class="col-md">
             <h5>File system</h5>
             <ul>
-            {% for article in site.file_system %}
-                <li><a href="/pythonic{{ article.url }}">{{ article.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _articles/file-system-json.md %}">JSON</a></li>
+                <li><a href="{{ site.baseurl }}{% link _articles/file-system-pathlib.md %}">Pathlib</a></li>
             </ul>
 
             <h5>Command line</h5>
             <ul>
-            {% for article in site.command_line %}
-                <li><a href="/pythonic{{ article.url }}">{{ article.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _articles/command-line-argparse.md %}">Argparse</a></li>
             </ul>
         </div>
     </div>
