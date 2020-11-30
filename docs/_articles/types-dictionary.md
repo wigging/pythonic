@@ -1,6 +1,6 @@
 ---
 title: Dictionary
-date: 2020-11-27
+date: 2020-11-29
 ---
 
 **Contents**
@@ -11,7 +11,7 @@ date: 2020-11-27
 
 ## Introduction
 
-A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets.
+A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.
 
 ```python
 >>> d = {'one': 1, 'two': 2, 'three': 3}
@@ -39,16 +39,26 @@ year     1977
 
 ## Default values
 
+The get method can be used to specify a default value when a key doesn't
+exist.
+
+```python
+>>> time = {'hour': 1, 'min': 34}
+>>> time.get('sec', 15)
+15
+```
+
 The defaultdict is a specialized container type which supplies missing values based on the given default type.
 
 ```python
-from collections import defaultdict
-
 # using defaultdict will return a default value for the missing key
-dd = defaultdict(int)
-print('defaultdic', dd['item'])
+>>> from collections import defaultdict
+>>> dd = defaultdict(int)
+>>> dd['quantity']
+0
 
 # using a regular dictionary will return a key error
-d = {}
-print('dict', d['item'])
+>>> d = {}
+>>> d['quantity']
+KeyError
 ```
