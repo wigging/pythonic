@@ -40,12 +40,6 @@ $ gem update bundler
 $ bundle update github-pages
 ```
 
-## Writing posts
+## Writing articles
 
-Posts are written as Markdown files located in the `docs/_posts/` folder. Paths in the HTML and Markdown files must start with `/pythonic`.
-
-The font matter for each post contains a `title` and `category` field. The following categories are currently in use and should be used for new posts:
-
-- gettingstarted
-- strings
-- commandline
+Posts are written as Markdown files located in the `docs/_articles/` folder. Paths in the HTML and Markdown files must start with `/pythonic`. The font matter for each article contains a `title` and `date` field.
