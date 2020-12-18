@@ -1,14 +1,14 @@
 ---
 title: String
-date: 2020-09-11
+date: 2020-12-17
 ---
 
 **Contents**
 
-- [Basics](#basics)
+- [Introduction](#introduction)
 - [Further reading](#further-reading)
 
-## Basics
+## Introduction
 
 Some basic examples of creating strings in Python.
 
@@ -20,6 +20,9 @@ s2 = "hello there"
 # use \ to escape a single quote or use double quotes
 s3 = 'that ain\'t the one'
 s4 = "that ain't the one"
+
+# triple quotes can also be used
+s5 = """another string"""
 ```
 
 ## Further reading

@@ -1,14 +1,14 @@
 ---
 title: Tuple
-date: 2020-09-17
+date: 2020-12-17
 ---
 
 **Contents**
 
-- [Basics](#basics)
+- [Introduction](#introduction)
 - [Further reading](#further-reading)
 
-## Basics
+## Introduction
 
 A tuple is a number of items separated by commas.
 

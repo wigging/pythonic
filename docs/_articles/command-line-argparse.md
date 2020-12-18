@@ -1,14 +1,14 @@
 ---
 title: Argparse
-date: 2020-09-10
+date: 2020-12-17
 ---
 
 **Contents**
 
-- [Basics](#basics)
+- [Introduction](#introduction)
 - [Further reading](#further-reading)
 
-## Basics
+## Introduction
 
 The `argparse` module provides an interface to write command-line programs in Python. It is the recommended command-line parsing module available in the Python standard library. An example of using `argparse` is shown below.
 
@@ -31,7 +31,7 @@ if args.done:
     print('Program is done.')
 ```
 
-The command-line program shown above is in a file named `argparse_intro.py`. Examples of running the program from the terminal are shown below:
+The command-line program shown above is in a file named `argparse_cli.py`. Examples of running the program from the terminal are shown below:
 
 ```python
 $ python argparse_intro.py 8
