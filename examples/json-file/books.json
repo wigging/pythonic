@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Alice's Adventures in Wonderland",
+        "author": "Lewis Carroll",
+        "year": 1865
+    },
+    {
+        "title": "Do Androids Dream of Electric Sheep",
+        "author": "Philip K. Dick",
+        "year": 1968
+    },
+    {
+        "title": "The Lorax",
+        "author": "Dr. Seuss",
+        "year": 1971
+    }
+]
