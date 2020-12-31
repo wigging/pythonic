@@ -7,7 +7,6 @@ date: 2020-12-30
 
 - [Introduction](#introduction)
 - [String methods](#string-methods)
-- [Further reading](#further-reading)
 
 ## Introduction
 
