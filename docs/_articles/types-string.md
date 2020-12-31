@@ -1,11 +1,12 @@
 ---
 title: String
-date: 2020-12-17
+date: 2020-12-30
 ---
 
 **Contents**
 
 - [Introduction](#introduction)
+- [String methods](#string-methods)
 - [Further reading](#further-reading)
 
 ## Introduction
@@ -25,6 +26,18 @@ s4 = "that ain't the one"
 s5 = """another string"""
 ```
 
-## Further reading
+## String methods
 
-- Built-in Types — Python 3.8.6rc1 Documentation. Accessed September 12, 2020. <https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str>
+Methods available for the string type are demonstrated below.
+
+```python
+>>> s = 'i love apples'
+
+# return a copy of the string where the first letter is capitalized
+>>> s.capitalize()
+'I love apples'
+
+# return a copy of the string where words start with an uppercase
+>>> s.title()
+'I Love Apples'
+```
