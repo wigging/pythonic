@@ -1,5 +1,5 @@
 ---
-title: Secrets password
+title: Secrets
 date: 2021-02-08
 ---
 
