@@ -1,5 +1,5 @@
 ---
-title: Clip array
+title: Clip array values
 date: 2021-03-01
 ---
 
