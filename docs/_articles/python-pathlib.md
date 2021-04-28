@@ -1,30 +1,27 @@
 ---
 title: Pathlib
-date: 2020-09-12
+date: 2020-04-27
 ---
 
-**Contents**
-
-- [Basics](#basics)
-- [Read text](#read-text)
-- [Further reading](#further-reading)
-
-## Basics
-
-The pathlib module handles file paths with support for different operating systems.
+The `pathlib` module handles file paths with support for different operating systems.
 
 ## Read text
 
 The example below uses pathlib to read text from a file.
 
 ```python
-import pathlib
-
-text = pathlib.Path('myfile.txt').read_text()
-print(text)
+>>> import pathlib
+>>> pathlib.Path('myfile.txt').read_text()
+'text contained in the file'
 ```
 
-## Further reading
+## File name
 
-- Pathlib — Object-Oriented Filesystem Paths — Python 3.8.6rc1 Documentation. Accessed September 12, 2020. <https://docs.python.org/3/library/pathlib.html>
-- Python 3’s Pathlib Module: Taming the File System. Real Python. Accessed September 12, 2020. <https://realpython.com/python-pathlib/>
+Get the file name from a given path.
+
+```python
+>>> import pathlib
+>>> file = '/Users/gavinw/Desktop/screenshot.png'
+>>> pathlib.Path(file).name
+'screenshot.png'
+```
