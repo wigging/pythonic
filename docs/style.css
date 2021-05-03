@@ -15,8 +15,12 @@ body {
     background-color: #fffff8;
 }
 
-h1, h2 {
+h1 {
     margin-top: 60px;
+}
+
+h2 {
+    margin-top: 40px;
 }
 
 img {
