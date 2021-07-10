@@ -40,3 +40,11 @@ Methods available for the string type are demonstrated below.
 >>> s.title()
 'I Love Apples'
 ```
+
+## F-strings
+
+```python
+>>> x = 99.4
+>>> f'value is {x = }'
+'value is x = 99.4'
+```
