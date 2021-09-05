@@ -49,7 +49,7 @@ print('servers alpha role is:\t', config['servers']['alpha']['role'])
 The above Python code prints the following:
 
 ```
-title is:        TOML Example
-ports are:       [8000, 8001, 8002]
-servers alpha role is:   frontend
+title is:               TOML Example
+ports are:              [8000, 8001, 8002]
+servers alpha role is:  frontend
 ```
