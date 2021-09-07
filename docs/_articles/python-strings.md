@@ -1,14 +1,7 @@
 ---
-title: String
-date: 2020-12-30
+title: Strings
+date: 2021-09-06
 ---
-
-**Contents**
-
-- [Introduction](#introduction)
-- [String methods](#string-methods)
-
-## Introduction
 
 Some basic examples of creating strings in Python.
 
@@ -44,7 +37,31 @@ Methods available for the string type are demonstrated below.
 ## F-strings
 
 ```python
+>>> a = 2
+>>> f'you have {a} apples'
+'you have 2 apples'
+
 >>> x = 99.4
 >>> f'value is {x = }'
 'value is x = 99.4'
 ```
+
+## Reverse a string
+
+```python
+>>> name = 'Homer'
+>>> name[::-1]
+'remoH'
+```
+
+## Join strings
+
+```python
+>>> words = ['My', 'favorite', 'food', 'is', 'not', 'avocado']
+>>> ' '.join(words)
+'My favorite food is not avocado'
+
+>>> ' '.join(filter(lambda x : x != 'not', words))
+'My favorite food is avocado'
+```
+
