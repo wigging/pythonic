@@ -38,3 +38,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+## Example code
+
+- [dask_script.py](https://github.com/wigging/pythonic/blob/main/examples/dask_script.py)
