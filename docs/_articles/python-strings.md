@@ -1,6 +1,6 @@
 ---
 title: Strings
-date: 2021-09-06
+date: 2021-11-29
 ---
 
 Some basic examples of creating strings in Python.
@@ -32,6 +32,14 @@ Methods available for the string type are demonstrated below.
 # return a copy of the string where words start with an uppercase
 >>> s.title()
 'I Love Apples'
+
+# center a string using a fill character
+>>> ' hello '.center(30, '*')
+'*********** hello ************'
+
+# pad a numeric string with zeros
+>>> '1'.zfill(3)
+'001'
 ```
 
 ## F-strings
