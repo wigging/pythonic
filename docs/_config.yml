@@ -1,15 +1,56 @@
 baseurl: /pythonic
 
 collections:
-  articles:
+  getting_started:
     output: true
-    permalink: /:title
+  python_standard:
+    output: true
+  parallel_computing:
+    output: true
+  numpy:
+    output: true
+  flask:
+    output: true
+  matplotlib:
+    output: true
+  scipy:
+    output: true
 
 defaults:
   - scope:
       path: ""
-      type: "articles"
+      type: "getting_started"
     values:
-      layout: "article"
+      layout: "page"
+  - scope:
+      path: ""
+      type: "python_standard"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "parallel_computing"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "numpy"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "flask"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "matplotlib"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "scipy"
+    values:
+      layout: "page"
 
-exclude: [README.md, Gemfile]
+exclude: [Gemfile]
