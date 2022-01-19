@@ -115,8 +115,8 @@ The HTML templates used to render the index and plot pages are shown below.
                     var graphDiv = document.getElementById('graph');
 
                     var data = [{
-                        x: {{ data['x'] }},
-                        y: {{ data['y'] }},
+                        x: {% raw %}{{ data['x'] }}{% endraw %},
+                        y: {% raw %}{{ data['y'] }}{% endraw %},
                         type: 'line'
                     }];
 
