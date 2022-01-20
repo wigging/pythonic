@@ -1,5 +1,6 @@
 """
-Example of saving and loading a single NumPy array.
+Example of saving and loading a NumPy array using the NumPy `.npy` file
+format.
 """
 
 import numpy as np

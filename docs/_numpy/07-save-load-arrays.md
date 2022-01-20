@@ -1,7 +1,11 @@
 ---
-title: Save arrays
-permalink: savearrays
+title: Save and load arrays
+permalink: saveloadarrays
 ---
+
+NumPy arrays can be saved and loaded using different file formats. Examples of using the NumPy file formats `.npy` and `.npz` as well as a plain text format are given below.
+
+## Using the npy format
 
 Use the NumPy `save()` function to save an array to a `.npy` file. Use the `load()` function to load the array from the file.
 
@@ -39,6 +43,8 @@ zz is
   [1.05 2.   7.  ]
   [5.4  3.   1.  ]]
 ```
+
+## Using the npz format
 
 Use the `savez()` function to save several arrays to a single `.npz` file. Use the `load()` function to load the saved arrays from the file.
 
@@ -101,4 +107,27 @@ cc is
  [[ 0.1   5.8   0.71]
   [ 3.9   2.    7.9 ]
   [ 1.05 21.    5.  ]]
+```
+
+## Using plain text format
+
+A plain text format can also be used to save and load a NumPy array with the `savetxt()` and `loadtxt()` functions.
+
+```python
+import numpy as np
+
+# Save array to a text file
+
+a = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+np.savetxt('array.txt', a)
+
+# Load array from a text file named `array.txt`
+
+b = np.loadtxt('array.txt')
+
+# Print comparison of `a` and `b`
+
+print('a is\n', a)
+print('b is\n', b)
 ```

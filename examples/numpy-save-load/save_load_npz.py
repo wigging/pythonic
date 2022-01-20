@@ -1,6 +1,6 @@
 """
-Example of saving several NumPy arrays into a single file and loading those
-arrays from the saved file.
+Example of saving and loading several NumPy arrays using the NumPy `.npz` file
+format.
 """
 
 import numpy as np
