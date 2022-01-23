@@ -1,0 +1,25 @@
+<script>
+    var graphDiv = document.getElementById('graph');
+
+    var data = [{
+        x: {{ data['x'] }},
+        y: {{ data['y'] }},
+        type: 'line'
+    }];
+
+    var layout = {
+        title: 'Example data',
+        xaxis: {
+            title: 'X points'
+        },
+        yaxis: {
+            title: 'Y points'
+        }
+    };
+
+    Plotly.newPlot(graphDiv, data, layout)
+</script>
+
+<p>The <strong>x data</strong> is {{ data['x'] }}.</p>
+
+<p>The <strong>y data</strong> is {{ data['y'] }}.</p>
