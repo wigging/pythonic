@@ -5,7 +5,7 @@ permalink: plotlyhtmx
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Plotly graph in a web page without updating the entire page.
 
-![plotly htmx](/pythonic/images/plotly-htmx.png)
+<img src="/pythonic/images/plotly-htmx.png" style="max-width:100%;" alt="plotly htmx">
 
 ```py
 # app.py
