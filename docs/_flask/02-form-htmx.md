@@ -91,5 +91,5 @@ The main webpage `index.html` is shown below. Notice the use of Htmx to handle t
 
 <p>Below are the results using the form inputs.</p>
 
-{{ results }}
+{% raw %}{{ results }}{% endraw %}
 ```
