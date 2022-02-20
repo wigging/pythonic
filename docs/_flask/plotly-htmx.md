@@ -1,6 +1,6 @@
 ---
-title: Use Htmx to display a Plotly graph
-permalink: plotlyhtmx
+title: Plotly graph with Htmx
+permalink: flask-plotly-htmx
 ---
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Plotly graph in a web page without updating the entire page.

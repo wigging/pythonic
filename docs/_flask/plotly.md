@@ -1,6 +1,6 @@
 ---
-title: Plotly graphing library
-permalink: plotly
+title: Plotly graph
+permalink: flask-plotly
 ---
 
 [Plotly](https://plotly.com) is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app.

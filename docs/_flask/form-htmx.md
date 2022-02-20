@@ -1,6 +1,6 @@
 ---
-title: Use Htmx to submit a form
-permalink: formhtmx
+title: Form input with Htmx
+permalink: flask-form-htmx
 ---
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to submit a form when the page loads. Results calculated from the form values are displayed on the same page.

@@ -1,6 +1,6 @@
 ---
 title: Form input
-permalink: forminput
+permalink: flask-form-input
 ---
 
 An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the `app.py` file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.
