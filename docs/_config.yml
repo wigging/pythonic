@@ -3,7 +3,7 @@ baseurl: /pythonic
 collections:
   getting_started:
     output: true
-  python_standard:
+  python:
     output: true
   parallel_computing:
     output: true
@@ -24,7 +24,7 @@ defaults:
       layout: "page"
   - scope:
       path: ""
-      type: "python_standard"
+      type: "python"
     values:
       layout: "page"
   - scope:
