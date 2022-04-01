@@ -39,3 +39,18 @@ c = 2 + 5j
 >>> round(1875.82, 1)
 1875.8
 ```
+
+## Compare floats
+
+Due to floating-point representation error, use the `isclose()` function from the math module to compare floats. Otherwise, you may get confounding results when comparing numbers.
+
+```python
+# This returns False due to floating point precision
+>>> 0.1 + 0.2 == 0.3
+False
+
+# Using math.isclose() gives the expected result
+>>> import math
+>>> math.isclose(0.1 + 0.2, 0.3)
+True
+```
