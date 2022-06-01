@@ -33,3 +33,5 @@ if __name__ == '__main__':
     main_app = MyApp(root)
     root.mainloop()
 ```
+
+![basic tkinter app](/pythonic/images/tkinter-app.png)
