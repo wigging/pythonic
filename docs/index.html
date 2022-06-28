@@ -39,23 +39,35 @@
         <div class="col-md">
             <h5>Getting started</h5>
             <ul>
-            {% for gs in site.getting_started %}
-                <li><a href="{{ site.baseurl }}{{ gs.url }}">{{ gs.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _getting_started/install-python.md %}">Installing Python</a></li>
+                <li><a href="{{ site.baseurl }}{% link _getting_started/conda-env.md %}">Conda environments</a></li>
+                <li><a href="{{ site.baseurl }}{% link _getting_started/virtual-env.md %}">Virtual environments</a></li>
             </ul>
 
-            <h5>Python</h5>
+            <h5>Python standard library</h5>
             <ul>
-            {% for py in site.python %}
-                <li><a href="{{ site.baseurl }}{{ py.url }}">{{ py.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _python/argparse.md %}">Argparse</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/cprofile.md %}">cProfile</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/dictionaries.md %}">Dictionaries</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/json.md %}">JSON</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/lists.md %}">Lists</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/numbers.md %}">Numbers</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/pathlib.md %}">Pathlib</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/prealloc-list.md %}">Pre-allocate list</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/secrets.md %}">Secrets</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/strings.md %}">Strings</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/textwrap-dedent.md %}">Textwrap dedent</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/tkinterapp.md %}">Basic Tkinter app</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/toml.md %}">TOML</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/tuples.md %}">Tuples</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/unittest-csv.md %}">Unittest CSV files</a></li>
+                <li><a href="{{ site.baseurl }}{% link _python/xml.md %}">XML</a></li>
             </ul>
 
             <h5>Parallel computing</h5>
             <ul>
-            {% for pc in site.parallel_computing %}
-                <li><a href="{{ site.baseurl }}{{ pc.url }}">{{ pc.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _parallel_computing/dask-script.md %}">Use Dask in a script</a></li>
+                <li><a href="{{ site.baseurl }}{% link _parallel_computing/dask-array.md %}">Dask array</a></li>
             </ul>
         </div>
 
@@ -64,30 +76,39 @@
         <div class="col-md">
             <h5>NumPy</h5>
             <ul>
-            {% for np in site.numpy %}
-                <li><a href="{{ site.baseurl }}{{ np.url }}">{{ np.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _numpy/bool-index.md %}">Boolean indexing</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/clip-array.md %}">Clip array values</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/loop-columns.md %}">Loop over columns</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/full.md %}">Full array</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/inv-solve.md %}">Compare inv and solve functions</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/large-array.md %}">Large array memory usage</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/maximum.md %}">Maximum array</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/save-load-arrays.md %}">Save and load arrays</a></li>
+                <li><a href="{{ site.baseurl }}{% link _numpy/setdiff.md %}">Set difference of two arrays</a></li>
             </ul>
 
             <h5>SciPy</h5>
             <ul>
-            {% for sc in site.scipy %}
-                <li><a href="{{ site.baseurl }}{{ sc.url }}">{{ sc.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _scipy/sparse-diag.md %}">Sparse diagonal matrix</a></li>
             </ul>
 
             <h5>Matplotlib</h5>
             <ul>
-            {% for ma in site.matplotlib %}
-                <li><a href="{{ site.baseurl }}{{ ma.url }}">{{ ma.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _matplotlib/line.md %}">Line plot</a></li>
+                <li><a href="{{ site.baseurl }}{% link _matplotlib/mosaic.md %}">Mosaic grid of plots</a></li>
             </ul>
 
             <h5>Flask</h5>
             <ul>
-            {% for fk in site.flask %}
-                <li><a href="{{ site.baseurl }}{{ fk.url }}">{{ fk.title }}</a></li>
-            {% endfor %}
+                <li><a href="{{ site.baseurl }}{% link _flask/heroku.md %}">Deploy on Heroku</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/ajax.md %}">Update page with Ajax</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/bokeh.md %}">Bokeh graph</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/bokeh-htmx.md %}">Bokeh graph with Htmx</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/form-input.md %}">Form input</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/form-htmx.md %}">Form input with Htmx</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/plotly.md %}">Plotly graph</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/plotly-restyle.md %}">Plotly graph restyle</a></li>
+                <li><a href="{{ site.baseurl }}{% link _flask/plotly-htmx.md %}">Plotly graph with Htmx</a></li>
             </ul>
         </div>
     </div>
