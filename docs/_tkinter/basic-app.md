@@ -1,9 +1,9 @@
 ---
-title: Basic Tkinter app
-permalink: tkinterapp
+title: Basic application
+permalink: basicapp
 ---
 
-This example demonstrates the structure of a basic Tkinter app.
+This example demonstrates the structure of a basic Tkinter application.
 
 ```python
 import tkinter as tk
