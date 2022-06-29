@@ -1,6 +1,6 @@
 ---
 title: Theme ttkbootstrap
-permalink: matplotlib
+permalink: ttkbootstrap
 ---
 
 Example of a Tkinter app using the ttkbootstrap theme. More information about
