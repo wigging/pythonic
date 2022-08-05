@@ -28,16 +28,21 @@ c = 2 + 5j
 ## Round a number
 
 ```python
-# round to a whole number
+# Round to a whole number
 >>> round(1875.82)
 1876
 
->>> round(1875.82, -2)
-1900.0
-
-# round to a decimal place
+# Round to nearest tenth decimal place
 >>> round(1875.82, 1)
 1875.8
+
+# Round to the nearest hundred
+>>> round(1875.82, -2)
+1900
+
+# Round to the nearest thousand
+>>> round(3256, -3)
+3000
 ```
 
 ## Compare floats
