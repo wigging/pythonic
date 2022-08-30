@@ -23,21 +23,86 @@ s5 = """another string"""
 Methods available for the string type are demonstrated below.
 
 ```python
->>> s = 'i love apples'
+# Join a list of words as a single string
+>>> words = ['My', 'favorite', 'food', 'is', 'not', 'avocado']
+>>> ' '.join(words)
+'My favorite food is not avocado'
 
-# return a copy of the string where the first letter is capitalized
+# Join a list of words excluding the `not` string
+>>> ' '.join(filter(lambda x : x != 'not', words))
+'My favorite food is avocado'
+```
+
+```python
+# Split a string into a list of strings
+>>> 'hello there'.split(' ')
+['hello', 'there']
+```
+
+```python
+# Replace the occurance of a string with another string
+>>> 'hello there folks'.replace('there', 'all')
+'hello all folks'
+```
+
+```python
+# Remove space at beginning and end of string
+>>> ' space '.strip()
+'space'
+```
+
+```python
+# Return a lowercase string
+>>> 'Hello There'.casefold()
+'hello there'
+```
+
+```python
+# Check if string starts with a given prefix
+>>> 'hello there'.startswith('h')
+True
+
+# Check if string ends with a given suffix
+>>> 'hello there'.endswith('k')
+False
+```
+
+```python
+# Split lines into a list of strings
+>>> """first line
+    second line
+    and third line""".splitlines()
+['first line', 'second line', 'and third line']
+```
+
+```python
+# Count the occurance of a substring
+>>> 'hello there'.count('e')
+3
+```
+
+```python
+# Return a copy of the string where the first letter is capitalized
+>>> s = 'i love apples'
 >>> s.capitalize()
 'I love apples'
+```
 
-# return a copy of the string where words start with an uppercase
+```python
+# Return a copy of the string where words start with an uppercase
+>>> s = 'i love apples'
 >>> s.title()
 'I Love Apples'
+```
 
-# center a string using a fill character
+```python
+# Center a string using a fill character
 >>> ' hello '.center(30, '*')
 '*********** hello ************'
+```
 
-# pad a numeric string with zeros
+```python
+# Pad a numeric string with zeros
 >>> '1'.zfill(3)
 '001'
 ```
@@ -61,15 +126,3 @@ Methods available for the string type are demonstrated below.
 >>> name[::-1]
 'remoH'
 ```
-
-## Join strings
-
-```python
->>> words = ['My', 'favorite', 'food', 'is', 'not', 'avocado']
->>> ' '.join(words)
-'My favorite food is not avocado'
-
->>> ' '.join(filter(lambda x : x != 'not', words))
-'My favorite food is avocado'
-```
-
