@@ -34,4 +34,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-![basic tkinter app](/pythonic/images/tkinter-app.png)
+<img src="/pythonic/images/tkinter-app.png" style="max-width: 400px;" alt="basic tkinter app">

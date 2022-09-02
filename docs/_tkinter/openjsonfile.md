@@ -53,4 +53,4 @@ Use the Open File button to display a file selection dialog. Then select the boo
 
 The contents of the JSON file is loaded and displayed as text labels in the window.
 
-![open json file](/pythonic/images/tkinter-openjsonfile2.png)
+<img src="/pythonic/images/tkinter-openjsonfile2.png" style="max-width: 400px;" alt="open json file">

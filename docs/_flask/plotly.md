@@ -32,9 +32,9 @@ def plot():
     return render_template('plot.html', data=data)
 ```
 
-![index page](/pythonic/images/plotly-index.png)
+<img src="/pythonic/images/plotly-index.png" style="max-width:500px;" alt="index page">
 
-![plot page](/pythonic/images/plotly-plot.png)
+<img src="/pythonic/images/plotly-plot.png" style="max-width:500px;" alt="plot page">
 
 The HTML templates used to render the index and plot pages are shown below.
 

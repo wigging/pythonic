@@ -5,7 +5,7 @@ permalink: flask-ajax
 
 This Flask app example uses Ajax to update the page with results from the post request. The results are returned as JSON which is used to update the div tags.
 
-![ajax page](/pythonic/images/flask-ajax.png)
+<img src="/pythonic/images/flask-ajax.png" style="max-width:100%;" alt="flask ajax">
 
 ```python
 # app.py
@@ -120,3 +120,4 @@ def results():
 </body>
 </html>
 ```
+{: .highlight1000}

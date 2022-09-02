@@ -82,7 +82,7 @@ for rt in root:
 
 Running the above example in the terminal prints the following:
 
-```txt
+```
 ---
 TestId        0001
 TestType      CMD

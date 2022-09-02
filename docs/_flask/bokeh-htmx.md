@@ -103,6 +103,7 @@ The `index.html` template is shown below. Notice how Htmx is used to post the fo
 </body>
 </html>
 ```
+{: .highlight1000}
 
 The `plot.html` template that displays the Bokeh components is given below.
 

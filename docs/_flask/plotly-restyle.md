@@ -97,6 +97,7 @@ The HTML index page is shown below. The form submits a `POST` request and calls 
 </body>
 </html>
 ```
+{: .highlight1000}
 
 The JavaScript for creating the Plotly graph is shown below. The `updateGraph()` is called when the HTML form is submitted. This function uses the JavaScript `fetch()` method to handle the response from the `POST` request. Finally, the line graph is updated with the new x and y data using `Plotly.restyle()`.
 

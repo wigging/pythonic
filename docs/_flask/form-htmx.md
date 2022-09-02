@@ -83,6 +83,7 @@ The main webpage `index.html` is shown below. Notice the use of Htmx to handle t
 </body>
 </html>
 ```
+{: .highlight1000}
 
 ```html
 <!-- templates/results.html -->

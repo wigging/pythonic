@@ -51,6 +51,6 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-![customtkinter light](/pythonic/images/tkinter-customtkinter-light.png)
+<img src="/pythonic/images/tkinter-customtkinter-light.png" style="max-width: 400px;" alt="customtkinter-light">
 
-![customtkinter dark](/pythonic/images/tkinter-customtkinter-dark.png)
+<img src="/pythonic/images/tkinter-customtkinter-dark.png" style="max-width: 400px;" alt="customtkinter-dark">

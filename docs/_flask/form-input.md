@@ -37,9 +37,9 @@ def results():
     return render_template('results.html', results=res)
 ```
 
-![index page](/pythonic/images/form-input-index.png)
+<img src="/pythonic/images/form-input-index.png" style="max-width:500px;" alt="index page">
 
-![results page](/pythonic/images/form-input-results.png)
+<img src="/pythonic/images/form-input-results.png" style="max-width:400px;" alt="results page">
 
 The HTML templates used by the app are shown below. Notice that [Bootstrap](https://getbootstrap.com) is used for the style and layout of the pages.
 
@@ -88,6 +88,7 @@ The HTML templates used by the app are shown below. Notice that [Bootstrap](http
 </body>
 </html>
 ```
+{: .highlight1000}
 
 ```html
 <!-- results.html -->

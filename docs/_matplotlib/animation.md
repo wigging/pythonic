@@ -68,7 +68,7 @@ plt.show()
 
 Both examples generate the animated line plot shown below.
 
-<video controls style="width: 100%">
+<video controls style="max-width:600px;">
     <source src="/pythonic/images/artistanim.mp4" type="video/mp4">
     Sorry, your browser doesn't support this embedded video.
 </video>

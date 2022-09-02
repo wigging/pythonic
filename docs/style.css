@@ -1,6 +1,5 @@
-.container {
-    max-width: 700px;
-}
+/* Main style
+--------------------------------------------------------------------- */
 
 a {
     text-decoration: none;
@@ -15,30 +14,57 @@ body {
     background-color: #fffff8;
 }
 
-h1 {
-    margin-top: 60px;
+h1, h2, h4 {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
 }
 
-h2 {
-    margin-top: 40px;
+p, hr, ul, .highlight {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
 }
 
-img {
-    max-width: 400px;
+img, video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-pre code {
-    /* Make code blocks scroll horizontally */
-    white-space: pre;
-    word-wrap: normal;
+.highlight1000 .highlight {
+    max-width: 1000px;
 }
 
-/* --- Mobile --- */
+/* Mobile style
+--------------------------------------------------------------------- */
 
 @media (max-width: 480px) {
 
     img {
         max-width: 100%;
+    }
+
+}
+
+/* Dark mode style
+--------------------------------------------------------------------- */
+
+@media screen and (prefers-color-scheme: dark) {
+
+    a {
+        color: deepskyblue;
+    }
+
+    a:hover {
+        color: dodgerblue;
+        background: none;
+    }
+
+    body {
+        background-color: rgb(35, 39, 45);
+        color: rgb(223, 223, 224);
     }
 
 }

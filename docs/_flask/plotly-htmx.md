@@ -87,6 +87,7 @@ The html templates used for the Flask app are given below. The Plotly graph is c
 </body>
 </html>
 ```
+{: .highlight1000}
 
 ```html
 <!-- templates/plot.html -->

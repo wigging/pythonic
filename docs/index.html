@@ -12,40 +12,24 @@
 </head>
 <body>
 <div class="container">
-
-    <!-- Header -->
-
     <div class="row">
         <div class="col-md">
-            <h1><strong>🐍 Pythonic Programming</strong></h1>
-            <hr>
+            <h1 class="text-center"><b>🐍 Pythonic Programming</b></h1>
+            <br>
             <p>Python is a great programming language for all ages and skill levels. It's ecosystem of packages extends the language to many areas of software development. This website provides concise code examples that demonstrate basic Python features as well as more advanced topics relevant to scientific computing. The website and the associated code examples are available on <a href="https://github.com/wigging/pythonic">GitHub</a>.</p>
-        </div>
-    </div>
+            <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a> or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an <a href="https://github.com/wigging/pythonic/issues">Issue</a> on the GitHub repository. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
 
-    <!-- Contents -->
-
-    <div class="row">
-        <div class="col-md">
-            <h2>Contents</h2>
+            <h4>Getting started</h4>
             <hr>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <!-- Column 1 -->
-
-        <div class="col-md">
-            <h5>Getting started</h5>
             <ul>
                 <li><a href="{{ site.baseurl }}{% link _getting_started/install-python.md %}">Installing Python</a></li>
                 <li><a href="{{ site.baseurl }}{% link _getting_started/conda-env.md %}">Conda environments</a></li>
                 <li><a href="{{ site.baseurl }}{% link _getting_started/virtual-env.md %}">Virtual environments</a></li>
             </ul>
 
-            <h5>Python standard library</h5>
-            <ul>
+            <h4>Python standard library</h4>
+            <hr>
+            <ul style="columns: 2;">
                 <li><a href="{{ site.baseurl }}{% link _python/argparse.md %}">Argparse</a></li>
                 <li><a href="{{ site.baseurl }}{% link _python/cprofile.md %}">cProfile</a></li>
                 <li><a href="{{ site.baseurl }}{% link _python/dictionaries.md %}">Dictionaries</a></li>
@@ -64,14 +48,16 @@
                 <li><a href="{{ site.baseurl }}{% link _python/xml.md %}">XML</a></li>
             </ul>
 
-            <h5>Parallel computing</h5>
+            <h4>Parallel computing</h4>
+            <hr>
             <ul>
                 <li><a href="{{ site.baseurl }}{% link _parallel_computing/dask-script.md %}">Use Dask in a script</a></li>
                 <li><a href="{{ site.baseurl }}{% link _parallel_computing/dask-array.md %}">Dask array</a></li>
             </ul>
 
-            <h5>Tkinter</h5>
-            <ul>
+            <h4>Tkinter</h4>
+            <hr>
+            <ul style="columns: 2;">
                 <li><a href="{{ site.baseurl }}{% link _tkinter/basic-app.md %}">Basic Tkinter application</a></li>
                 <li><a href="{{ site.baseurl }}{% link _tkinter/label.md %}">Update Label text</a></li>
                 <li><a href="{{ site.baseurl }}{% link _tkinter/matplotlib.md %}">View data with Matplotlib</a></li>
@@ -79,13 +65,10 @@
                 <li><a href="{{ site.baseurl }}{% link _tkinter/customtkinter.md %}">Theme customtkinter</a></li>
                 <li><a href="{{ site.baseurl }}{% link _tkinter/openjsonfile.md %}">Open JSON file</a></li>
             </ul>
-        </div>
 
-        <!-- Column 2 -->
-
-        <div class="col-md">
-            <h5>NumPy</h5>
-            <ul>
+            <h4>NumPy</h4>
+            <hr>
+            <ul style="columns: 2;">
                 <li><a href="{{ site.baseurl }}{% link _numpy/bool-index.md %}">Boolean indexing</a></li>
                 <li><a href="{{ site.baseurl }}{% link _numpy/clip-array.md %}">Clip array values</a></li>
                 <li><a href="{{ site.baseurl }}{% link _numpy/loop-columns.md %}">Loop over columns</a></li>
@@ -97,12 +80,14 @@
                 <li><a href="{{ site.baseurl }}{% link _numpy/setdiff.md %}">Set difference of two arrays</a></li>
             </ul>
 
-            <h5>SciPy</h5>
+            <h4>SciPy</h4>
+            <hr>
             <ul>
                 <li><a href="{{ site.baseurl }}{% link _scipy/sparse-diag.md %}">Sparse diagonal matrix</a></li>
             </ul>
 
-            <h5>Matplotlib</h5>
+            <h4>Matplotlib</h4>
+            <hr>
             <ul>
                 <li><a href="{{ site.baseurl }}{% link _matplotlib/animation.md %}">Animation</a></li>
                 <li><a href="{{ site.baseurl }}{% link _matplotlib/contour.md %}">Contour plot smoothing</a></li>
@@ -110,8 +95,9 @@
                 <li><a href="{{ site.baseurl }}{% link _matplotlib/mosaic.md %}">Mosaic grid of plots</a></li>
             </ul>
 
-            <h5>Flask</h5>
-            <ul>
+            <h4>Flask</h4>
+            <hr>
+            <ul style="columns: 2;">
                 <li><a href="{{ site.baseurl }}{% link _flask/heroku.md %}">Deploy on Heroku</a></li>
                 <li><a href="{{ site.baseurl }}{% link _flask/ajax.md %}">Update page with Ajax</a></li>
                 <li><a href="{{ site.baseurl }}{% link _flask/bokeh.md %}">Bokeh graph</a></li>
@@ -123,38 +109,17 @@
                 <li><a href="{{ site.baseurl }}{% link _flask/plotly-htmx.md %}">Plotly graph with Htmx</a></li>
             </ul>
 
-            <h5>Streamlit</h5>
+            <h4>Streamlit</h4>
+            <hr>
             <ul>
                 <li><a href="{{ site.baseurl }}{% link _streamlit/selectbox.md %}">Selectbox widget</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- Contact -->
-
-    <div class="row">
-        <div class="col-md">
-            <h2>Contact</h2>
-            <hr>
-            <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a> or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an issue on the <a href="https://github.com/wigging/pythonic">GitHub</a> repository.</p>
-        </div>
-    </div>
-
-    <!-- Support -->
-
-    <div class="row">
-        <div class="col-md">
-            <h2>Support</h2>
-            <hr>
-            <p>If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-
     <div class="row my-5">
         <div class="col-md">
-            <p class="text-center small my-5">Gavin Wiggins © 2022</p>
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
         </div>
     </div>
 </div>

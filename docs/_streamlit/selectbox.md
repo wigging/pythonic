@@ -20,4 +20,4 @@ st.selectbox('Select at item', data, key='selected', on_change=print_selected)
 st.write('You selected: ', st.session_state.selected)
 ```
 
-![selectbox](/pythonic/images/streamlit-selectbox.png)
+<img src="/pythonic/images/streamlit-selectbox.png" style="max-width:100%;" alt="selectbox">

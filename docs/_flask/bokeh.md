@@ -96,6 +96,7 @@ The home page (index) template contains a form where the user inputs the x and y
 </body>
 </html>
 ```
+{: .highlight1000}
 
 When the submit button is clicked or tapped, the x and y values are used to create a Bokeh plot on a separate page using the plot template which is shown below.
 

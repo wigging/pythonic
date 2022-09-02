@@ -41,6 +41,7 @@ $ python -m cProfile ztest.py
         2    6.502    3.251    6.502    3.251 {built-in method time.sleep}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 ```
+{: .highlight1000}
 
 The output can be sorted using the sort arguments: `calls`, `cumtime`, `cumulative`, `filename`, `line`, `module`, `name`, `ncalls`, `nfl`, `pcalls`, `stdname`, `time`, and `tottime`. The example below sorts the output based on the total time.
 
@@ -59,5 +60,6 @@ $ python -m cProfile -s tottime ztest.py
         1    0.000    0.000    6.506    6.506 {built-in method builtins.exec}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 ```
+{: .highlight1000}
 
 See the [Python documentation](https://docs.python.org/3/library/profile.html) for more information about the profiler.
