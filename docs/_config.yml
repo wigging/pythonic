@@ -17,6 +17,8 @@ collections:
     output: true
   tkinter:
     output: true
+  streamlit:
+    output: true
 
 defaults:
   - scope:
@@ -57,6 +59,11 @@ defaults:
   - scope:
       path: ""
       type: "tkinter"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "streamlit"
     values:
       layout: "page"
 
