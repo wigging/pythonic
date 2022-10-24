@@ -14,6 +14,9 @@
             <h1>{{ page.title }}</h1>
             <hr>
             {{ content }}
+        {% if page.example %}
+            <p>See <code class="language-plaintext highlighter-rouge">{{ page.example }}</code> in the <a href="https://github.com/wigging/pythonic">GitHub</a> repository for the example code.</p>
+        {% endif %}
             <hr class="mt-4">
         </div>
     </div>

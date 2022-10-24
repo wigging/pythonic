@@ -1,0 +1,10 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mypackage"
+version = "0.1"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
