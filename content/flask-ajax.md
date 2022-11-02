@@ -1,11 +1,11 @@
 ---
 title: Update page with Ajax
-permalink: flask-ajax
+date: November 1, 2022
 ---
 
-This Flask app example uses Ajax to update the page with results from the post request. The results are returned as JSON which is used to update the div tags.
+This Flask webapp example uses Ajax to update the page with results from the post request. The results are returned as JSON which is used to update the div tags.
 
-<img src="/pythonic/images/flask-ajax.png" style="max-width:100%;" alt="flask ajax">
+<img src="images/flask-ajax.png" style="max-width:100%;" alt="flask ajax">
 
 ```python
 # app.py
@@ -43,7 +43,7 @@ def results():
     return jsonify(res)
 ```
 
-```html
+```{ .html .pre1000 }
 <!-- templates/index.html -->
 
 <!DOCTYPE html>
@@ -120,4 +120,3 @@ def results():
 </body>
 </html>
 ```
-{: .highlight1000}

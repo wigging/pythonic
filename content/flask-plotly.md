@@ -1,6 +1,6 @@
 ---
 title: Plotly graph
-permalink: flask-plotly
+date: November 1, 2022
 ---
 
 [Plotly](https://plotly.com) is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app.
@@ -32,9 +32,9 @@ def plot():
     return render_template('plot.html', data=data)
 ```
 
-<img src="/pythonic/images/plotly-index.png" style="max-width:500px;" alt="index page">
+<img src="images/plotly-index.png" style="max-width:500px;" alt="index page">
 
-<img src="/pythonic/images/plotly-plot.png" style="max-width:500px;" alt="plot page">
+<img src="images/plotly-plot.png" style="max-width:500px;" alt="plot page">
 
 The HTML templates used to render the index and plot pages are shown below.
 

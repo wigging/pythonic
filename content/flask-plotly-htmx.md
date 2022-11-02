@@ -1,11 +1,11 @@
 ---
 title: Plotly graph with Htmx
-permalink: flask-plotly-htmx
+date: November 1, 2022
 ---
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Plotly graph in a web page without updating the entire page.
 
-<img src="/pythonic/images/plotly-htmx.png" style="max-width:100%;" alt="plotly htmx">
+<img src="images/plotly-htmx.png" style="max-width:100%;" alt="plotly htmx">
 
 ```py
 # app.py
@@ -36,7 +36,7 @@ def plot():
 
 The html templates used for the Flask app are given below. The Plotly graph is created using the `plot.html` template.
 
-```html
+```{ .html .pre1000 }
 <!-- templates/index.html -->
 
 <!DOCTYPE html>
@@ -87,7 +87,6 @@ The html templates used for the Flask app are given below. The Plotly graph is c
 </body>
 </html>
 ```
-{: .highlight1000}
 
 ```html
 <!-- templates/plot.html -->

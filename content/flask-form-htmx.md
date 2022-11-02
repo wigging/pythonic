@@ -1,11 +1,11 @@
 ---
 title: Form input with Htmx
-permalink: flask-form-htmx
+date: November 1, 2022
 ---
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to submit a form when the page loads. Results calculated from the form values are displayed on the same page.
 
-<img src="/pythonic/images/form-htmx.png" style="max-width:100%;" alt="form htmx">
+<img src="images/form-htmx.png" style="max-width:100%;" alt="form htmx">
 
 ```python
 # app.py
@@ -37,7 +37,7 @@ def results():
 
 The main webpage `index.html` is shown below. Notice the use of Htmx to handle the form submission when the page loads and when the user clicks the submit button.
 
-```html
+```{ .html .pre1000 }
 <!-- templates/index.html -->
 
 <!DOCTYPE html>
@@ -83,7 +83,6 @@ The main webpage `index.html` is shown below. Notice the use of Htmx to handle t
 </body>
 </html>
 ```
-{: .highlight1000}
 
 ```html
 <!-- templates/results.html -->

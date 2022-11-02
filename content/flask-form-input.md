@@ -1,6 +1,6 @@
 ---
 title: Form input
-permalink: flask-form-input
+date: November 1, 2022
 ---
 
 An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the `app.py` file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.
@@ -37,13 +37,13 @@ def results():
     return render_template('results.html', results=res)
 ```
 
-<img src="/pythonic/images/form-input-index.png" style="max-width:500px;" alt="index page">
+<img src="images/form-input-index.png" style="max-width:500px;" alt="index page">
 
-<img src="/pythonic/images/form-input-results.png" style="max-width:400px;" alt="results page">
+<img src="images/form-input-results.png" style="max-width:400px;" alt="results page">
 
 The HTML templates used by the app are shown below. Notice that [Bootstrap](https://getbootstrap.com) is used for the style and layout of the pages.
 
-```html
+```{ .html .pre1000 }
 <!-- index.html -->
 
 <!DOCTYPE html>
@@ -88,7 +88,6 @@ The HTML templates used by the app are shown below. Notice that [Bootstrap](http
 </body>
 </html>
 ```
-{: .highlight1000}
 
 ```html
 <!-- results.html -->
