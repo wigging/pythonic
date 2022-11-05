@@ -5,7 +5,7 @@ date: November 1, 2022
 
 [Plotly](https://plotly.com) is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app. When the page first loads, a default line graph is shown. New data points are added to the graph using the form inputs. The `Plotly.restyle` function is used to redraw the graph when new data points are submitted; this approach avoids recreating an entirely new Plotly graph each time the data is updated.
 
-<img src="images/plotly-restyle.png" style="max-width:100%;" alt="plotly restyle">
+<img src="../images/plotly-restyle.png" style="max-width:100%;" alt="plotly restyle">
 
 The main Flask app is shown below. The `update()` route sends the x and y values from the form inputs as JSON which is used to update the Plotly line graph data.
 

@@ -37,9 +37,9 @@ def results():
     return render_template('results.html', results=res)
 ```
 
-<img src="images/form-input-index.png" style="max-width:500px;" alt="index page">
+<img src="../images/form-input-index.png" style="max-width:500px;" alt="index page">
 
-<img src="images/form-input-results.png" style="max-width:400px;" alt="results page">
+<img src="../images/form-input-results.png" style="max-width:400px;" alt="results page">
 
 The HTML templates used by the app are shown below. Notice that [Bootstrap](https://getbootstrap.com) is used for the style and layout of the pages.
 
