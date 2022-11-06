@@ -1,6 +1,6 @@
 ---
 title: Virtual environments
-permalink: virtualenv
+date: November 5, 2022
 ---
 
 The `venv` module included with Python is used to create and manage virtual environments.
