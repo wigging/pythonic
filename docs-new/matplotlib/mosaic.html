@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Mosaic grid of plots</h1>
+<h6>November 6, 2022</h6>
+<hr>
+
+<p>Example of using Matplotlib <code>subplot_mosaic()</code> to create a grid of plots.</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+_, ax = plt.subplot_mosaic([['one', 'two'],
+                            ['three', 'three']])
+
+ax['one'].plot([3, 5, 6, 2, 8], '-o', color='red')
+
+ax['two'].plot([7, 8, 4, 9], color='blue')
+
+ax['three'].plot([1, 3, 4, 2, 3, 4], color='black')
+
+plt.show()
+</code></pre>
+<p><img src="../images/matplotlib-mosaic.png" style="max-width:500px;" alt="mosaic plot"></p>
+
+        <hr class="mt-4">
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

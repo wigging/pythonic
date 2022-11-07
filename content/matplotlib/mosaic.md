@@ -1,6 +1,6 @@
 ---
 title: Mosaic grid of plots
-permalink: mosaic
+date: November 6, 2022
 ---
 
 Example of using Matplotlib `subplot_mosaic()` to create a grid of plots.
@@ -20,4 +20,4 @@ ax['three'].plot([1, 3, 4, 2, 3, 4], color='black')
 plt.show()
 ```
 
-<img src="/pythonic/images/matplotlib-mosaic.png" style="max-width:500px;" alt="mosaic plot">
+<img src="../images/matplotlib-mosaic.png" style="max-width:500px;" alt="mosaic plot">
