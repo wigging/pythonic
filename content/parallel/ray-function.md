@@ -1,6 +1,6 @@
 ---
 title: Ray function
-permalink: rayfunction
+date: November 8, 2022
 ---
 
 To parallelize a function with the [Ray](https://www.ray.io) framework, decorate the function with `@ray.remote` to run the function remotely. Call the function with `.remote()` instead of calling it normally. The remote call yields a future that must be fetched with `ray.get`. The example below compares a parallel Ray function to a standard non-parallel function. A computationally expensive task is simulated by using the `sleep()` function.

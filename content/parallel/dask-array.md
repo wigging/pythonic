@@ -1,6 +1,6 @@
 ---
 title: Dask array
-permalink: daskarray
+date: November 8, 2022
 ---
 
 Dask Array is similar to a NumPy array and allows cutting up a large array into smaller arrays (chunks). This enables working with arrays that are larger than memory. Computations can be applied in parallel for fast execution. Below is an example of using Dask array `map_blocks()` to map a function that returns a single value. Using an 8 CPU core MacBook Pro running macOS v11.6, the serial elapsed time is 513.51 seconds and the Dask elapsed time is 3.21 seconds.
@@ -133,8 +133,3 @@ if __name__ == '__main__':
     run_dask()
     client.close()
 ```
-
-## Example code
-
-- [dask_array_1.py](https://github.com/wigging/pythonic/blob/main/examples/dask_array_1.py)
-- [dask_array_2.py](https://github.com/wigging/pythonic/blob/main/examples/dask_array_2.py)

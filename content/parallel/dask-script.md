@@ -1,6 +1,6 @@
 ---
 title: Use Dask in a script
-permalink: daskscript
+date: November 8, 2022
 ---
 
 Since most Dask examples are demonstrated using Jupyter notebooks, here's an example of using Dask in a Python file or script. Notice how the Dask code must be in the `__main__` block or called from within a function.
@@ -38,7 +38,3 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-
-## Example code
-
-- [dask_script.py](https://github.com/wigging/pythonic/blob/main/examples/dask_script.py)
