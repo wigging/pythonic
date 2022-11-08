@@ -1,6 +1,6 @@
 ---
 title: Maximum array
-permalink: maxarray
+date: November 7, 2022
 ---
 
 The `maximum` function returns a new array that contains the maximum values of the two given arrays.

@@ -1,6 +1,6 @@
 ---
 title: Set difference of two arrays
-permalink: diffarrays
+date: November 7, 2022
 ---
 
 The `setdiff1d` function returns the unique values in array 1 that are not in array 2.

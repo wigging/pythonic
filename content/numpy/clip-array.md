@@ -1,6 +1,6 @@
 ---
 title: Clip array values
-permalink: cliparray
+date: November 7, 2022
 ---
 
 The `clip` function limits the values in an array based on a given interval or minimum or maximum value.

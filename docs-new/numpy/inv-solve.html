@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Compare inv and solve functions</h1>
+<h6>November 7, 2022</h6>
+<hr>
+
+<p>Solve equation <code>A*x=b</code> for <code>x</code> and compare results using the <code>np.linalg.solve()</code> function to the <code>np.linalg.inv()</code> approach.</p>
+<pre><code class="language-python">import numpy as np
+from time import perf_counter
+
+# Check results
+# ----------------------------------------------------------------------------
+
+a = np.random.rand(4, 4)
+b = np.random.rand(4)
+
+x = np.linalg.solve(a, b)
+print('x', x)
+
+x = np.linalg.inv(a) @ b
+print('x', x)
+
+# Elapsed time
+# ----------------------------------------------------------------------------
+
+n = 5000
+
+a = np.random.rand(n, n)
+b = np.random.rand(n)
+
+tic = perf_counter()
+x = np.linalg.solve(a, b)
+toc = perf_counter()
+print(f'Elapsed time for .solve is {toc - tic:.2f} s')
+
+tic = perf_counter()
+x = np.linalg.inv(a) @ b
+toc = perf_counter()
+print(f'Elapsed time for .inv is {toc - tic:.2f} s')
+</code></pre>
+<p>The output shown below is from running the example on a MacBook Pro. Using <code>np.linalg.solve()</code> is noticeably faster (especially for large arrays) than using the inverse matrix approach.</p>
+<pre><code>x [-19.96400793 6.3753703 -8.27713073 35.08957403]
+x [-19.96400793 6.3753703 -8.27713073 35.08957403]
+Elapsed time for .solve is 0.98 s
+Elapsed time for .inv is 3.47 s
+</code></pre>
+
+        <hr class="mt-4">
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

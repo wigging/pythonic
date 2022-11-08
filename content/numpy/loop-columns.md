@@ -1,6 +1,6 @@
 ---
 title: Loop over columns
-permalink: loopcolumns
+date: November 7, 2022
 ---
 
 Loop over columns in an array by iterating over the transpose of the array.
