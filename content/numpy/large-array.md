@@ -145,7 +145,7 @@ calculated storage = 8.0 GB
 
 A comparison of the three examples is shown below in the table. Changing the array data type from float64 to float32 cut the memory usage in half. Writing the array to disk drastically reduced memory use. The generated hdf5 file is about 8 GB on disk which is the size of the array containing float32 values. The elapsed time for the hdf5 approach is similar to the other examples; therefore, writing to the hdf5 file seems to have a negligible performance impact. Based on these examples, writing the array to disk using an hdf5 file allows substantial memory reduction as long as disk space is available for storing the array.
 
-<table class="table table-hover">
+<table class="table table-dark table-hover">
 <thead>
     <tr>
         <th scope="col">Example</th>
