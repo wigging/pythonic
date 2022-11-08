@@ -177,13 +177,11 @@ calculated storage = 8.0 GB
 <p>Other approaches for writing the array to disk such as <a href="https://numpy.org/doc/stable/reference/generated/numpy.memmap.html">numpy.memmap</a> and <a href="https://zarr.readthedocs.io/en/stable/">zarr</a> were tested too. But the hdf5 approach demonstrated in example 3 gave better performance and memory usage for this type of problem.</p>
 <p>A comment about the memory increase over time for examples 1 and 2. When an array is initialized with <code>np.zeros</code>, the memory is lazily allocated as values are added to the array. The total amount of memory allocated for the array is based on the data type of the values stored in the array.</p>
 
-        <hr class="mt-4">
         </div>
     </div>
-
     <div class="row my-5">
         <div class="col-md">
-            <p class="text-center small">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
         </div>
     </div>
 </div>
