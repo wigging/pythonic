@@ -1,6 +1,6 @@
 ---
 title: cProfile
-permalink: cprofile
+date: November 8, 2022
 ---
 
 The `cProfile` module provides an interface to profile Python programs. A single function or an entire script or module can be profiled. As an example, the script shown below contains two functions that suspend execution for 2 and 4.5 seconds.
@@ -26,7 +26,7 @@ slower()
 
 Use the terminal command given below to profile the script. This will output the profile results to the terminal as total time `tottime` and cumulative time `cumtime`.
 
-```bash
+```{ .bash .pre1000 }
 $ python -m cProfile ztest.py
 
 7 function calls in 6.503 seconds
@@ -41,11 +41,10 @@ $ python -m cProfile ztest.py
         2    6.502    3.251    6.502    3.251 {built-in method time.sleep}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 ```
-{: .highlight1000}
 
 The output can be sorted using the sort arguments: `calls`, `cumtime`, `cumulative`, `filename`, `line`, `module`, `name`, `ncalls`, `nfl`, `pcalls`, `stdname`, `time`, and `tottime`. The example below sorts the output based on the total time.
 
-```bash
+```{ .bash .pre1000 }
 $ python -m cProfile -s tottime ztest.py
 
 7 function calls in 6.506 seconds
@@ -60,6 +59,5 @@ $ python -m cProfile -s tottime ztest.py
         1    0.000    0.000    6.506    6.506 {built-in method builtins.exec}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 ```
-{: .highlight1000}
 
 See the [Python documentation](https://docs.python.org/3/library/profile.html) for more information about the profiler.

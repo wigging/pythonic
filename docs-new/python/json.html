@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>JSON</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>JavaScript Object Notation (JSON) is a common data format that is supported natively in Python. The format is built on name/value pairs and ordered list values. Visit <a href="https://www.json.org/json-en.html">json.org</a> to learn more about the JSON format.</p>
+<h2>Load a JSON file</h2>
+<p>The contents of a JSON file named <code>books.json</code> are shown below:</p>
+<pre><code class="language-json">[
+    {
+        &quot;title&quot;: &quot;Alice's Adventures in Wonderland&quot;,
+        &quot;author&quot;: &quot;Lewis Carroll&quot;,
+        &quot;year&quot;: 1865
+    },
+    {
+        &quot;title&quot;: &quot;Do Androids Dream of Electric Sheep&quot;,
+        &quot;author&quot;: &quot;Philip K. Dick&quot;,
+        &quot;year&quot;: 1968
+    },
+    {
+        &quot;title&quot;: &quot;The Lorax&quot;,
+        &quot;author&quot;: &quot;Dr. Seuss&quot;,
+        &quot;year&quot;: 1971
+    }
+]
+</code></pre>
+<p>To read this file, use the <code>json</code> module to load the contents of the file. The example below prints the title, author, and year for each book item in the JSON file.</p>
+<pre><code class="language-python">import json
+
+with open(&quot;books.json&quot;) as json_file:
+    data = json.load(json_file)
+
+for d in data:
+    print(f&quot;{d['title']} by {d['author']} in {d['year']}&quot;)
+</code></pre>
+<p>This prints the following:</p>
+<pre><code>Alice's Adventures in Wonderland by Lewis Carroll in 1865
+Do Androids Dream of Electric Sheep by Philip K. Dick in 1968
+The Lorax by Dr. Seuss in 1971
+</code></pre>
+<h2>Read a JSON file containing comments</h2>
+<p>JSON does not support comments. However, commented lines in a JSON file can be ignored when reading the file line-by-line. The function shown below reads a JSON file that contains comments denoted by <code>//</code> and returns the JSON data as a dictionary. An example of using the function is also given.</p>
+<pre><code class="language-python">def read_json(jsonfile, comment='//'):
+    json_str = ''
+
+    with open(jsonfile, 'r') as json_file:
+        for line in json_file:
+            if comment not in line:
+                json_str += line
+
+    json_dict = json.loads(json_str)
+    return json_dict
+</code></pre>
+<pre><code class="language-python">&gt;&gt;&gt; file = 'example.json'
+&gt;&gt;&gt; jsondict = read_json(file)
+&gt;&gt;&gt; jsondict[1]['first_name']
+'Giavani'
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

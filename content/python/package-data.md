@@ -1,6 +1,6 @@
 ---
 title: Package with data
-permalink: packagedata
+date: November 8, 2022
 ---
 
 The file structure below represents a Python package that includes data files. Notice the data directory is within the package at `src/mypackage/`. This source directory approach follows the conventions outlined in the [Python Packaging User Guide](https://packaging.python.org/en/latest/).

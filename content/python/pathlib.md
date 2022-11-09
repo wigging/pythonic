@@ -1,6 +1,6 @@
 ---
 title: Pathlib
-permalink: pathlib
+date: November 8, 2022
 ---
 
 The `pathlib` module handles file paths with support for different operating systems.

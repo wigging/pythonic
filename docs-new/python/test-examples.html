@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Test examples</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>Example scripts are often available for Python packages to demonstrate how to use the package. The examples are typically part of the repository where the package is developed. Tests should be written to ensure the examples continue to work with new versions of the package.</p>
+<p>Below is the structure of a project for developing a Python package. Notice the <code>examples</code> directory that contains example scripts for demonstrating functions from <code>mypackage</code>.</p>
+<pre><code>myproject/
+├── README.md
+├── examples/
+│   ├── ex1.py
+│   └── ex2.py
+├── pyproject.toml
+├── src/
+│   └── mypackage/
+│       ├── __init__.py
+│       ├── adder.py
+│       └── divider.py
+└── tests/
+    ├── test_adder.py
+    ├── test_divider.py
+    ├── test_ex1.py
+    └── test_ex2.py
+</code></pre>
+<p>To ensure pytest can discover the examples, add the project to the Python path as shown below in the <code>pyproject.toml</code> file:</p>
+<pre><code class="language-toml">[tool.pytest.ini_options]
+pythonpath = [&quot;.&quot;]
+</code></pre>
+<p>The content of the first example is shown below along with the associated test. The test imports the example and asserts the value of the <code>a</code> variable.</p>
+<pre><code class="language-python"># Example 1 from examples/ex1.py
+
+from mypackage import adder
+
+x = 2.5
+y = 8
+
+a = adder(x, y)
+print('a is', a)
+</code></pre>
+<pre><code class="language-python"># Test for example 1 from tests/test_ex1.py
+
+from examples import ex1
+
+def test_ex1():
+    a = ex1.a
+    assert a == 10.5
+</code></pre>
+<p>The content of the second example is shown below along with the test. Unlike the previous example, this example contains all its code within functions. The test imports the example and asserts the returned value of the <code>run_divider()</code> function.</p>
+<pre><code class="language-python"># Example 2 from examples/ex2.py
+
+from mypackage import divider
+
+def run_divider():
+    x = 4
+    y = 9.2
+    d = divider(x, y)
+    return d
+
+def main():
+    d = run_divider()
+    print('d is', d)
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+<pre><code class="language-python"># Test for example 2 from tests/test_ex2.py
+
+from examples import ex2
+import pytest
+
+def test_ex2():
+    d = ex2.run_divider()
+    assert d == pytest.approx(0.4347, rel=1e-3)
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Package with data</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>The file structure below represents a Python package that includes data files. Notice the data directory is within the package at <code>src/mypackage/</code>. This source directory approach follows the conventions outlined in the <a href="https://packaging.python.org/en/latest/">Python Packaging User Guide</a>.</p>
+<pre><code>mypackage-data
+├── README.md
+├── examples
+│   ├── add_numbers.py
+│   └── read_fruits_data.py
+├── pyproject.toml
+├── src
+│   └── mypackage
+│       ├── __init__.py
+│       ├── adder.py
+│       ├── data
+│       │   └── fruits.csv
+│       └── read_fruits.py
+└── tests
+    ├── test_adder.py
+    └── test_read_fruits.py
+</code></pre>
+<p>The <code>importlib.resources</code> module should be used to get a path to the data files. This ensures the data file's path is correct even when the package is installed on different systems.</p>
+<pre><code class="language-python">import pandas as pd
+from importlib.resources import files
+
+
+def read_fruits():
+    &quot;&quot;&quot;
+    Read fruit data from CSV file.
+    &quot;&quot;&quot;
+    path = files('mypackage') / 'data/fruits.csv'
+    print(f'File path is\n{path}')
+
+    df = pd.read_csv(path)
+    print(f'Pandas dataframe is\n{df}')
+
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

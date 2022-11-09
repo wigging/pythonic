@@ -1,21 +1,41 @@
----
-title: Pre-allocate list
-permalink: prealloclist
----
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-If the size of a list is known, then pre-allocating the list can provide
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Pre-allocate list</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>If the size of a list is known, then pre-allocating the list can provide
 performance improvements; especially for a large list. The example below
 measures the performance of appending items to an empty list. Pre-allocating
 a list of known size and assigning items to it gives better performance than
 appending to the list. The list comprehension approach (see Example 3) gives
-the best elapsed time.
-
-- Example 1 = 11.6552 ms
-- Example 2 = 8.9583 ms
-- Example 3 = 4.5061 ms
-
-```python
-import time
+the best elapsed time.</p>
+<ul>
+<li>Example 1 = 11.6552 ms</li>
+<li>Example 2 = 8.9583 ms</li>
+<li>Example 3 = 4.5061 ms</li>
+</ul>
+<pre><code class="language-python">import time
 
 # Size of the list
 n = 100_000
@@ -58,4 +78,15 @@ list_three = [i for i in range(n)]
 toc = time.perf_counter_ns()
 print(f'Ex 3 elapsed time {(toc - tic) / 1_000_000:.4f} ms')
 print(f'list_three = {list_three[:3]}...{list_three[-3:]}')
-```
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

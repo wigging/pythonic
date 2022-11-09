@@ -1,6 +1,6 @@
 ---
 title: TOML
-permalink: toml
+date: November 8, 2022
 ---
 
 With the `toml` package, the contents of a TOML file can be loaded into a Python dictionary. Below is an example of reading a TOML file named `configure.toml` into a `config` dictionary.

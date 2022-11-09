@@ -1,6 +1,6 @@
 ---
 title: Unittest CSV files
-permalink: unittest-csv
+date: November 8, 2022
 ---
 
 The example below demonstrates a unit test for a function that writes data in a dictionary to CSV files.

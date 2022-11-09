@@ -1,6 +1,6 @@
 ---
 title: Strings
-permalink: strings
+date: November 8, 2022
 ---
 
 Some basic examples of creating strings in Python.

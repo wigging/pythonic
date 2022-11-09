@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Dictionaries</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.</p>
+<pre><code class="language-python">&gt;&gt;&gt; d = {'one': 1, 'two': 2, 'three': 3}
+&gt;&gt;&gt; d['three']
+3
+
+&gt;&gt;&gt; dd = dict(apples=2, oranges=5
+&gt;&gt;&gt; dd['oranges']
+5
+</code></pre>
+<h2>Loop through a dictionary</h2>
+<p>The items method can be used to loop through a dictionary.</p>
+<pre><code class="language-python">&gt;&gt;&gt; d = {'make': 'Ford', 'model': 'Bronco', 'year': 1977}
+&gt;&gt;&gt; for k, v in d.items():
+...     print(k, '\t', v)
+...
+make     Ford
+model    Bronco
+year     1977
+</code></pre>
+<h2>Default values</h2>
+<p>The get method can be used to specify a default value when a key doesn't
+exist.</p>
+<pre><code class="language-python">&gt;&gt;&gt; time = {'hour': 1, 'min': 34}
+&gt;&gt;&gt; time.get('sec', 15)
+15
+</code></pre>
+<p>The defaultdict is a specialized container type which supplies missing values based on the given default type.</p>
+<pre><code class="language-python"># using defaultdict will return a default value for the missing key
+&gt;&gt;&gt; from collections import defaultdict
+&gt;&gt;&gt; dd = defaultdict(int)
+&gt;&gt;&gt; dd['quantity']
+0
+
+# using a regular dictionary will return a key error
+&gt;&gt;&gt; d = {}
+&gt;&gt;&gt; d['quantity']
+KeyError
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

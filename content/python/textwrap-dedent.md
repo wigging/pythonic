@@ -1,6 +1,6 @@
 ---
 title: Textwrap dedent
-permalink: textwrapdedent
+date: November 8, 2022
 ---
 
 Remove leading whitespace from every line in text with the `textwrap.dedent()` function. The first example prints the leading white space in the string which is caused by the indentation of the function. The second example uses `textwrap.dedent()` to remove the leading white space.

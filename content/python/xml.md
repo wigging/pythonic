@@ -1,6 +1,6 @@
 ---
 title: XML
-permalink: xml
+date: November 8, 2022
 ---
 
 There are several XML parsers available in the Python standard library. Below is an example of using the ElementTree module.

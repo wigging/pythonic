@@ -1,15 +1,7 @@
 ---
 title: JSON
-permalink: json
+date: November 8, 2022
 ---
-
-**Contents**
-
-- [Introduction](#introduction)
-- [Load a JSON file](#load-a-json-file)
-- [Read a JSON file containing comments](#read-a-json-file-containing-comments)
-
-## Introduction
 
 JavaScript Object Notation (JSON) is a common data format that is supported natively in Python. The format is built on name/value pairs and ordered list values. Visit [json.org](https://www.json.org/json-en.html) to learn more about the JSON format.
 

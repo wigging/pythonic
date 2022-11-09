@@ -1,6 +1,6 @@
 ---
 title: Numbers
-permalink: numbers
+date: November 8, 2022
 ---
 
 Python includes three numeric types such as integers `int`, float `float`, and complex `complex` numbers.

@@ -1,21 +1,7 @@
 ---
 title: Lists
-permalink: lists
+date: November 8, 2022
 ---
-
-**Contents**
-
-- [Introduction](#introduction)
-- [Indexing](#indexing)
-- [Slicing](#slicing)
-- [Combining lists](#combining-lists)
-- [Methods](#methods)
-- [Unpacking](#unpacking)
-- [Functions](#functions)
-- [Reverse a list](#reverse-a-list)
-- [Further reading](#further-reading)
-
-## Introduction
 
 A list is used to group numbers, strings, or objects together. It is written as a pair of square brackets containing comma-separated items. A list typically contains items of similar type but it can contain items of different types too. Unlike tuples, lists are mutable therefore the content of a list can be modified.
 

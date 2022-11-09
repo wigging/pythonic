@@ -1,6 +1,6 @@
 ---
 title: Secrets
-permalink: secrets
+date: November 8, 2022
 ---
 
 Use the `secrets` module to generate cryptographically strong random passwords containing letters, numbers, and punctuation.

@@ -1,14 +1,7 @@
 ---
 title: Tuples
-permalink: tuples
+date: November 8, 2022
 ---
-
-**Contents**
-
-- [Introduction](#introduction)
-- [Further reading](#further-reading)
-
-## Introduction
 
 A tuple is a number of items separated by commas.
 

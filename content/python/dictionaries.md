@@ -1,15 +1,7 @@
 ---
 title: Dictionaries
-permalink: dictionaries
+date: November 8, 2022
 ---
-
-**Contents**
-
-- [Introduction](#introduction)
-- [Loop through a dictionary](#loop-through-a-dictionary)
-- [Default values](#default-values)
-
-## Introduction
 
 A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.
 
