@@ -1,6 +1,6 @@
 ---
 title: Update Label text
-permalink: label
+date: November 8, 2022
 ---
 
 Example of updating a Label's text in Tkinter.
@@ -38,4 +38,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<img src="/pythonic/images/tkinter-label.png" style="max-width: 400px;" alt="tkinter label">
+<img src="../images/tkinter-label.png" style="max-width: 400px;" alt="tkinter label">

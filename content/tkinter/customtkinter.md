@@ -1,6 +1,6 @@
 ---
 title: Theme customtkinter
-permalink: customtkinter
+date: November 8, 2022
 ---
 
 Example of a Tkinter app using the customtkinter theme. This theme will automatically change to light or dark mode when the macOS appearance changes. More information about the theme is available on GitHub at [TomSchimansky/CustomTkinter](https://github.com/TomSchimansky/CustomTkinter).
@@ -51,6 +51,6 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<img src="/pythonic/images/tkinter-customtkinter-light.png" style="max-width: 400px;" alt="customtkinter-light">
+<img src="../images/tkinter-customtkinter-light.png" style="max-width: 400px;" alt="customtkinter-light">
 
-<img src="/pythonic/images/tkinter-customtkinter-dark.png" style="max-width: 400px;" alt="customtkinter-dark">
+<img src="../images/tkinter-customtkinter-dark.png" style="max-width: 400px;" alt="customtkinter-dark">

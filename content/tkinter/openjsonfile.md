@@ -1,6 +1,6 @@
 ---
 title: Open JSON file
-permalink: openjsonfile
+date: November 8, 2022
 ---
 
 Example of opening a JSON file and reading its contents in a Tkinter app. See
@@ -49,8 +49,8 @@ if __name__ == '__main__':
 
 Use the Open File button to display a file selection dialog. Then select the books.json file from the examples folder in this GitHub repository.
 
-<img src="/pythonic/images/tkinter-openjsonfile1.png" style="max-width:100%;" alt="open json file">
+<img src="../images/tkinter-openjsonfile1.png" style="max-width:100%;" alt="open json file">
 
 The contents of the JSON file is loaded and displayed as text labels in the window.
 
-<img src="/pythonic/images/tkinter-openjsonfile2.png" style="max-width: 400px;" alt="open json file">
+<img src="../images/tkinter-openjsonfile2.png" style="max-width: 400px;" alt="open json file">

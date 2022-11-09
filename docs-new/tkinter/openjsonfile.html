@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Open JSON file</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>Example of opening a JSON file and reading its contents in a Tkinter app. See
+the <a href="https://docs.python.org/3/library/dialog.html">Python Tkinter docs</a> for
+more information about file selection dialogs.</p>
+<pre><code class="language-python">import json
+import tkinter as tk
+from tkinter import ttk
+from tkinter import filedialog
+
+
+class MyApp:
+
+    def __init__(self, root):
+        self.root = root
+        self.configure_window()
+        self.create_widgets()
+
+    def configure_window(self):
+        self.root.title('Example App')
+        self.root.geometry('400x300')
+        self.root.resizable(True, False)
+
+    def create_widgets(self):
+        ttk.Label(text='Choose a JSON file to open.').pack(pady=10)
+        ttk.Button(text='Open File', command=self.open_file).pack()
+
+    def open_file(self):
+        filetypes = (('JSON files', '*.json'),)
+        filename = filedialog.askopenfilename(filetypes=filetypes)
+
+        with open(filename) as json_file:
+            data = json.load(json_file)
+
+        for d in data:
+            ttk.Label(text=f&quot;{d['title']}&quot;).pack(pady=2)
+
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    MyApp(root)
+    root.mainloop()
+</code></pre>
+<p>Use the Open File button to display a file selection dialog. Then select the books.json file from the examples folder in this GitHub repository.</p>
+<p><img src="../images/tkinter-openjsonfile1.png" style="max-width:100%;" alt="open json file"></p>
+<p>The contents of the JSON file is loaded and displayed as text labels in the window.</p>
+<p><img src="../images/tkinter-openjsonfile2.png" style="max-width: 400px;" alt="open json file"></p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

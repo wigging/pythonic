@@ -1,6 +1,6 @@
 ---
 title: Theme ttkbootstrap
-permalink: ttkbootstrap
+date: November 8, 2022
 ---
 
 Example of a Tkinter app using the ttkbootstrap theme. More information about
@@ -52,4 +52,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<img src="/pythonic/images/tkinter-ttkbootstrap.png" style="max-width: 400px;" alt="ttkbootstrap">
+<img src="../images/tkinter-ttkbootstrap.png" style="max-width: 400px;" alt="ttkbootstrap">

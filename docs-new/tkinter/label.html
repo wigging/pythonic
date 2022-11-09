@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<h1>Update Label text</h1>
+<h6>November 8, 2022</h6>
+<hr>
+
+<p>Example of updating a Label's text in Tkinter.</p>
+<pre><code class="language-python">import tkinter as tk
+from tkinter import ttk
+
+
+class MyApp:
+
+    def __init__(self, root):
+        self.root = root
+        self.counter = tk.IntVar()
+        self.configure_window()
+        self.create_widgets()
+
+    def configure_window(self):
+        self.root.title('My App')
+        self.root.geometry('400x200')
+
+    def create_widgets(self):
+        frame = ttk.Frame(self.root).pack(pady=10)
+        ttk.Button(frame, text='Increment', command=self.increment).pack()
+        ttk.Label(frame, textvariable=self.counter).pack()
+
+    def increment(self):
+        self.counter.set(self.counter.get() + 1)
+        print(f'counter is {self.counter.get()}')
+
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    MyApp(root)
+    root.mainloop()
+</code></pre>
+<p><img src="../images/tkinter-label.png" style="max-width: 400px;" alt="tkinter label"></p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🐍 Pythonic Programming <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

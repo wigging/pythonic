@@ -1,6 +1,6 @@
 ---
 title: Basic Tkinter application
-permalink: basicapp
+date: November 8, 2022
 ---
 
 This example demonstrates the structure of a basic Tkinter application.
@@ -34,4 +34,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<img src="/pythonic/images/tkinter-app.png" style="max-width: 400px;" alt="basic tkinter app">
+<img src="../images/tkinter-app.png" style="max-width: 400px;" alt="basic tkinter app">
