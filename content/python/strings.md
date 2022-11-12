@@ -1,20 +1,20 @@
 ---
 title: Strings
-date: November 8, 2022
+date: November 11, 2022
 ---
 
 Some basic examples of creating strings in Python.
 
 ```python
-# create a string with single quotes or double quotes
+# Create a string with single quotes or double quotes
 s1 = 'hello'
 s2 = "hello there"
 
-# use \ to escape a single quote or use double quotes
+# Use \ to escape a single quote or use double quotes
 s3 = 'that ain\'t the one'
 s4 = "that ain't the one"
 
-# triple quotes can also be used
+# Triple quotes can also be used
 s5 = """another string"""
 ```
 
@@ -125,4 +125,21 @@ False
 >>> name = 'Homer'
 >>> name[::-1]
 'remoH'
+```
+
+## Unicode character
+
+Refer to a unicode character by its name.
+
+```python
+>>> "Hello snake \N{snake}"
+'Hello snake 🐍'
+```
+
+Lookup the name associated with a unicode character.
+
+```python
+>>> import unicodedata
+>>> unicodedata.name('😀')
+'GRINNING FACE'
 ```

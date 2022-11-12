@@ -21,19 +21,19 @@
         <div class="col-md">
 
 <h1>Strings</h1>
-<h6>November 8, 2022</h6>
+<h6>November 11, 2022</h6>
 <hr>
 
 <p>Some basic examples of creating strings in Python.</p>
-<pre><code class="language-python"># create a string with single quotes or double quotes
+<pre><code class="language-python"># Create a string with single quotes or double quotes
 s1 = 'hello'
 s2 = &quot;hello there&quot;
 
-# use \ to escape a single quote or use double quotes
+# Use \ to escape a single quote or use double quotes
 s3 = 'that ain\'t the one'
 s4 = &quot;that ain't the one&quot;
 
-# triple quotes can also be used
+# Triple quotes can also be used
 s5 = &quot;&quot;&quot;another string&quot;&quot;&quot;
 </code></pre>
 <h2>String methods</h2>
@@ -112,6 +112,16 @@ False
 <pre><code class="language-python">&gt;&gt;&gt; name = 'Homer'
 &gt;&gt;&gt; name[::-1]
 'remoH'
+</code></pre>
+<h2>Unicode character</h2>
+<p>Refer to a unicode character by its name.</p>
+<pre><code class="language-python">&gt;&gt;&gt; &quot;Hello snake \N{snake}&quot;
+'Hello snake 🐍'
+</code></pre>
+<p>Lookup the name associated with a unicode character.</p>
+<pre><code class="language-python">&gt;&gt;&gt; import unicodedata
+&gt;&gt;&gt; unicodedata.name('😀')
+'GRINNING FACE'
 </code></pre>
 
         </div>
