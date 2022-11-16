@@ -78,4 +78,7 @@ table {
         color: rgb(223, 223, 224);
     }
 
+    code {
+        color: hotpink;
+    }
 }
