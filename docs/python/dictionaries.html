@@ -21,7 +21,7 @@
         <div class="col-md">
 
 <h1>Dictionaries</h1>
-<h6>November 8, 2022</h6>
+<h6>November 15, 2022</h6>
 <hr>
 
 <p>A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.</p>
@@ -61,6 +61,23 @@ exist.</p>
 &gt;&gt;&gt; d = {}
 &gt;&gt;&gt; d['quantity']
 KeyError
+</code></pre>
+<h2>Combine dictionaries</h2>
+<p>There are several ways to combine dictionaries but the two examples shown below are the most simple and elegant. One approach is to use the merge operator <code>|</code> to merge the dictionaries. This is available in Python 3.9 and above.</p>
+<pre><code class="language-python"># Using the merge operator
+&gt;&gt;&gt; dict_one = {'one': 1, 'two': 2}
+&gt;&gt;&gt; dict_two = {'three': 3, 'four': 4}
+&gt;&gt;&gt; d = dict_one | dict_two
+&gt;&gt;&gt; d
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
+</code></pre>
+<p>Another approach is to unpack the dictionaries using the double-asterisk operator <code>**</code>.</p>
+<pre><code class="language-python"># Using the double-asterisk operator for unpacking
+&gt;&gt;&gt; dict_one = {'one': 1, 'two': 2}
+&gt;&gt;&gt; dict_two = {'three': 3, 'four': 4}
+&gt;&gt;&gt; d = {**dict_one, **dict_two}
+&gt;&gt;&gt; d
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
 </code></pre>
 
         </div>
