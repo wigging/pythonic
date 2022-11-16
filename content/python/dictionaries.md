@@ -54,3 +54,27 @@ The defaultdict is a specialized container type which supplies missing values ba
 >>> d['quantity']
 KeyError
 ```
+
+## Combine dictionaries
+
+There are several ways to combine dictionaries but the two examples shown below are the most simple and elegant. One approach is to use the merge operator `|` to merge the dictionaries. This is available in Python 3.9 and above.
+
+```python
+# Using the merge operator
+>>> dict_one = {'one': 1, 'two': 2}
+>>> dict_two = {'three': 3, 'four': 4}
+>>> d = dict_one | dict_two
+>>> d
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
+```
+
+Another approach is to unpack the dictionaries using the double-asterisk operator `**`.
+
+```python
+# Using the double-asterisk operator for unpacking
+>>> dict_one = {'one': 1, 'two': 2}
+>>> dict_two = {'three': 3, 'four': 4}
+>>> d = {**dict_one, **dict_two}
+>>> d
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
+```
