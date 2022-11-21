@@ -20,4 +20,4 @@ Support this project by using the **:heart: Sponsor** button at the top of this 
 
 ## License
 
-Code in this repository is available under the MIT License - see the [LICENSE](LICENSE) file for more information.
+Code in this repository is available under the MIT License - see the [LICENSE](LICENSE.md) file for more information.
