@@ -8,7 +8,7 @@ Example code is located in the `python-projects` and `python-scripts` folders.
 
 ## Website
 
-The website is available at https://gavinw.me/pythonic. It is generated with the [genja](https://github.com/wigging/genja) tool where Markdown files are in the `content` folder and the generated HTML files are in the `docs`.
+The website is available at https://gavinw.me/pythonic. It is generated with the [genja](https://github.com/wigging/genja) tool where Markdown files are in the `content` folder and the generated HTML files are in the `docs` folder.
 
 ## Contributing
 
