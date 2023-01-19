@@ -38,4 +38,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="/img/tkinter-label.png" style="max-width: 400px;" alt="tkinter label"></p>
+<p><img src="/pythonic/img/tkinter-label.png" style="max-width: 400px;" alt="tkinter label"></p>

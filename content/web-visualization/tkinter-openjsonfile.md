@@ -49,8 +49,8 @@ if __name__ == '__main__':
 
 Use the Open File button to display a file selection dialog. Then select the books.json file from the examples folder in this GitHub repository.
 
-<p><img src="/img/tkinter-openjsonfile1.png" style="max-width:100%;" alt="open json file"></p>
+<p><img src="/pythonic/img/tkinter-openjsonfile1.png" style="max-width:100%;" alt="open json file"></p>
 
 The contents of the JSON file is loaded and displayed as text labels in the window.
 
-<p><img src="/img/tkinter-openjsonfile2.png" style="max-width: 400px;" alt="open json file"></p>
+<p><img src="/pythonic/img/tkinter-openjsonfile2.png" style="max-width: 400px;" alt="open json file"></p>

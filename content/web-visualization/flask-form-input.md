@@ -37,9 +37,9 @@ def results():
     return render_template('results.html', results=res)
 ```
 
-<p><img src="/img/flask-form-input-index.png" style="max-width:500px;" alt="index page"></p>
+<p><img src="/pythonic/img/flask-form-input-index.png" style="max-width:500px;" alt="index page"></p>
 
-<p><img src="/img/flask-form-input-results.png" style="max-width:400px;" alt="results page"></p>
+<p><img src="/pythonic/img/flask-form-input-results.png" style="max-width:400px;" alt="results page"></p>
 
 The HTML templates used by the app are shown below. Notice that [Bootstrap](https://getbootstrap.com) is used for the style and layout of the pages.
 

@@ -52,4 +52,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="/img/tkinter-ttkbootstrap.png" style="max-width: 400px;" alt="ttkbootstrap"></p>
+<p><img src="/pythonic/img/tkinter-ttkbootstrap.png" style="max-width: 400px;" alt="ttkbootstrap"></p>

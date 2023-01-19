@@ -5,7 +5,7 @@ date = 2022-11-01
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to submit a form when the page loads. Results calculated from the form values are displayed on the same page.
 
-<p><img src="/img/flask-form-htmx.png" style="max-width:100%;" alt="form htmx"></p>
+<p><img src="/pythonic/img/flask-form-htmx.png" style="max-width:100%;" alt="form htmx"></p>
 
 ```python
 # app.py

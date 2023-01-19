@@ -20,4 +20,4 @@ ax['three'].plot([1, 3, 4, 2, 3, 4], color='black')
 plt.show()
 ```
 
-<p><img src="/img/matplotlib-mosaic.png" style="max-width:500px;" alt="mosaic plot"></p>
+<p><img src="/pythonic/img/matplotlib-mosaic.png" style="max-width:500px;" alt="mosaic plot"></p>

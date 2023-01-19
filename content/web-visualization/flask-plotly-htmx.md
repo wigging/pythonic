@@ -5,7 +5,7 @@ date = 2022-11-01
 
 [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Plotly graph in a web page without updating the entire page.
 
-<p><img src="/img/flask-plotly-htmx.png" style="max-width:100%;" alt="plotly htmx"></p>
+<p><img src="/pythonic/img/flask-plotly-htmx.png" style="max-width:100%;" alt="plotly htmx"></p>
 
 ```py
 # app.py

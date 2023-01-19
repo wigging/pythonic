@@ -5,9 +5,9 @@ date = 2022-11-01
 
 [Bokeh](https://bokeh.org) is a visualization library for Python that makes it easy to plot data in Jupyter notebooks or web pages. The example below uses Flask to serve a web page, handle the form input data, then plot the data on a separate page using Bokeh.
 
-<p><img src="/img/flask-bokeh-index.png" alt="index page" style="max-width:100%;"></p>
+<p><img src="/pythonic/img/flask-bokeh-index.png" alt="index page" style="max-width:100%;"></p>
 
-<p><img src="/img/flask-bokeh-plot.png" alt="plot page" style="max-width:100%;"></p>
+<p><img src="/pythonic/img/flask-bokeh-plot.png" alt="plot page" style="max-width:100%;"></p>
 
 The main Flask app is shown below. The form inputs are converted to lists of float values which are used to create the Bokeh plot. To render the Bokeh plot on a web page, it is converted to HTML components that are passed the template.
 

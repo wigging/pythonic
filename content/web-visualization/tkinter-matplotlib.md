@@ -53,4 +53,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="/img/tkinter-matplotlib.png" style="max-width: 680px;" alt="tkinter matplotlib"></p>
+<p><img src="/pythonic/img/tkinter-matplotlib.png" style="max-width: 680px;" alt="tkinter matplotlib"></p>

@@ -3,7 +3,7 @@
 {% block content %}
 <div class="row">
 <div class="col">
-    <h1 class="text-center">🐍 Pythonic Programming</h1>
+    <h1 class="mb-4 text-center">🐍 Pythonic Programming</h1>
 
     <p>Python is a great programming language for all ages and skill levels. Its ecosystem of packages extends the language to many areas of software development. This website and associated repository provide concise code examples about basic Python features as well as more advanced topics relevant to scientific computing.</p>
 
@@ -11,8 +11,25 @@
 
     <h2>Python</h2>
     <hr>
-
     {% set section = get_section(path="python/_index.md") %}
+    <ul style="columns:2;">
+    {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2>Numerical</h2>
+    <hr>
+    {% set section = get_section(path="numerical/_index.md") %}
+    <ul style="columns:2;">
+    {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2>Web and Visualization</h2>
+    <hr>
+    {% set section = get_section(path="web-visualization/_index.md") %}
     <ul style="columns:2;">
     {% for page in section.pages %}
         <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
