@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Plotly graph restyle</h1>
+    
+        <h6>November  1, 2022</h6>
+    
+    <hr>
+    <p><a href="https://plotly.com">Plotly</a> is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app. When the page first loads, a default line graph is shown. New data points are added to the graph using the form inputs. The <code>Plotly.restyle</code> function is used to redraw the graph when new data points are submitted; this approach avoids recreating an entirely new Plotly graph each time the data is updated.</p>
+<p><img src="/pythonic/img/flask-plotly-restyle.png" style="max-width:100%;" alt="plotly restyle"></p>
+<p>The main Flask app is shown below. The <code>update()</code> route sends the x and y values from the form inputs as JSON which is used to update the Plotly line graph data.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># app.py
+</span><span>
+</span><span style="color:#b48ead;">from </span><span>flask </span><span style="color:#b48ead;">import </span><span>Flask
+</span><span style="color:#b48ead;">from </span><span>flask </span><span style="color:#b48ead;">import </span><span>render_template
+</span><span style="color:#b48ead;">from </span><span>flask </span><span style="color:#b48ead;">import </span><span>request
+</span><span style="color:#b48ead;">from </span><span>flask </span><span style="color:#b48ead;">import </span><span>jsonify
+</span><span>
+</span><span>
+</span><span>app = </span><span style="color:#bf616a;">Flask</span><span>(__name__)
+</span><span>
+</span><span>
+</span><span>@app.</span><span style="color:#bf616a;">route</span><span>(&#39;</span><span style="color:#a3be8c;">/</span><span>&#39;)
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">index</span><span>():
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">render_template</span><span>(&#39;</span><span style="color:#a3be8c;">index.html</span><span>&#39;)
+</span><span>
+</span><span>
+</span><span>@app.</span><span style="color:#bf616a;">route</span><span>(&#39;</span><span style="color:#a3be8c;">/update</span><span>&#39;, </span><span style="color:#bf616a;">methods</span><span>=[&#39;</span><span style="color:#a3be8c;">POST</span><span>&#39;])
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">update</span><span>():
+</span><span>    xdata = request.form[&#39;</span><span style="color:#a3be8c;">xdata</span><span>&#39;]
+</span><span>    ydata = request.form[&#39;</span><span style="color:#a3be8c;">ydata</span><span>&#39;]
+</span><span>
+</span><span>    x = </span><span style="color:#bf616a;">list</span><span>(</span><span style="color:#96b5b4;">map</span><span>(float, xdata.</span><span style="color:#bf616a;">split</span><span>(&#39;</span><span style="color:#a3be8c;">, </span><span>&#39;)))
+</span><span>    y = </span><span style="color:#bf616a;">list</span><span>(</span><span style="color:#96b5b4;">map</span><span>(float, ydata.</span><span style="color:#bf616a;">split</span><span>(&#39;</span><span style="color:#a3be8c;">, </span><span>&#39;)))
+</span><span>
+</span><span>    res = {&#39;</span><span style="color:#a3be8c;">xValues</span><span>&#39;: x, &#39;</span><span style="color:#a3be8c;">yValues</span><span>&#39;: y}
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">jsonify</span><span>(res)
+</span></code></pre>
+<p>The HTML index page is shown below. The form submits a <code>POST</code> request and calls the <code>updateGraph()</code> JavaScript function while the <code>#graphDiv</code> is where the Plotly graph is displayed.</p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span style="color:#65737e;">&lt;!-- templates/index.html --&gt;
+</span><span>
+</span><span>&lt;!</span><span style="color:#b48ead;">DOCTYPE </span><span style="color:#d08770;">html</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">html </span><span style="color:#d08770;">lang</span><span>=&quot;</span><span style="color:#a3be8c;">en</span><span>&quot;&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">charset</span><span>=&quot;</span><span style="color:#a3be8c;">utf-8</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">name</span><span>=&quot;</span><span style="color:#a3be8c;">viewport</span><span>&quot; </span><span style="color:#d08770;">content</span><span>=&quot;</span><span style="color:#a3be8c;">width=device-width, initial-scale=1</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">link </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css</span><span>&quot; </span><span style="color:#d08770;">rel</span><span>=&quot;</span><span style="color:#a3be8c;">stylesheet</span><span>&quot; </span><span style="color:#d08770;">integrity</span><span>=&quot;</span><span style="color:#a3be8c;">sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3</span><span>&quot; </span><span style="color:#d08770;">crossorigin</span><span>=&quot;</span><span style="color:#a3be8c;">anonymous</span><span>&quot;&gt;
+</span><span>
+</span><span>    &lt;</span><span style="color:#bf616a;">title</span><span>&gt;Home Page&lt;/</span><span style="color:#bf616a;">title</span><span>&gt;
+</span><span>
+</span><span>    &lt;</span><span style="color:#bf616a;">style </span><span style="color:#d08770;">type</span><span>=&quot;</span><span style="color:#a3be8c;">text/css</span><span>&quot;&gt;
+</span><span>        </span><span style="color:#bf616a;">body </span><span>{ background-color: lightgray; }
+</span><span>        </span><span style="color:#bf616a;">input </span><span>{ max-width: </span><span style="color:#d08770;">200px</span><span>; }
+</span><span>    &lt;/</span><span style="color:#bf616a;">style</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">container</span><span>&quot;&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">row</span><span>&quot;&gt;
+</span><span>
+</span><span>            &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">col</span><span>&quot;&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">h1 </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">mt-3</span><span>&quot;&gt;Submit data&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>
+</span><span>                &lt;</span><span style="color:#bf616a;">p</span><span>&gt;Input the X and Y data points using comma separated values. Then click the submit button to plot the data.&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>
+</span><span>                &lt;</span><span style="color:#bf616a;">form </span><span style="color:#d08770;">method</span><span>=&quot;</span><span style="color:#a3be8c;">POST</span><span>&quot; </span><span style="color:#d08770;">action</span><span>=&quot;</span><span style="color:#a3be8c;">/update</span><span>&quot; </span><span style="color:#d08770;">onsubmit</span><span>=&quot;</span><span style="color:#bf616a;">updateGraph</span><span>()&quot;&gt;
+</span><span>                    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">mb-3</span><span>&quot;&gt;
+</span><span>                        &lt;</span><span style="color:#bf616a;">label </span><span style="color:#d08770;">for</span><span>=&quot;</span><span style="color:#a3be8c;">xdata</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">form-label</span><span>&quot;&gt;X data&lt;/</span><span style="color:#bf616a;">label</span><span>&gt;
+</span><span>                        &lt;</span><span style="color:#bf616a;">input </span><span style="color:#d08770;">type</span><span>=&quot;</span><span style="color:#a3be8c;">text</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">form-control</span><span>&quot; </span><span style="color:#d08770;">name</span><span>=&quot;</span><span style="color:#a3be8c;">xdata</span><span>&quot; </span><span style="color:#d08770;">value</span><span>=&quot;</span><span style="color:#a3be8c;">1, 2, 3, 4, 5</span><span>&quot;&gt;
+</span><span>                    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>                    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">mb-3</span><span>&quot;&gt;
+</span><span>                        &lt;</span><span style="color:#bf616a;">label </span><span style="color:#d08770;">for</span><span>=&quot;</span><span style="color:#a3be8c;">ydata</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">form-label</span><span>&quot;&gt;Y data&lt;/</span><span style="color:#bf616a;">label</span><span>&gt;
+</span><span>                        &lt;</span><span style="color:#bf616a;">input </span><span style="color:#d08770;">type</span><span>=&quot;</span><span style="color:#a3be8c;">text</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">form-control</span><span>&quot; </span><span style="color:#d08770;">name</span><span>=&quot;</span><span style="color:#a3be8c;">ydata</span><span>&quot; </span><span style="color:#d08770;">value</span><span>=&quot;</span><span style="color:#a3be8c;">3, 2.1, 5, 8, 9</span><span>&quot;&gt;
+</span><span>                    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>                    &lt;</span><span style="color:#bf616a;">button </span><span style="color:#d08770;">type</span><span>=&quot;</span><span style="color:#a3be8c;">submit</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">btn btn-primary</span><span>&quot;&gt;Submit&lt;/</span><span style="color:#bf616a;">button</span><span>&gt;
+</span><span>                &lt;/</span><span style="color:#bf616a;">form</span><span>&gt;
+</span><span>            &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>
+</span><span>            &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">col</span><span>&quot;&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">h1 </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">mt-3</span><span>&quot;&gt;Plot data&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>
+</span><span>                &lt;</span><span style="color:#bf616a;">p</span><span>&gt;Below is a line plot using the X and Y data points.&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>
+</span><span>                &lt;</span><span style="color:#bf616a;">div </span><span style="color:#8fa1b3;">id</span><span>=&quot;</span><span style="color:#a3be8c;">graphDiv</span><span>&quot; </span><span style="color:#d08770;">style</span><span>=&quot;width:</span><span style="color:#d08770;">600px</span><span>;height:</span><span style="color:#d08770;">480px</span><span>;&quot;&gt;&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>            &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>
+</span><span>        &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>
+</span><span>    &lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">src</span><span>=&quot;</span><span style="color:#a3be8c;">https://cdn.plot.ly/plotly-2.8.3.min.js</span><span>&quot;&gt;&lt;/</span><span style="color:#bf616a;">script</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">src</span><span>=&quot;</span><span style="color:#a3be8c;">{% raw %}{{ url_for(&#39;static&#39;, filename=&#39;graph.js&#39;) }}{% endraw %}</span><span>&quot;&gt;&lt;/</span><span style="color:#bf616a;">script</span><span>&gt;
+</span><span>
+</span><span>&lt;/</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">html</span><span>&gt;
+</span></code></pre>
+<p>The JavaScript for creating the Plotly graph is shown below. The <code>updateGraph()</code> is called when the HTML form is submitted. This function uses the JavaScript <code>fetch()</code> method to handle the response from the <code>POST</code> request. Finally, the line graph is updated with the new x and y data using <code>Plotly.restyle()</code>.</p>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#65737e;">// static/graph.js
+</span><span>
+</span><span>window.</span><span style="color:#8fa1b3;">onload</span><span>(</span><span style="color:#8fa1b3;">showGraph</span><span>());
+</span><span>
+</span><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">showGraph</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">data </span><span>= [{
+</span><span>        x: [</span><span style="color:#d08770;">1</span><span>, </span><span style="color:#d08770;">2</span><span>, </span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">4</span><span>, </span><span style="color:#d08770;">5</span><span>],
+</span><span>        y: [</span><span style="color:#d08770;">3</span><span>, </span><span style="color:#d08770;">2.1</span><span>, </span><span style="color:#d08770;">5</span><span>, </span><span style="color:#d08770;">8</span><span>, </span><span style="color:#d08770;">9</span><span>],
+</span><span>        type: &quot;</span><span style="color:#a3be8c;">line</span><span>&quot;
+</span><span>    }];
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">layout </span><span>= {
+</span><span>        title: &quot;</span><span style="color:#a3be8c;">Example data</span><span>&quot;,
+</span><span>        xaxis: {
+</span><span>            title: &quot;</span><span style="color:#a3be8c;">X points</span><span>&quot;
+</span><span>        },
+</span><span>        yaxis: {
+</span><span>            title: &quot;</span><span style="color:#a3be8c;">Y points</span><span>&quot;
+</span><span>        },
+</span><span>        margin: {l: </span><span style="color:#d08770;">50</span><span>, r: </span><span style="color:#d08770;">20</span><span>, b: </span><span style="color:#d08770;">50</span><span>, t: </span><span style="color:#d08770;">40</span><span>}
+</span><span>    };
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">Plotly</span><span>.</span><span style="color:#8fa1b3;">newPlot</span><span>(&quot;</span><span style="color:#a3be8c;">graphDiv</span><span>&quot;, </span><span style="color:#bf616a;">data</span><span>, </span><span style="color:#bf616a;">layout</span><span>);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">updateGraph</span><span>() {
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">formData </span><span>= new FormData();
+</span><span>    </span><span style="color:#bf616a;">formData</span><span>.</span><span style="color:#96b5b4;">append</span><span>(&quot;</span><span style="color:#a3be8c;">xdata</span><span>&quot;, document.</span><span style="color:#96b5b4;">getElementsByName</span><span>(&quot;</span><span style="color:#a3be8c;">xdata</span><span>&quot;)[</span><span style="color:#d08770;">0</span><span>].value);
+</span><span>    </span><span style="color:#bf616a;">formData</span><span>.</span><span style="color:#96b5b4;">append</span><span>(&quot;</span><span style="color:#a3be8c;">ydata</span><span>&quot;, document.</span><span style="color:#96b5b4;">getElementsByName</span><span>(&quot;</span><span style="color:#a3be8c;">ydata</span><span>&quot;)[</span><span style="color:#d08770;">0</span><span>].value);
+</span><span>
+</span><span>    </span><span style="color:#8fa1b3;">fetch</span><span>(&quot;</span><span style="color:#a3be8c;">/update</span><span>&quot;, {
+</span><span>        method: &quot;</span><span style="color:#a3be8c;">POST</span><span>&quot;,
+</span><span>        body: </span><span style="color:#bf616a;">formData
+</span><span>    })
+</span><span>    .</span><span style="color:#96b5b4;">then</span><span>(</span><span style="color:#bf616a;">response </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">response</span><span>.</span><span style="color:#8fa1b3;">json</span><span>())
+</span><span>    .</span><span style="color:#96b5b4;">then</span><span>(</span><span style="color:#bf616a;">jsonData </span><span style="color:#b48ead;">=&gt; </span><span>{
+</span><span>        </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">update </span><span>= {
+</span><span>            x: [</span><span style="color:#bf616a;">jsonData</span><span>.</span><span style="color:#bf616a;">xValues</span><span>],
+</span><span>            y: [</span><span style="color:#bf616a;">jsonData</span><span>.</span><span style="color:#bf616a;">yValues</span><span>]
+</span><span>        };
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">Plotly</span><span>.</span><span style="color:#8fa1b3;">restyle</span><span>(&quot;</span><span style="color:#a3be8c;">graphDiv</span><span>&quot;, </span><span style="color:#bf616a;">update</span><span>);
+</span><span>    });
+</span><span>
+</span><span>    event.</span><span style="color:#96b5b4;">preventDefault</span><span>();
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Strings</h1>
+    
+        <h6>November 11, 2022</h6>
+    
+    <hr>
+    <p>Some basic examples of creating strings in Python.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Create a string with single quotes or double quotes
+</span><span>s1 = &#39;</span><span style="color:#a3be8c;">hello</span><span>&#39;
+</span><span>s2 = &quot;</span><span style="color:#a3be8c;">hello there</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Use \ to escape a single quote or use double quotes
+</span><span>s3 = &#39;</span><span style="color:#a3be8c;">that ain</span><span style="color:#96b5b4;">\&#39;</span><span style="color:#a3be8c;">t the one</span><span>&#39;
+</span><span>s4 = &quot;</span><span style="color:#a3be8c;">that ain&#39;t the one</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Triple quotes can also be used
+</span><span>s5 = &quot;&quot;&quot;</span><span style="color:#a3be8c;">another string</span><span>&quot;&quot;&quot;
+</span></code></pre>
+<h2 id="string-methods">String methods</h2>
+<p>Methods available for the string type are demonstrated below.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Join a list of words as a single string
+</span><span>&gt;&gt;&gt; words = [&#39;</span><span style="color:#a3be8c;">My</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">favorite</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">food</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">is</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">not</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">avocado</span><span>&#39;]
+</span><span>&gt;&gt;&gt; &#39; &#39;.</span><span style="color:#bf616a;">join</span><span>(words)
+</span><span>&#39;</span><span style="color:#a3be8c;">My favorite food is not avocado</span><span>&#39;
+</span><span>
+</span><span style="color:#65737e;"># Join a list of words excluding the `not` string
+</span><span>&gt;&gt;&gt; &#39; &#39;.</span><span style="color:#bf616a;">join</span><span>(</span><span style="color:#96b5b4;">filter</span><span>(</span><span style="color:#b48ead;">lambda </span><span style="color:#bf616a;">x </span><span>: x != &#39;</span><span style="color:#a3be8c;">not</span><span>&#39;, words))
+</span><span>&#39;</span><span style="color:#a3be8c;">My favorite food is avocado</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Split a string into a list of strings
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">hello there</span><span>&#39;.</span><span style="color:#bf616a;">split</span><span>(&#39; &#39;)
+</span><span>[&#39;</span><span style="color:#a3be8c;">hello</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">there</span><span>&#39;]
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Replace the occurance of a string with another string
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">hello there folks</span><span>&#39;.</span><span style="color:#bf616a;">replace</span><span>(&#39;</span><span style="color:#a3be8c;">there</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">all</span><span>&#39;)
+</span><span>&#39;</span><span style="color:#a3be8c;">hello all folks</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Remove space at beginning and end of string
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;"> space </span><span>&#39;.</span><span style="color:#bf616a;">strip</span><span>()
+</span><span>&#39;</span><span style="color:#a3be8c;">space</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Return a lowercase string
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">Hello There</span><span>&#39;.</span><span style="color:#bf616a;">casefold</span><span>()
+</span><span>&#39;</span><span style="color:#a3be8c;">hello there</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Check if string starts with a given prefix
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">hello there</span><span>&#39;.</span><span style="color:#bf616a;">startswith</span><span>(&#39;</span><span style="color:#a3be8c;">h</span><span>&#39;)
+</span><span style="color:#d08770;">True
+</span><span>
+</span><span style="color:#65737e;"># Check if string ends with a given suffix
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">hello there</span><span>&#39;.</span><span style="color:#bf616a;">endswith</span><span>(&#39;</span><span style="color:#a3be8c;">k</span><span>&#39;)
+</span><span style="color:#d08770;">False
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Split lines into a list of strings
+</span><span>&gt;&gt;&gt; &quot;&quot;&quot;</span><span style="color:#a3be8c;">first line
+</span><span style="color:#a3be8c;">    second line
+</span><span style="color:#a3be8c;">    and third line</span><span>&quot;&quot;&quot;.</span><span style="color:#bf616a;">splitlines</span><span>()
+</span><span>[&#39;</span><span style="color:#a3be8c;">first line</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">second line</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">and third line</span><span>&#39;]
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Count the occurance of a substring
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">hello there</span><span>&#39;.</span><span style="color:#bf616a;">count</span><span>(&#39;</span><span style="color:#a3be8c;">e</span><span>&#39;)
+</span><span style="color:#d08770;">3
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Return a copy of the string where the first letter is capitalized
+</span><span>&gt;&gt;&gt; s = &#39;</span><span style="color:#a3be8c;">i love apples</span><span>&#39;
+</span><span>&gt;&gt;&gt; s.</span><span style="color:#bf616a;">capitalize</span><span>()
+</span><span>&#39;</span><span style="color:#a3be8c;">I love apples</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Return a copy of the string where words start with an uppercase
+</span><span>&gt;&gt;&gt; s = &#39;</span><span style="color:#a3be8c;">i love apples</span><span>&#39;
+</span><span>&gt;&gt;&gt; s.</span><span style="color:#bf616a;">title</span><span>()
+</span><span>&#39;</span><span style="color:#a3be8c;">I Love Apples</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Center a string using a fill character
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;"> hello </span><span>&#39;.</span><span style="color:#bf616a;">center</span><span>(</span><span style="color:#d08770;">30</span><span>, &#39;</span><span style="color:#a3be8c;">*</span><span>&#39;)
+</span><span>&#39;</span><span style="color:#a3be8c;">*********** hello ************</span><span>&#39;
+</span></code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Pad a numeric string with zeros
+</span><span>&gt;&gt;&gt; &#39;</span><span style="color:#a3be8c;">1</span><span>&#39;.</span><span style="color:#bf616a;">zfill</span><span>(</span><span style="color:#d08770;">3</span><span>)
+</span><span>&#39;</span><span style="color:#a3be8c;">001</span><span>&#39;
+</span></code></pre>
+<h2 id="f-strings">F-strings</h2>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; a = </span><span style="color:#d08770;">2
+</span><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">you have </span><span>{a}</span><span style="color:#a3be8c;"> apples</span><span>&#39;
+</span><span>&#39;</span><span style="color:#a3be8c;">you have 2 apples</span><span>&#39;
+</span><span>
+</span><span>&gt;&gt;&gt; x = </span><span style="color:#d08770;">99.4
+</span><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">value is </span><span>{x = }&#39;
+</span><span>&#39;</span><span style="color:#a3be8c;">value is x = 99.4</span><span>&#39;
+</span></code></pre>
+<h2 id="reverse-a-string">Reverse a string</h2>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; name = &#39;</span><span style="color:#a3be8c;">Homer</span><span>&#39;
+</span><span>&gt;&gt;&gt; name[::-</span><span style="color:#d08770;">1</span><span>]
+</span><span>&#39;</span><span style="color:#a3be8c;">remoH</span><span>&#39;
+</span></code></pre>
+<h2 id="unicode-character">Unicode character</h2>
+<p>Refer to a unicode character by its name.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; &quot;</span><span style="color:#a3be8c;">Hello snake </span><span style="color:#96b5b4;">\N{snake}</span><span>&quot;
+</span><span>&#39;</span><span style="color:#a3be8c;">Hello snake 🐍</span><span>&#39;
+</span></code></pre>
+<p>Lookup the name associated with a unicode character.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">import </span><span>unicodedata
+</span><span>&gt;&gt;&gt; unicodedata.</span><span style="color:#bf616a;">name</span><span>(&#39;</span><span style="color:#a3be8c;">😀</span><span>&#39;)
+</span><span>&#39;</span><span style="color:#a3be8c;">GRINNING FACE</span><span>&#39;
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Large array memory usage</h1>
+    
+        <h6>November  7, 2022</h6>
+    
+    <hr>
+    <p>In the examples below, a 500x2000x2000 three-dimensional NumPy array named <code>a</code> is initialized with zeros. At each iteration, a random two-dimensional array <code>r</code> is inserted into array <code>a</code>. This approach could represent a larger piece of code where the <code>r</code> array would be created from various calculations during each iteration of the for-loop. Consequently, each slice in the z dimension of the <code>a</code> array is calculated at each iteration.</p>
+<p>The examples were run on a MacBook Pro with a 2.6 GHz 6-Core Intel Core i7 CPU and 32 GB of memory (RAM). Memory usage is profiled with the <a href="https://pypi.org/project/memory-profiler/">memory-profiler</a> tool using the terminal commands shown below.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span># Generate a memory profile for ex1_basic.py
+</span><span>mprof run --output ex1_mprof.dat ex1_basic.py
+</span><span>mprof plot --output ex1_mprof.pdf ex1_mprof.dat
+</span></code></pre>
+<h2 id="example-1">Example 1</h2>
+<p>Basic example of building a large NumPy array with random values. Notice that <code>np.random.rand()</code> creates an array of <code>np.float64</code> values.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># ex1_basic.py
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    z = </span><span style="color:#d08770;">500   </span><span style="color:#65737e;"># depth
+</span><span>    x = </span><span style="color:#d08770;">2000  </span><span style="color:#65737e;"># rows
+</span><span>    y = </span><span style="color:#d08770;">2000  </span><span style="color:#65737e;"># columns
+</span><span>
+</span><span>    a = np.</span><span style="color:#bf616a;">zeros</span><span>((z, x, y))
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>i </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(z):
+</span><span>        r = np.random.</span><span style="color:#bf616a;">rand</span><span>(x, y)
+</span><span>        a[i] = r
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">elapsed time =</span><span>&#39;, </span><span style="color:#96b5b4;">round</span><span>(toc - tic, </span><span style="color:#d08770;">2</span><span>), &#39;</span><span style="color:#a3be8c;">sec</span><span>&#39;)
+</span><span>
+</span><span>    s = np.</span><span style="color:#bf616a;">float64</span><span>().nbytes * (z * x * y) / </span><span style="color:#d08770;">1e9  </span><span style="color:#65737e;"># where 1 GB = 1000 MB
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">calculated storage =</span><span>&#39;, s, &#39;</span><span style="color:#a3be8c;">GB</span><span>&#39;)
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &#39;</span><span style="color:#a3be8c;">__main__</span><span>&#39;:
+</span><span>    </span><span style="color:#bf616a;">main</span><span>()
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ python ex1_basic.py
+</span><span>elapsed time = 16.56 sec
+</span><span>calculated storage = 16.0 GB
+</span></code></pre>
+<p><img src="/pythonic/img/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
+<h2 id="example-2">Example 2</h2>
+<p>An example of building a large NumPy array with random values where the data type is
+defined as <code>np.float32</code>.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># ex2_float32.py
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
+</span><span>    rng = np.random.</span><span style="color:#bf616a;">default_rng</span><span>()
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    z = </span><span style="color:#d08770;">500   </span><span style="color:#65737e;"># depth
+</span><span>    x = </span><span style="color:#d08770;">2000  </span><span style="color:#65737e;"># rows
+</span><span>    y = </span><span style="color:#d08770;">2000  </span><span style="color:#65737e;"># columns
+</span><span>
+</span><span>    a = np.</span><span style="color:#bf616a;">zeros</span><span>((z, x, y), </span><span style="color:#bf616a;">dtype</span><span>=np.float32)
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>i </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(z):
+</span><span>        r = rng.</span><span style="color:#bf616a;">standard_normal</span><span>((x, y), </span><span style="color:#bf616a;">dtype</span><span>=np.float32)
+</span><span>        a[i] = r
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">elapsed time =</span><span>&#39;, </span><span style="color:#96b5b4;">round</span><span>(toc - tic, </span><span style="color:#d08770;">2</span><span>), &#39;</span><span style="color:#a3be8c;">sec</span><span>&#39;)
+</span><span>
+</span><span>    s = np.</span><span style="color:#bf616a;">float32</span><span>().nbytes * (z * x * y) / </span><span style="color:#d08770;">1e9  </span><span style="color:#65737e;"># where 1 GB = 1000 MB
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">calculated storage =</span><span>&#39;, s, &#39;</span><span style="color:#a3be8c;">GB</span><span>&#39;)
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &#39;</span><span style="color:#a3be8c;">__main__</span><span>&#39;:
+</span><span>    </span><span style="color:#bf616a;">main</span><span>()
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ python ex2_float32.py
+</span><span>elapsed time = 19.41 sec
+</span><span>calculated storage = 8.0 GB
+</span></code></pre>
+<p><img src="/pythonic/img/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
+<h2 id="example-3">Example 3</h2>
+<p>Using the h5py package, this example creates an hdf5 file that contains a dataset that represents the <code>a</code> array. The <code>dset</code> variable is similar to the <code>a</code> variable in the previous examples. This approach allows the array to reside on disk, not in memory.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># ex3_hdf5.py
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">import </span><span>h5py
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">main</span><span>():
+</span><span>    rng = np.random.</span><span style="color:#bf616a;">default_rng</span><span>()
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    z = </span><span style="color:#d08770;">500   </span><span style="color:#65737e;"># depth
+</span><span>    x = </span><span style="color:#d08770;">2000  </span><span style="color:#65737e;"># rows
+</span><span>    y = </span><span style="color:#d08770;">2000  </span><span style="color:#65737e;"># columns
+</span><span>
+</span><span>    f = h5py.</span><span style="color:#bf616a;">File</span><span>(&#39;</span><span style="color:#a3be8c;">file.hdf5</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">w</span><span>&#39;)
+</span><span>    dset = f.</span><span style="color:#bf616a;">create_dataset</span><span>(&#39;</span><span style="color:#a3be8c;">data</span><span>&#39;, </span><span style="color:#bf616a;">shape</span><span>=(z, x, y), </span><span style="color:#bf616a;">dtype</span><span>=np.float32)
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>i </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(z):
+</span><span>        r = rng.</span><span style="color:#bf616a;">standard_normal</span><span>((x, y), </span><span style="color:#bf616a;">dtype</span><span>=np.float32)
+</span><span>        dset[i, :, :] = r
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">elapsed time =</span><span>&#39;, </span><span style="color:#96b5b4;">round</span><span>(toc - tic, </span><span style="color:#d08770;">2</span><span>), &#39;</span><span style="color:#a3be8c;">sec</span><span>&#39;)
+</span><span>
+</span><span>    s = np.</span><span style="color:#bf616a;">float32</span><span>().nbytes * (z * x * y) / </span><span style="color:#d08770;">1e9  </span><span style="color:#65737e;"># where 1 GB = 1000 MB
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(&#39;</span><span style="color:#a3be8c;">calculated storage =</span><span>&#39;, s, &#39;</span><span style="color:#a3be8c;">GB</span><span>&#39;)
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &#39;</span><span style="color:#a3be8c;">__main__</span><span>&#39;:
+</span><span>    </span><span style="color:#bf616a;">main</span><span>()
+</span></code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>$ python ex3_hdf5.py
+</span><span>elapsed time = 21.34 sec
+</span><span>calculated storage = 8.0 GB
+</span></code></pre>
+<p><img src="/pythonic/img/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
+<h2 id="summary">Summary</h2>
+<p>A comparison of the three examples is shown below in the table. Changing the array data type from float64 to float32 cut the memory usage in half. Writing the array to disk drastically reduced memory use. The generated hdf5 file is about 8 GB on disk which is the size of the array containing float32 values. The elapsed time for the hdf5 approach is similar to the other examples; therefore, writing to the hdf5 file seems to have a negligible performance impact. Based on these examples, writing the array to disk using an hdf5 file allows substantial memory reduction as long as disk space is available for storing the array.</p>
+<table class="table table-dark table-hover">
+<thead>
+    <tr>
+        <th scope="col">Example</th>
+        <th scope="col">Elapsed time</th>
+        <th scope="col">Calculated storage</th>
+        <th scope="col">Peak memory</th>
+        <th scope="col">File storage</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>1 basic</td>
+        <td>16.56 s</td>
+        <td>16.0 GB</td>
+        <td>16.05 GB</td>
+        <td>n/a</td>
+    </tr>
+    <tr>
+        <td>2 float32</td>
+        <td>19.41 s</td>
+        <td>8.0 GB</td>
+        <td>8.06 GB</td>
+        <td>n/a</td>
+    </tr>
+    <tr>
+        <td>3 hdf5</td>
+        <td>21.34 s</td>
+        <td>8.0 GB</td>
+        <td>104 MB</td>
+        <td>8.02 GB</td>
+    </tr>
+</tbody>
+</table>
+<p>Other approaches for writing the array to disk such as <a href="https://numpy.org/doc/stable/reference/generated/numpy.memmap.html">numpy.memmap</a> and <a href="https://zarr.readthedocs.io/en/stable/">zarr</a> were tested too. But the hdf5 approach demonstrated in example 3 gave better performance and memory usage for this type of problem.</p>
+<p>A comment about the memory increase over time for examples 1 and 2. When an array is initialized with <code>np.zeros</code>, the memory is lazily allocated as values are added to the array. The total amount of memory allocated for the array is based on the data type of the values stored in the array.</p>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Dask array</h1>
+    
+        <h6>November  8, 2022</h6>
+    
+    <hr>
+    <p>Dask Array is similar to a NumPy array and allows cutting up a large array into smaller arrays (chunks). This enables working with arrays that are larger than memory. Computations can be applied in parallel for fast execution. Below is an example of using Dask array <code>map_blocks()</code> to map a function that returns a single value. Using an 8 CPU core MacBook Pro running macOS v11.6, the serial elapsed time is 513.51 seconds and the Dask elapsed time is 3.21 seconds.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>dask.array </span><span style="color:#b48ead;">as </span><span>da
+</span><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span style="color:#b48ead;">from </span><span>distributed </span><span style="color:#b48ead;">import </span><span>Client
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">calc_result</span><span>(</span><span style="color:#bf616a;">p</span><span>: float) -&gt; float:
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Function to map across an array. Returns a single value.
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    time.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">1</span><span>)
+</span><span>    result = p + </span><span style="color:#d08770;">1
+</span><span>    </span><span style="color:#b48ead;">return </span><span>result
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">run_serial</span><span>():
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Non-parallel example (no Dask).
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    params = np.random.</span><span style="color:#bf616a;">random</span><span>(</span><span style="color:#d08770;">512</span><span>) * </span><span style="color:#d08770;">10
+</span><span>    results = []
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>p </span><span style="color:#b48ead;">in </span><span>params:
+</span><span>        r = </span><span style="color:#bf616a;">calc_result</span><span>(p)
+</span><span>        results.</span><span style="color:#bf616a;">append</span><span>(r)
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">Serial elapsed time </span><span>{toc - tic</span><span style="color:#d08770;">:.2f</span><span>}</span><span style="color:#a3be8c;"> s</span><span>&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">Serial results</span><span style="color:#96b5b4;">\n</span><span>{results}&#39;)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">run_dask</span><span>():
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Parallel example using Dask.
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    ps = np.random.</span><span style="color:#bf616a;">random</span><span>(</span><span style="color:#d08770;">512</span><span>) * </span><span style="color:#d08770;">10
+</span><span>    params = da.</span><span style="color:#bf616a;">from_array</span><span>(ps, </span><span style="color:#bf616a;">chunks</span><span>=</span><span style="color:#d08770;">64</span><span>)
+</span><span>
+</span><span>    futures = da.</span><span style="color:#bf616a;">map_blocks</span><span>(calc_result, params)
+</span><span>    results = futures.</span><span style="color:#bf616a;">compute</span><span>()
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">Dask elapsed time </span><span>{toc - tic</span><span style="color:#d08770;">:.2f</span><span>}</span><span style="color:#a3be8c;"> s</span><span>&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">Dask results</span><span style="color:#96b5b4;">\n</span><span>{results}&#39;)
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &#39;</span><span style="color:#a3be8c;">__main__</span><span>&#39;:
+</span><span>    np.</span><span style="color:#bf616a;">set_printoptions</span><span>(</span><span style="color:#bf616a;">precision</span><span>=</span><span style="color:#d08770;">2</span><span>)
+</span><span>    </span><span style="color:#bf616a;">run_serial</span><span>()
+</span><span>
+</span><span>    client = </span><span style="color:#bf616a;">Client</span><span>(</span><span style="color:#bf616a;">n_workers</span><span>=</span><span style="color:#d08770;">8</span><span>)
+</span><span>    </span><span style="color:#bf616a;">run_dask</span><span>()
+</span><span>    client.</span><span style="color:#bf616a;">close</span><span>()
+</span></code></pre>
+<p>Below, is an example of using Dask array <code>map_blocks()</code> with a function that returns multiple values as a NumPy array. Using an 8 CPU core MacBook Pro running macOS v11.6, the serial
+elapsed time is 513.45 seconds and the Dask elapsed time is 3.20 seconds.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>dask.array </span><span style="color:#b48ead;">as </span><span>da
+</span><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">import </span><span>time
+</span><span style="color:#b48ead;">from </span><span>distributed </span><span style="color:#b48ead;">import </span><span>Client
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">calc_result</span><span>(</span><span style="color:#bf616a;">p</span><span>: float) -&gt; float:
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Function to map across an array. Returns two values as an array. This
+</span><span style="color:#65737e;">    could represent a function that returns a tuple.
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    time.</span><span style="color:#bf616a;">sleep</span><span>(</span><span style="color:#d08770;">1</span><span>)
+</span><span>    a = p + </span><span style="color:#d08770;">1
+</span><span>    b = p + </span><span style="color:#d08770;">2
+</span><span>    </span><span style="color:#b48ead;">return </span><span>np.</span><span style="color:#bf616a;">array</span><span>([a, b])
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">run_serial</span><span>():
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Non-parallel example (no Dask).
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    params = np.random.</span><span style="color:#bf616a;">random</span><span>(</span><span style="color:#d08770;">512</span><span>) * </span><span style="color:#d08770;">10
+</span><span>    results_a = []
+</span><span>    results_b = []
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">for </span><span>p </span><span style="color:#b48ead;">in </span><span>params:
+</span><span>        a, b = </span><span style="color:#bf616a;">calc_result</span><span>(p)
+</span><span>        results_a.</span><span style="color:#bf616a;">append</span><span>(a)
+</span><span>        results_b.</span><span style="color:#bf616a;">append</span><span>(b)
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">Serial elapsed time </span><span>{toc - tic</span><span style="color:#d08770;">:.2f</span><span>}</span><span style="color:#a3be8c;"> s</span><span>&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">params</span><span style="color:#96b5b4;">\n</span><span>{params}&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">results_a</span><span style="color:#96b5b4;">\n</span><span>{results_a}&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">results_b</span><span style="color:#96b5b4;">\n</span><span>{results_b}&#39;)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">run_dask</span><span>():
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;
+</span><span style="color:#65737e;">    Parallel example using Dask.
+</span><span style="color:#65737e;">    &quot;&quot;&quot;
+</span><span>    tic = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    ps = np.random.</span><span style="color:#bf616a;">random</span><span>(</span><span style="color:#d08770;">512</span><span>) * </span><span style="color:#d08770;">10
+</span><span>    params = da.</span><span style="color:#bf616a;">from_array</span><span>(ps, </span><span style="color:#bf616a;">chunks</span><span>=</span><span style="color:#d08770;">64</span><span>)
+</span><span>
+</span><span>    futures = da.</span><span style="color:#bf616a;">map_blocks</span><span>(calc_result, params, </span><span style="color:#bf616a;">new_axis</span><span>=</span><span style="color:#d08770;">1</span><span>)
+</span><span>    ab = futures.</span><span style="color:#bf616a;">compute</span><span>()
+</span><span>    results_a = ab[::</span><span style="color:#d08770;">2</span><span>].</span><span style="color:#bf616a;">flatten</span><span>()
+</span><span>    results_b = ab[</span><span style="color:#d08770;">1</span><span>::</span><span style="color:#d08770;">2</span><span>].</span><span style="color:#bf616a;">flatten</span><span>()
+</span><span>
+</span><span>    toc = time.</span><span style="color:#bf616a;">perf_counter</span><span>()
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">Dask elapsed time </span><span>{toc - tic</span><span style="color:#d08770;">:.2f</span><span>}</span><span style="color:#a3be8c;"> s</span><span>&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">params</span><span style="color:#96b5b4;">\n</span><span>{np.</span><span style="color:#bf616a;">array</span><span>(params)}&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">results_a</span><span style="color:#96b5b4;">\n</span><span>{results_a}&#39;)
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">results_b</span><span style="color:#96b5b4;">\n</span><span>{results_b}&#39;)
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>__name__ == &#39;</span><span style="color:#a3be8c;">__main__</span><span>&#39;:
+</span><span>    np.</span><span style="color:#bf616a;">set_printoptions</span><span>(</span><span style="color:#bf616a;">precision</span><span>=</span><span style="color:#d08770;">2</span><span>)
+</span><span>    </span><span style="color:#bf616a;">run_serial</span><span>()
+</span><span>
+</span><span>    client = </span><span style="color:#bf616a;">Client</span><span>(</span><span style="color:#bf616a;">n_workers</span><span>=</span><span style="color:#d08770;">8</span><span>)
+</span><span>    </span><span style="color:#bf616a;">run_dask</span><span>()
+</span><span>    client.</span><span style="color:#bf616a;">close</span><span>()
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

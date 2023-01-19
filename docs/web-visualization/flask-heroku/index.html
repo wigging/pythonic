@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Deploy on Heroku</h1>
+    
+        <h6>November  1, 2022</h6>
+    
+    <hr>
+    <p><a href="https://www.heroku.com">Heroku</a> makes it easy to deploy a Python Flask application. To get started, create a project folder and a virtual environment in that folder. Notice that <code>env</code> is the name of the virtual environment discussed below; it can be called <code>myenv</code> or something else.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Create a project folder
+</span><span style="color:#bf616a;">$</span><span> mkdir flask-heroku
+</span><span style="color:#bf616a;">$</span><span> cd flask-heroku
+</span><span>
+</span><span style="color:#65737e;"># Create and activate a virtual environment in the project folder
+</span><span style="color:#bf616a;">$</span><span> python</span><span style="color:#bf616a;"> -m</span><span> venv env
+</span><span style="color:#bf616a;">$</span><span> source env/bin/activate
+</span></code></pre>
+<p>Install Flask and gunicorn in the environment. Save the dependencies list to a requirements text file.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>(env) $ pip install Flask
+</span><span>(env) $ pip install gunicorn
+</span><span>(env) $ pip freeze &gt; requirements.txt
+</span></code></pre>
+<p>Build a basic Flask web app and save it as <code>hello.py</code>.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>flask </span><span style="color:#b48ead;">import </span><span>Flask
+</span><span>
+</span><span>app = </span><span style="color:#bf616a;">Flask</span><span>(__name__)
+</span><span>
+</span><span>@app.</span><span style="color:#bf616a;">route</span><span>(&quot;</span><span style="color:#a3be8c;">/</span><span>&quot;)
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">hello_world</span><span>():
+</span><span>    </span><span style="color:#b48ead;">return </span><span>&quot;</span><span style="color:#a3be8c;">&lt;h1&gt;Hello, Python!&lt;/h1&gt;</span><span>&quot;
+</span></code></pre>
+<p>Create a <code>Procfile</code> for Heroku containing the following:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>web: gunicorn hello:app
+</span></code></pre>
+<p>Initialize a local Git repository for the project. In this example the default branch is called <code>main</code>.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span>(</span><span style="color:#bf616a;">env</span><span>) $ git init
+</span><span>(</span><span style="color:#bf616a;">env</span><span>) $ git add .
+</span><span>(</span><span style="color:#bf616a;">env</span><span>) $ git commit</span><span style="color:#bf616a;"> -m </span><span>&#39;</span><span style="color:#a3be8c;">Initial commit</span><span>&#39;
+</span></code></pre>
+<p>Now go to the Heroku website at <a href="https://www.heroku.com">https://www.heroku.com</a> and create an account if you don't already have one. Then follow Heroku's Python documentation to setup their command line tool. Once everything is setup, go to the command line and login with</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> heroku login
+</span></code></pre>
+<p>Create a Heroku application named <code>flaskheroku21</code>. The application name can be anything that is available on the Heroku service. Push it to the Heroku remote repository, then open the deployed app in your web browser.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span>(</span><span style="color:#bf616a;">env</span><span>) $ heroku create flaskheroku21
+</span><span>(</span><span style="color:#bf616a;">env</span><span>) $ git push heroku main
+</span><span>(</span><span style="color:#bf616a;">env</span><span>) $ heroku open
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

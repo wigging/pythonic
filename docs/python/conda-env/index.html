@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Conda environments</h1>
+    
+        <h6>November  5, 2022</h6>
+    
+    <hr>
+    <p>Similar to Python's <code>venv</code> module, Conda can also create virtual environments but these environments support languages other than Python.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Create a Python environment named `myenv`, can also use `-n` for `--name`
+</span><span style="color:#bf616a;">$</span><span> conda create</span><span style="color:#bf616a;"> --name</span><span> myenv python
+</span><span>
+</span><span style="color:#65737e;"># Activate the `myenv` environment
+</span><span style="color:#bf616a;">$</span><span> conda activate myenv
+</span><span>
+</span><span style="color:#65737e;"># Command prompt for the activated environment
+</span><span>(</span><span style="color:#bf616a;">myenv</span><span>) $
+</span><span>
+</span><span style="color:#65737e;"># Deactivate the current environment
+</span><span>(</span><span style="color:#bf616a;">myenv</span><span>) $ conda deactivate
+</span><span>
+</span><span style="color:#65737e;"># Remove an environment named `myenv`, can also use `-n` for `--name`
+</span><span style="color:#bf616a;">$</span><span> conda env remove</span><span style="color:#bf616a;"> --name</span><span> myenv
+</span><span>
+</span><span style="color:#65737e;"># Create an environment using a config file
+</span><span style="color:#bf616a;">$</span><span> conda env create</span><span style="color:#bf616a;"> --file</span><span> environment.yml
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

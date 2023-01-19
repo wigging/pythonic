@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/pythonic/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/pythonic/styles.css" rel="stylesheet">
+    <title>Pythonic</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Dictionaries</h1>
+    
+        <h6>November 15, 2022</h6>
+    
+    <hr>
+    <p>A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; d = {&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;: </span><span style="color:#d08770;">2</span><span>, &#39;</span><span style="color:#a3be8c;">three</span><span>&#39;: </span><span style="color:#d08770;">3</span><span>}
+</span><span>&gt;&gt;&gt; d[&#39;</span><span style="color:#a3be8c;">three</span><span>&#39;]
+</span><span style="color:#d08770;">3
+</span><span>
+</span><span>&gt;&gt;&gt; dd = </span><span style="color:#bf616a;">dict</span><span>(</span><span style="color:#bf616a;">apples</span><span>=</span><span style="color:#d08770;">2</span><span>, </span><span style="color:#bf616a;">oranges</span><span>=</span><span style="color:#d08770;">5
+</span><span>&gt;&gt;&gt; dd[&#39;</span><span style="color:#a3be8c;">oranges</span><span>&#39;]
+</span><span style="color:#d08770;">5
+</span></code></pre>
+<h2 id="loop-through-a-dictionary">Loop through a dictionary</h2>
+<p>The items method can be used to loop through a dictionary.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; d = {&#39;</span><span style="color:#a3be8c;">make</span><span>&#39;: &#39;</span><span style="color:#a3be8c;">Ford</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">model</span><span>&#39;: &#39;</span><span style="color:#a3be8c;">Bronco</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">year</span><span>&#39;: </span><span style="color:#d08770;">1977</span><span>}
+</span><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">for </span><span>k, v </span><span style="color:#b48ead;">in </span><span>d.</span><span style="color:#bf616a;">items</span><span>():
+</span><span style="color:#d08770;">...     </span><span style="color:#96b5b4;">print</span><span>(k, &#39;</span><span style="color:#96b5b4;">\t</span><span>&#39;, v)
+</span><span style="color:#d08770;">...
+</span><span>make     Ford
+</span><span>model    Bronco
+</span><span>year     </span><span style="color:#d08770;">1977
+</span></code></pre>
+<h2 id="default-values">Default values</h2>
+<p>The get method can be used to specify a default value when a key doesn't
+exist.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; time = {&#39;</span><span style="color:#a3be8c;">hour</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>, &#39;</span><span style="color:#a3be8c;">min</span><span>&#39;: </span><span style="color:#d08770;">34</span><span>}
+</span><span>&gt;&gt;&gt; time.</span><span style="color:#bf616a;">get</span><span>(&#39;</span><span style="color:#a3be8c;">sec</span><span>&#39;, </span><span style="color:#d08770;">15</span><span>)
+</span><span style="color:#d08770;">15
+</span></code></pre>
+<p>The defaultdict is a specialized container type which supplies missing values based on the given default type.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># using defaultdict will return a default value for the missing key
+</span><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">from </span><span>collections </span><span style="color:#b48ead;">import </span><span>defaultdict
+</span><span>&gt;&gt;&gt; dd = </span><span style="color:#bf616a;">defaultdict</span><span>(int)
+</span><span>&gt;&gt;&gt; dd[&#39;</span><span style="color:#a3be8c;">quantity</span><span>&#39;]
+</span><span style="color:#d08770;">0
+</span><span>
+</span><span style="color:#65737e;"># using a regular dictionary will return a key error
+</span><span>&gt;&gt;&gt; d = {}
+</span><span>&gt;&gt;&gt; d[&#39;</span><span style="color:#a3be8c;">quantity</span><span>&#39;]
+</span><span>KeyError
+</span></code></pre>
+<h2 id="combine-dictionaries">Combine dictionaries</h2>
+<p>There are several ways to combine dictionaries but the two examples shown below are the most simple and elegant. One approach is to use the merge operator <code>|</code> to merge the dictionaries. This is available in Python 3.9 and above.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Using the merge operator
+</span><span>&gt;&gt;&gt; dict_one = {&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;: </span><span style="color:#d08770;">2</span><span>}
+</span><span>&gt;&gt;&gt; dict_two = {&#39;</span><span style="color:#a3be8c;">three</span><span>&#39;: </span><span style="color:#d08770;">3</span><span>, &#39;</span><span style="color:#a3be8c;">four</span><span>&#39;: </span><span style="color:#d08770;">4</span><span>}
+</span><span>&gt;&gt;&gt; d = dict_one | dict_two
+</span><span>&gt;&gt;&gt; d
+</span><span>{&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;: </span><span style="color:#d08770;">2</span><span>, &#39;</span><span style="color:#a3be8c;">three</span><span>&#39;: </span><span style="color:#d08770;">3</span><span>, &#39;</span><span style="color:#a3be8c;">four</span><span>&#39;: </span><span style="color:#d08770;">4</span><span>}
+</span></code></pre>
+<p>Another approach is to unpack the dictionaries using the double-asterisk operator <code>**</code>.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Using the double-asterisk operator for unpacking
+</span><span>&gt;&gt;&gt; dict_one = {&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;: </span><span style="color:#d08770;">2</span><span>}
+</span><span>&gt;&gt;&gt; dict_two = {&#39;</span><span style="color:#a3be8c;">three</span><span>&#39;: </span><span style="color:#d08770;">3</span><span>, &#39;</span><span style="color:#a3be8c;">four</span><span>&#39;: </span><span style="color:#d08770;">4</span><span>}
+</span><span>&gt;&gt;&gt; d = {**dict_one, **dict_two}
+</span><span>&gt;&gt;&gt; d
+</span><span>{&#39;</span><span style="color:#a3be8c;">one</span><span>&#39;: </span><span style="color:#d08770;">1</span><span>, &#39;</span><span style="color:#a3be8c;">two</span><span>&#39;: </span><span style="color:#d08770;">2</span><span>, &#39;</span><span style="color:#a3be8c;">three</span><span>&#39;: </span><span style="color:#d08770;">3</span><span>, &#39;</span><span style="color:#a3be8c;">four</span><span>&#39;: </span><span style="color:#d08770;">4</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
