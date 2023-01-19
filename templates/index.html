@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="col">
+    <h1 class="text-center">🐍 Pythonic Programming</h1>
+
+    <p>Python is a great programming language for all ages and skill levels. Its ecosystem of packages extends the language to many areas of software development. This website and associated repository provide concise code examples about basic Python features as well as more advanced topics relevant to scientific computing.</p>
+
+    <p>This website and example code are available on <a href="https://github.com/wigging/pythonic">GitHub</a>. An RSS feed is available for subscribing to new content and updates. Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a>, <a href="https://fosstodon.org/@wigging">Mastodon</a>, or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an Issue on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
+
+    <h2>Python</h2>
+    <hr>
+
+    {% set section = get_section(path="python/_index.md") %}
+    <ul style="columns:2;">
+    {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        Pythonic Programming © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+{% endblock content %}
