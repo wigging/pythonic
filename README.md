@@ -1,10 +1,14 @@
 # :snake: Pythonic Programming
 
-Python is a great programming language for all ages and skill levels. It's ecosystem of packages extends the language to many areas of software development. This repository provides concise code examples about basic Python features as well as more advanced topics relevant to scientific computing. The examples are discussed on my personal website at https://gavinw.me.
+Python is a great programming language for all ages and skill levels. It's ecosystem of packages extends the language to many areas of software development. This repository and accompanying website provide concise code examples about basic Python features as well as more advanced topics relevant to scientific computing. The website is available at https://gavinw.me/pythonic.
 
 ## Examples
 
 Example code is located in the `python-projects` and `python-scripts` folders.
+
+## Website
+
+The website is generated with [Zola](https://www.getzola.org) using the `content`, `static`, `templates` folders, and the `config.toml` file. It is hosted with GitHub Pages from the `docs` folder.
 
 ## Contributing
 
