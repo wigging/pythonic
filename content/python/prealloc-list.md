@@ -1,7 +1,7 @@
-+++
-title = "Pre-allocate list"
-date = 2022-11-08
-+++
+---
+title: Pre-allocate list
+date: November 8, 2022
+---
 
 If the size of a list is known, then pre-allocating the list can provide
 performance improvements; especially for a large list. The example below

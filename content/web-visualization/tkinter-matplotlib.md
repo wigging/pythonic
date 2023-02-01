@@ -1,7 +1,7 @@
-+++
-title = "View data with Matplotlib"
-date = 2022-11-08
-+++
+---
+title: View data with Matplotlib
+date: November 8, 2022
+---
 
 Below is an example of using Matplotlib to plot data in a Tkinter app. The plot figure is shown in a separate window when the button is pressed.
 
@@ -53,4 +53,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="/pythonic/img/tkinter-matplotlib.png" style="max-width: 680px;" alt="tkinter matplotlib"></p>
+<p><img src="/img/tkinter-matplotlib.png" style="max-width: 680px;" alt="tkinter matplotlib"></p>

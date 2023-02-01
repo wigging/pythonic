@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Dictionaries</h1>
+        <h6>November 15, 2022</h6>
+        <hr>
+
+        <p>A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.</p>
+<pre><code class="language-python">&gt;&gt;&gt; d = {'one': 1, 'two': 2, 'three': 3}
+&gt;&gt;&gt; d['three']
+3
+
+&gt;&gt;&gt; dd = dict(apples=2, oranges=5
+&gt;&gt;&gt; dd['oranges']
+5
+</code></pre>
+<h2>Loop through a dictionary</h2>
+<p>The items method can be used to loop through a dictionary.</p>
+<pre><code class="language-python">&gt;&gt;&gt; d = {'make': 'Ford', 'model': 'Bronco', 'year': 1977}
+&gt;&gt;&gt; for k, v in d.items():
+...     print(k, '\t', v)
+...
+make     Ford
+model    Bronco
+year     1977
+</code></pre>
+<h2>Default values</h2>
+<p>The get method can be used to specify a default value when a key doesn't
+exist.</p>
+<pre><code class="language-python">&gt;&gt;&gt; time = {'hour': 1, 'min': 34}
+&gt;&gt;&gt; time.get('sec', 15)
+15
+</code></pre>
+<p>The defaultdict is a specialized container type which supplies missing values based on the given default type.</p>
+<pre><code class="language-python"># using defaultdict will return a default value for the missing key
+&gt;&gt;&gt; from collections import defaultdict
+&gt;&gt;&gt; dd = defaultdict(int)
+&gt;&gt;&gt; dd['quantity']
+0
+
+# using a regular dictionary will return a key error
+&gt;&gt;&gt; d = {}
+&gt;&gt;&gt; d['quantity']
+KeyError
+</code></pre>
+<h2>Combine dictionaries</h2>
+<p>There are several ways to combine dictionaries but the two examples shown below are the most simple and elegant. One approach is to use the merge operator <code>|</code> to merge the dictionaries. This is available in Python 3.9 and above.</p>
+<pre><code class="language-python"># Using the merge operator
+&gt;&gt;&gt; dict_one = {'one': 1, 'two': 2}
+&gt;&gt;&gt; dict_two = {'three': 3, 'four': 4}
+&gt;&gt;&gt; d = dict_one | dict_two
+&gt;&gt;&gt; d
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
+</code></pre>
+<p>Another approach is to unpack the dictionaries using the double-asterisk operator <code>**</code>.</p>
+<pre><code class="language-python"># Using the double-asterisk operator for unpacking
+&gt;&gt;&gt; dict_one = {'one': 1, 'two': 2}
+&gt;&gt;&gt; dict_two = {'three': 3, 'four': 4}
+&gt;&gt;&gt; d = {**dict_one, **dict_two}
+&gt;&gt;&gt; d
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

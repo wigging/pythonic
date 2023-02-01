@@ -1,7 +1,7 @@
-+++
-title = "Deploy on Heroku"
-date = 2022-11-01
-+++
+---
+title: Deploy on Heroku
+date: November 1, 2022
+---
 
 [Heroku](https://www.heroku.com) makes it easy to deploy a Python Flask application. To get started, create a project folder and a virtual environment in that folder. Notice that `env` is the name of the virtual environment discussed below; it can be called `myenv` or something else.
 

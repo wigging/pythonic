@@ -1,7 +1,7 @@
-+++
-title = "Conda environments"
-date = 2022-11-05
-+++
+---
+title: Conda environments
+date: November 5, 2022
+---
 
 Similar to Python's `venv` module, Conda can also create virtual environments but these environments support languages other than Python.
 

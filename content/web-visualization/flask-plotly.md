@@ -1,7 +1,7 @@
-+++
-title = "Plotly graph"
-date = 2022-11-01
-+++
+---
+title: Plotly graph
+date: November 1, 2022
+---
 
 [Plotly](https://plotly.com) is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app.
 
@@ -32,9 +32,9 @@ def plot():
     return render_template('plot.html', data=data)
 ```
 
-<p><img src="/pythonic/img/flask-plotly-index.png" style="max-width:500px;" alt="index page"></p>
+<p><img src="/img/flask-plotly-index.png" style="max-width:500px;" alt="index page"></p>
 
-<p><img src="/pythonic/img/flask-plotly-plot.png" style="max-width:500px;" alt="plot page"></p>
+<p><img src="/img/flask-plotly-plot.png" style="max-width:500px;" alt="plot page"></p>
 
 The HTML templates used to render the index and plot pages are shown below.
 

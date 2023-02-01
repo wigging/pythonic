@@ -1,11 +1,11 @@
-+++
-title = "Update page with Ajax"
-date = 2022-11-01
-+++
+---
+title: Update page with Ajax
+date: November 1, 2022
+---
 
 This Flask webapp example uses Ajax to update the page with results from the post request. The results are returned as JSON which is used to update the div tags.
 
-<p><img src="/pythonic/img/flask-ajax.png" style="max-width:100%;" alt="flask ajax"></p>
+<p><img src="/img/flask-ajax.png" style="max-width:100%;" alt="flask ajax"></p>
 
 ```python
 # app.py

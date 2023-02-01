@@ -1,7 +1,7 @@
-+++
-title = "Dictionaries"
-date = 2022-11-15
-+++
+---
+title: Dictionaries
+date: November 15, 2022
+---
 
 A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.
 

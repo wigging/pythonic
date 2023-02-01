@@ -1,7 +1,7 @@
-+++
-title = "Set difference of two arrays"
-date = 2022-11-07
-+++
+---
+title: Set difference of two arrays
+date: November 7, 2022
+---
 
 The `setdiff1d` function returns the unique values in array 1 that are not in array 2.
 

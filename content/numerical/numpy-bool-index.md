@@ -1,7 +1,7 @@
-+++
-title = "Boolean indexing"
-date = 2022-11-07
-+++
+---
+title: Boolean indexing
+date: November 7, 2022
+---
 
 Use boolean indexing in NumPy arrays to assign values. The example below assigns a zero to array items that are less than zero.
 

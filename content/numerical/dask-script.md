@@ -1,7 +1,7 @@
-+++
-title = "Use Dask in a script"
-date = 2022-11-08
-+++
+---
+title: Use Dask in a script
+date: November 8, 2022
+---
 
 Since most Dask examples are demonstrated using Jupyter notebooks, here's an example of using Dask in a Python file or script. Notice how the Dask code must be in the `__main__` block or called from within a function.
 

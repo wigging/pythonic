@@ -1,7 +1,7 @@
-+++
-title = "Dask array"
-date = 2022-11-08
-+++
+---
+title: Dask array
+date: November 8, 2022
+---
 
 Dask Array is similar to a NumPy array and allows cutting up a large array into smaller arrays (chunks). This enables working with arrays that are larger than memory. Computations can be applied in parallel for fast execution. Below is an example of using Dask array `map_blocks()` to map a function that returns a single value. Using an 8 CPU core MacBook Pro running macOS v11.6, the serial elapsed time is 513.51 seconds and the Dask elapsed time is 3.21 seconds.
 

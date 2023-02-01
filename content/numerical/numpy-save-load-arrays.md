@@ -1,7 +1,7 @@
-+++
-title = "Save and load arrays"
-date = 2022-11-07
-+++
+---
+title: Save and load arrays
+date: November 7, 2022
+---
 
 NumPy arrays can be saved and loaded using different file formats. Examples of using the NumPy file formats `.npy` and `.npz` as well as a plain text format are given below.
 

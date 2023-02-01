@@ -1,7 +1,7 @@
-+++
-title = "Contour plot smoothing"
-date = 2022-11-06
-+++
+---
+title: Contour plot smoothing
+date: November 6, 2022
+---
 
 The example below generates a contour plot of sparse data.
 
@@ -19,7 +19,7 @@ ax1.contour(data)
 ax2.contourf(data)
 ```
 
-<p><img src="/pythonic/img/matplotlib-contour-orig.pdf" style="max-width:100%;" alt="original"></p>
+<p><img src="/img/matplotlib-contour-orig.pdf" style="max-width:100%;" alt="original"></p>
 
 The plot can be smoothed by using SciPy's zoom function or gaussian filter function. Input parameters for each function should be adjusted accordingly for the data.
 
@@ -32,7 +32,7 @@ ax1.contour(data2)
 ax2.contourf(data2)
 ```
 
-<p><img src="/pythonic/img/matplotlib-contour-zoom.pdf" style="max-width:100%;" alt="zoom"></p>
+<p><img src="/img/matplotlib-contour-zoom.pdf" style="max-width:100%;" alt="zoom"></p>
 
 ```python
 # Resample data with gaussian filter then create contour plot
@@ -43,6 +43,6 @@ ax1.contour(data3)
 ax2.contourf(data3)
 ```
 
-<p><img src="/pythonic/img/matplotlib-contour-gauss.pdf" style="max-width:100%;" alt="gaussian"></p>
+<p><img src="/img/matplotlib-contour-gauss.pdf" style="max-width:100%;" alt="gaussian"></p>
 
 The contour plot examples in this article are based on a Stack Overflow [post](https://stackoverflow.com/q/12274529/1084875) which is where the original data was obtained from.

@@ -1,7 +1,7 @@
-+++
-title = "Virtual environments"
-date = 2022-11-05
-+++
+---
+title: Virtual environments
+date: November 5, 2022
+---
 
 The `venv` module included with Python is used to create and manage virtual environments.
 

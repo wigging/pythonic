@@ -1,7 +1,7 @@
-+++
-title = "Maximum array"
-date = 2022-11-07
-+++
+---
+title: Maximum array
+date: November 7, 2022
+---
 
 The `maximum` function returns a new array that contains the maximum values of the two given arrays.
 

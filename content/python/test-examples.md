@@ -1,7 +1,7 @@
-+++
-title = "Test examples"
-date = 2022-11-08
-+++
+---
+title: Test examples
+date: November 8, 2022
+---
 
 Example scripts are often available for Python packages to demonstrate how to use the package. The examples are typically part of the repository where the package is developed. Tests should be written to ensure the examples continue to work with new versions of the package.
 

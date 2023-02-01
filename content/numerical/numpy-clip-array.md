@@ -1,7 +1,7 @@
-+++
-title = "Clip array values"
-date = 2022-11-07
-+++
+---
+title: Clip array values
+date: November 7, 2022
+---
 
 The `clip` function limits the values in an array based on a given interval or minimum or maximum value.
 

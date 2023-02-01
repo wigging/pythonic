@@ -1,7 +1,7 @@
-+++
-title = "Loop over columns"
-date = 2022-11-07
-+++
+---
+title: Loop over columns
+date: November 7, 2022
+---
 
 Loop over columns in an array by iterating over the transpose of the array.
 

@@ -1,7 +1,7 @@
-+++
-title = "cProfile"
-date = 2022-11-08
-+++
+---
+title: cProfile
+date: November 8, 2022
+---
 
 The `cProfile` module provides an interface to profile Python programs. A single function or an entire script or module can be profiled. As an example, the script shown below contains two functions that suspend execution for 2 and 4.5 seconds.
 

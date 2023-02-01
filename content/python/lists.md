@@ -1,7 +1,7 @@
-+++
-title = "Lists"
-date = 2022-11-08
-+++
+---
+title: Lists
+date: November 8, 2022
+---
 
 A list is used to group numbers, strings, or objects together. It is written as a pair of square brackets containing comma-separated items. A list typically contains items of similar type but it can contain items of different types too. Unlike tuples, lists are mutable therefore the content of a list can be modified.
 

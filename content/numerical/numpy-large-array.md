@@ -1,7 +1,7 @@
-+++
-title = "Large array memory usage"
-date = 2022-11-07
-+++
+---
+title: Large array memory usage
+date: November 7, 2022
+---
 
 In the examples below, a 500x2000x2000 three-dimensional NumPy array named `a` is initialized with zeros. At each iteration, a random two-dimensional array `r` is inserted into array `a`. This approach could represent a larger piece of code where the `r` array would be created from various calculations during each iteration of the for-loop. Consequently, each slice in the z dimension of the `a` array is calculated at each iteration.
 
@@ -52,7 +52,7 @@ elapsed time = 16.56 sec
 calculated storage = 16.0 GB
 ```
 
-<p><img src="/pythonic/img/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
+<p><img src="/img/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
 
 ## Example 2
 
@@ -95,7 +95,7 @@ elapsed time = 19.41 sec
 calculated storage = 8.0 GB
 ```
 
-<p><img src="/pythonic/img/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
+<p><img src="/img/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
 
 ## Example 3
 
@@ -139,7 +139,7 @@ elapsed time = 21.34 sec
 calculated storage = 8.0 GB
 ```
 
-<p><img src="/pythonic/img/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
+<p><img src="/img/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
 
 ## Summary
 

@@ -1,7 +1,7 @@
-+++
-title = "Strings"
-date = 2022-11-11
-+++
+---
+title: Strings
+date: November 11, 2022
+---
 
 Some basic examples of creating strings in Python.
 

@@ -1,7 +1,7 @@
-+++
-title = "XML"
-date = 2022-11-08
-+++
+---
+title: XML
+date: November 8, 2022
+---
 
 There are several XML parsers available in the Python standard library. Below is an example of using the ElementTree module.
 

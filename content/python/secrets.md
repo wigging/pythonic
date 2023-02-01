@@ -1,7 +1,7 @@
-+++
-title = "Secrets"
-date = 2022-11-08
-+++
+---
+title: Secrets
+date: November 8, 2022
+---
 
 Use the `secrets` module to generate cryptographically strong random passwords containing letters, numbers, and punctuation.
 

@@ -1,7 +1,7 @@
-+++
-title = "Full array"
-date = 2022-11-07
-+++
+---
+title: Full array
+date: November 7, 2022
+---
 
 Use the `full` function in NumPy to create a new array filled with a given value.
 

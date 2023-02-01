@@ -1,7 +1,7 @@
-+++
-title = "Tuples"
-date = 2022-11-08
-+++
+---
+title: Tuples
+date: November 8, 2022
+---
 
 A tuple is a number of items separated by commas.
 

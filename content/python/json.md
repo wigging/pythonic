@@ -1,7 +1,7 @@
-+++
-title = "JSON"
-date = 2022-11-08
-+++
+---
+title: JSON
+date: November 8, 2022
+---
 
 JavaScript Object Notation (JSON) is a common data format that is supported natively in Python. The format is built on name/value pairs and ordered list values. Visit [json.org](https://www.json.org/json-en.html) to learn more about the JSON format.
 

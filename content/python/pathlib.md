@@ -1,7 +1,7 @@
-+++
-title = "Pathlib"
-date = 2022-11-08
-+++
+---
+title: Pathlib
+date: November 8, 2022
+---
 
 The `pathlib` module handles file paths with support for different operating systems.
 

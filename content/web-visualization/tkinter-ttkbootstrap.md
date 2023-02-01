@@ -1,7 +1,7 @@
-+++
-title = "Theme ttkbootstrap"
-date = 2022-11-08
-+++
+---
+title: Theme ttkbootstrap
+date: November 8, 2022
+---
 
 Example of a Tkinter app using the ttkbootstrap theme. More information about
 the theme is available on GitHub at [israel-dryer/ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap).
@@ -52,4 +52,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="/pythonic/img/tkinter-ttkbootstrap.png" style="max-width: 400px;" alt="ttkbootstrap"></p>
+<p><img src="/img/tkinter-ttkbootstrap.png" style="max-width: 400px;" alt="ttkbootstrap"></p>

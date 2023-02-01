@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Plotly graph restyle</h1>
+        <h6>November 1, 2022</h6>
+        <hr>
+
+        <p><a href="https://plotly.com">Plotly</a> is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app. When the page first loads, a default line graph is shown. New data points are added to the graph using the form inputs. The <code>Plotly.restyle</code> function is used to redraw the graph when new data points are submitted; this approach avoids recreating an entirely new Plotly graph each time the data is updated.</p>
+<p><img src="/img/flask-plotly-restyle.png" style="max-width:100%;" alt="plotly restyle"></p>
+
+<p>The main Flask app is shown below. The <code>update()</code> route sends the x and y values from the form inputs as JSON which is used to update the Plotly line graph data.</p>
+<pre><code class="language-python"># app.py
+
+from flask import Flask
+from flask import render_template
+from flask import request
+from flask import jsonify
+
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/update', methods=['POST'])
+def update():
+    xdata = request.form['xdata']
+    ydata = request.form['ydata']
+
+    x = list(map(float, xdata.split(', ')))
+    y = list(map(float, ydata.split(', ')))
+
+    res = {'xValues': x, 'yValues': y}
+
+    return jsonify(res)
+</code></pre>
+<p>The HTML index page is shown below. The form submits a <code>POST</code> request and calls the <code>updateGraph()</code> JavaScript function while the <code>#graphDiv</code> is where the Plotly graph is displayed.</p>
+<pre><code class="language-html">&lt;!-- templates/index.html --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+    &lt;title&gt;Home Page&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        body { background-color: lightgray; }
+        input { max-width: 200px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;h1 class=&quot;mt-3&quot;&gt;Submit data&lt;/h1&gt;
+
+                &lt;p&gt;Input the X and Y data points using comma separated values. Then click the submit button to plot the data.&lt;/p&gt;
+
+                &lt;form method=&quot;POST&quot; action=&quot;/update&quot; onsubmit=&quot;updateGraph()&quot;&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;xdata&quot; class=&quot;form-label&quot;&gt;X data&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;xdata&quot; value=&quot;1, 2, 3, 4, 5&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;ydata&quot; class=&quot;form-label&quot;&gt;Y data&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;ydata&quot; value=&quot;3, 2.1, 5, 8, 9&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col&quot;&gt;
+                &lt;h1 class=&quot;mt-3&quot;&gt;Plot data&lt;/h1&gt;
+
+                &lt;p&gt;Below is a line plot using the X and Y data points.&lt;/p&gt;
+
+                &lt;div id=&quot;graphDiv&quot; style=&quot;width:600px;height:480px;&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.plot.ly/plotly-2.8.3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;{% raw %}{{ url_for('static', filename='graph.js') }}{% endraw %}&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The JavaScript for creating the Plotly graph is shown below. The <code>updateGraph()</code> is called when the HTML form is submitted. This function uses the JavaScript <code>fetch()</code> method to handle the response from the <code>POST</code> request. Finally, the line graph is updated with the new x and y data using <code>Plotly.restyle()</code>.</p>
+<pre><code class="language-javascript">// static/graph.js
+
+window.onload(showGraph());
+
+function showGraph() {
+    var data = [{
+        x: [1, 2, 3, 4, 5],
+        y: [3, 2.1, 5, 8, 9],
+        type: &quot;line&quot;
+    }];
+
+    var layout = {
+        title: &quot;Example data&quot;,
+        xaxis: {
+            title: &quot;X points&quot;
+        },
+        yaxis: {
+            title: &quot;Y points&quot;
+        },
+        margin: {l: 50, r: 20, b: 50, t: 40}
+    };
+
+    Plotly.newPlot(&quot;graphDiv&quot;, data, layout);
+}
+
+function updateGraph() {
+
+    const formData = new FormData();
+    formData.append(&quot;xdata&quot;, document.getElementsByName(&quot;xdata&quot;)[0].value);
+    formData.append(&quot;ydata&quot;, document.getElementsByName(&quot;ydata&quot;)[0].value);
+
+    fetch(&quot;/update&quot;, {
+        method: &quot;POST&quot;,
+        body: formData
+    })
+    .then(response =&gt; response.json())
+    .then(jsonData =&gt; {
+        var update = {
+            x: [jsonData.xValues],
+            y: [jsonData.yValues]
+        };
+
+        Plotly.restyle(&quot;graphDiv&quot;, update);
+    });
+
+    event.preventDefault();
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

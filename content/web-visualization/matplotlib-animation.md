@@ -1,7 +1,7 @@
-+++
-title = "Animation"
-date = 2022-11-06
-+++
+---
+title: Animation
+date: November 6, 2022
+---
 
 Matplotlib provides two animation classes for animating a plot figure. The example below uses the ArtistAnimation class. The animation can be displayed just like any other Matplotlib figure and saved to file as various video formats.
 
@@ -69,6 +69,6 @@ plt.show()
 Both examples generate the animated line plot shown below.
 
 <p><video controls style="max-width:600px;">
-    <source src="/pythonic/img/matplotlib-animation.mp4" type="video/mp4">
+    <source src="/img/matplotlib-animation.mp4" type="video/mp4">
     Sorry, your browser doesn't support this embedded video.
 </video></p>

@@ -1,7 +1,7 @@
-+++
-title = "Enumerations"
-date = 2022-11-08
-+++
+---
+title: Enumerations
+date: November 8, 2022
+---
 
 An enumeration is a set of symbolic names that are bound to unique, constant values. Enumerations (or enums) are implemented in Python using the `Enum` class from the `enum` module.
 

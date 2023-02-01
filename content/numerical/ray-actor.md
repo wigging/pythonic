@@ -1,7 +1,7 @@
-+++
-title = "Ray actor"
-date = 2022-11-08
-+++
+---
+title: Ray actor
+date: November 8, 2022
+---
 
 [Ray](https://www.ray.io) actors are used to parallelize a class instance to perform stateful operations in parallel. Ray will start a remote instance of the class and then execute remote method calls and maintain its own internal state. The example below compares a parallel Ray actor approach to a standard class approach. A computationally expensive task is simulated by using the `sleep()` function.
 

@@ -1,7 +1,7 @@
-+++
-title = "Numbers"
-date = 2022-11-08
-+++
+---
+title: Numbers
+date: November 8, 2022
+---
 
 Python includes three numeric types such as integers `int`, float `float`, and complex `complex` numbers.
 

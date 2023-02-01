@@ -1,7 +1,7 @@
-+++
-title = "Compare inv and solve functions"
-date = 2022-11-07
-+++
+---
+title: Compare inv and solve functions
+date: November 7, 2022
+---
 
 Solve equation `A*x=b` for `x` and compare results using the `np.linalg.solve()` function to the `np.linalg.inv()` approach.
 

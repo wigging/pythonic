@@ -1,7 +1,7 @@
-+++
-title = "Argparse"
-date = 2022-11-08
-+++
+---
+title: Argparse
+date: November 8, 2022
+---
 
 The `argparse` module provides an interface to write command-line programs in Python. It is the recommended command-line parsing module available in the Python standard library. An example of using `argparse` is shown below.
 

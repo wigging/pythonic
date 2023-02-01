@@ -1,11 +1,11 @@
-+++
-title = "Bokeh graph with Htmx"
-date = 2022-11-01
-+++
+---
+title: Bokeh graph with Htmx
+date: November 1, 2022
+---
 
 [Bokeh](https://bokeh.org) is a visualization library for Python that makes it easy to plot data in Jupyter notebooks or web pages. [Htmx](https://htmx.org) allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Bokeh graph in a web page without updating the entire page.
 
-<p><img src="/pythonic/img/flask-bokeh-htmx.png" style="max-width:100%;" alt="bokeh htmx"></p>
+<p><img src="/img/flask-bokeh-htmx.png" style="max-width:100%;" alt="bokeh htmx"></p>
 
 The main Flask app is shown below. The Bokeh graph is created in Python then its HTML components are sent to the `plot.html` template for display on the web page.
 

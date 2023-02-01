@@ -1,0 +1,400 @@
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "Pythonic Programming",
+    "home_page_url": "https://gavinw.me/pythonic/",
+    "feed_url": "https://gavinw.me/pythonic/feed.json",
+    "items": [
+        {
+            "id": "https://gavinw.me/pythonic/python/dictionaries.html",
+            "url": "https://gavinw.me/pythonic/python/dictionaries.html",
+            "title": "Dictionaries",
+            "date_published": "2022-11-15T00:00:00Z",
+            "content_html": "<p>A dictionary can be created with comma-separated key:value pairs within braces or by using the dict type constructor. A value is accessed by specifying its key in square brackets. The order of items in a dictionary is guaranteed as of Python 3.7.</p><p><a href=\"https://gavinw.me/pythonic/python/dictionaries.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/strings.html",
+            "url": "https://gavinw.me/pythonic/python/strings.html",
+            "title": "Strings",
+            "date_published": "2022-11-11T00:00:00Z",
+            "content_html": "<p>Some basic examples of creating strings in Python.</p><p><a href=\"https://gavinw.me/pythonic/python/strings.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/ray-function.html",
+            "url": "https://gavinw.me/pythonic/numerical/ray-function.html",
+            "title": "Ray function",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>To parallelize a function with the <a href=\"https://www.ray.io\">Ray</a> framework, decorate the function with <code>@ray.remote</code> to run the function remotely. Call the function with <code>.remote()</code> instead of calling it normally. The remote call yields a future that must be fetched with <code>ray.get</code>. The example below compares a parallel Ray function to a standard non-parallel function. A computationally expensive task is simulated by using the <code>sleep()</code> function.</p><p><a href=\"https://gavinw.me/pythonic/numerical/ray-function.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/dask-array.html",
+            "url": "https://gavinw.me/pythonic/numerical/dask-array.html",
+            "title": "Dask array",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Dask Array is similar to a NumPy array and allows cutting up a large array into smaller arrays (chunks). This enables working with arrays that are larger than memory. Computations can be applied in parallel for fast execution. Below is an example of using Dask array <code>map_blocks()</code> to map a function that returns a single value. Using an 8 CPU core MacBook Pro running macOS v11.6, the serial elapsed time is 513.51 seconds and the Dask elapsed time is 3.21 seconds.</p><p><a href=\"https://gavinw.me/pythonic/numerical/dask-array.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/dask-script.html",
+            "url": "https://gavinw.me/pythonic/numerical/dask-script.html",
+            "title": "Use Dask in a script",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Since most Dask examples are demonstrated using Jupyter notebooks, here's an example of using Dask in a Python file or script. Notice how the Dask code must be in the <code>__main__</code> block or called from within a function.</p><p><a href=\"https://gavinw.me/pythonic/numerical/dask-script.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/ray-actor.html",
+            "url": "https://gavinw.me/pythonic/numerical/ray-actor.html",
+            "title": "Ray actor",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p><a href=\"https://www.ray.io\">Ray</a> actors are used to parallelize a class instance to perform stateful operations in parallel. Ray will start a remote instance of the class and then execute remote method calls and maintain its own internal state. The example below compares a parallel Ray actor approach to a standard class approach. A computationally expensive task is simulated by using the <code>sleep()</code> function.</p><p><a href=\"https://gavinw.me/pythonic/numerical/ray-actor.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/scipy-sparse-diag.html",
+            "url": "https://gavinw.me/pythonic/numerical/scipy-sparse-diag.html",
+            "title": "Sparse diagonal matrix",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The <code>diags</code> function from SciPy can be used to create a sparse diagonal matrix. The matrix is constructed from lists or NumPy arrays that represent the diagonals of the matrix. The <code>offsets</code> argument sets the placement of the diagonals within the matrix where <code>k = 0</code> is the main diagonal, <code>k &lt; 0</code> is the kth lower diagonal, and <code>k &gt; 0</code> is the kth upper diagonal.</p><p><a href=\"https://gavinw.me/pythonic/numerical/scipy-sparse-diag.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/textwrap-dedent.html",
+            "url": "https://gavinw.me/pythonic/python/textwrap-dedent.html",
+            "title": "Textwrap dedent",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Remove leading whitespace from every line in text with the <code>textwrap.dedent()</code> function. The first example prints the leading white space in the string which is caused by the indentation of the function. The second example uses <code>textwrap.dedent()</code> to remove the leading white space.</p><p><a href=\"https://gavinw.me/pythonic/python/textwrap-dedent.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/argparse.html",
+            "url": "https://gavinw.me/pythonic/python/argparse.html",
+            "title": "Argparse",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The <code>argparse</code> module provides an interface to write command-line programs in Python. It is the recommended command-line parsing module available in the Python standard library. An example of using <code>argparse</code> is shown below.</p><p><a href=\"https://gavinw.me/pythonic/python/argparse.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/secrets.html",
+            "url": "https://gavinw.me/pythonic/python/secrets.html",
+            "title": "Secrets",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Use the <code>secrets</code> module to generate cryptographically strong random passwords containing letters, numbers, and punctuation.</p><p><a href=\"https://gavinw.me/pythonic/python/secrets.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/counter.html",
+            "url": "https://gavinw.me/pythonic/python/counter.html",
+            "title": "Counter",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The <code>Counter</code> class counts the number of times an item appears in a list or hashable object. For example, you can count the number of times a string appears in a list or how often a letter occurs in a string.</p><p><a href=\"https://gavinw.me/pythonic/python/counter.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/unittest-csv.html",
+            "url": "https://gavinw.me/pythonic/python/unittest-csv.html",
+            "title": "Unittest CSV files",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The example below demonstrates a unit test for a function that writes data in a dictionary to CSV files.</p><p><a href=\"https://gavinw.me/pythonic/python/unittest-csv.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/json.html",
+            "url": "https://gavinw.me/pythonic/python/json.html",
+            "title": "JSON",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>JavaScript Object Notation (JSON) is a common data format that is supported natively in Python. The format is built on name/value pairs and ordered list values. Visit <a href=\"https://www.json.org/json-en.html\">json.org</a> to learn more about the JSON format.</p><p><a href=\"https://gavinw.me/pythonic/python/json.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/toml.html",
+            "url": "https://gavinw.me/pythonic/python/toml.html",
+            "title": "TOML",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>With the <code>toml</code> package, the contents of a TOML file can be loaded into a Python dictionary. Below is an example of reading a TOML file named <code>configure.toml</code> into a <code>config</code> dictionary.</p><p><a href=\"https://gavinw.me/pythonic/python/toml.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/pathlib.html",
+            "url": "https://gavinw.me/pythonic/python/pathlib.html",
+            "title": "Pathlib",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The <code>pathlib</code> module handles file paths with support for different operating systems.</p><p><a href=\"https://gavinw.me/pythonic/python/pathlib.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/prealloc-list.html",
+            "url": "https://gavinw.me/pythonic/python/prealloc-list.html",
+            "title": "Pre-allocate list",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>If the size of a list is known, then pre-allocating the list can provide\nperformance improvements; especially for a large list. The example below\nmeasures the performance of appending items to an empty list. Pre-allocating\na list of known size and assigning items to it gives better performance than\nappending to the list. The list comprehension approach (see Example 3) gives\nthe best elapsed time.</p><p><a href=\"https://gavinw.me/pythonic/python/prealloc-list.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/tuples.html",
+            "url": "https://gavinw.me/pythonic/python/tuples.html",
+            "title": "Tuples",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>A tuple is a number of items separated by commas.</p><p><a href=\"https://gavinw.me/pythonic/python/tuples.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/cprofile.html",
+            "url": "https://gavinw.me/pythonic/python/cprofile.html",
+            "title": "cProfile",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The <code>cProfile</code> module provides an interface to profile Python programs. A single function or an entire script or module can be profiled. As an example, the script shown below contains two functions that suspend execution for 2 and 4.5 seconds.</p><p><a href=\"https://gavinw.me/pythonic/python/cprofile.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/lists.html",
+            "url": "https://gavinw.me/pythonic/python/lists.html",
+            "title": "Lists",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>A list is used to group numbers, strings, or objects together. It is written as a pair of square brackets containing comma-separated items. A list typically contains items of similar type but it can contain items of different types too. Unlike tuples, lists are mutable therefore the content of a list can be modified.</p><p><a href=\"https://gavinw.me/pythonic/python/lists.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/test-examples.html",
+            "url": "https://gavinw.me/pythonic/python/test-examples.html",
+            "title": "Test examples",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Example scripts are often available for Python packages to demonstrate how to use the package. The examples are typically part of the repository where the package is developed. Tests should be written to ensure the examples continue to work with new versions of the package.</p><p><a href=\"https://gavinw.me/pythonic/python/test-examples.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/enums.html",
+            "url": "https://gavinw.me/pythonic/python/enums.html",
+            "title": "Enumerations",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>An enumeration is a set of symbolic names that are bound to unique, constant values. Enumerations (or enums) are implemented in Python using the <code>Enum</code> class from the <code>enum</code> module.</p><p><a href=\"https://gavinw.me/pythonic/python/enums.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/xml.html",
+            "url": "https://gavinw.me/pythonic/python/xml.html",
+            "title": "XML",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>There are several XML parsers available in the Python standard library. Below is an example of using the ElementTree module.</p><p><a href=\"https://gavinw.me/pythonic/python/xml.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/numbers.html",
+            "url": "https://gavinw.me/pythonic/python/numbers.html",
+            "title": "Numbers",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Python includes three numeric types such as integers <code>int</code>, float <code>float</code>, and complex <code>complex</code> numbers.</p><p><a href=\"https://gavinw.me/pythonic/python/numbers.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/package-data.html",
+            "url": "https://gavinw.me/pythonic/python/package-data.html",
+            "title": "Package with data",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>The file structure below represents a Python package that includes data files. Notice the data directory is within the package at <code>src/mypackage/</code>. This source directory approach follows the conventions outlined in the <a href=\"https://packaging.python.org/en/latest/\">Python Packaging User Guide</a>.</p><p><a href=\"https://gavinw.me/pythonic/python/package-data.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/tkinter-label.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/tkinter-label.html",
+            "title": "Update Label text",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Example of updating a Label's text in Tkinter.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/tkinter-label.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/tkinter-customtkinter.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/tkinter-customtkinter.html",
+            "title": "Theme customtkinter",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Example of a Tkinter app using the customtkinter theme. This theme will automatically change to light or dark mode when the macOS appearance changes. More information about the theme is available on GitHub at <a href=\"https://github.com/TomSchimansky/CustomTkinter\">TomSchimansky/CustomTkinter</a>.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/tkinter-customtkinter.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/tkinter-ttkbootstrap.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/tkinter-ttkbootstrap.html",
+            "title": "Theme ttkbootstrap",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Example of a Tkinter app using the ttkbootstrap theme. More information about\nthe theme is available on GitHub at <a href=\"https://github.com/israel-dryer/ttkbootstrap\">israel-dryer/ttkbootstrap</a>.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/tkinter-ttkbootstrap.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/tkinter-openjsonfile.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/tkinter-openjsonfile.html",
+            "title": "Open JSON file",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Example of opening a JSON file and reading its contents in a Tkinter app. See\nthe <a href=\"https://docs.python.org/3/library/dialog.html\">Python Tkinter docs</a> for\nmore information about file selection dialogs.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/tkinter-openjsonfile.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/tkinter-basic-app.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/tkinter-basic-app.html",
+            "title": "Basic Tkinter application",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>This example demonstrates the structure of a basic Tkinter application.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/tkinter-basic-app.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/streamlit-selectbox.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/streamlit-selectbox.html",
+            "title": "Selectbox widget",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Example of a selectbox widget using a callback function and session state.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/streamlit-selectbox.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/tkinter-matplotlib.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/tkinter-matplotlib.html",
+            "title": "View data with Matplotlib",
+            "date_published": "2022-11-08T00:00:00Z",
+            "content_html": "<p>Below is an example of using Matplotlib to plot data in a Tkinter app. The plot figure is shown in a separate window when the button is pressed.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/tkinter-matplotlib.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-loop-columns.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-loop-columns.html",
+            "title": "Loop over columns",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>Loop over columns in an array by iterating over the transpose of the array.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-loop-columns.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-full.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-full.html",
+            "title": "Full array",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>Use the <code>full</code> function in NumPy to create a new array filled with a given value.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-full.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-maximum.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-maximum.html",
+            "title": "Maximum array",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>The <code>maximum</code> function returns a new array that contains the maximum values of the two given arrays.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-maximum.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-inv-solve.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-inv-solve.html",
+            "title": "Compare inv and solve functions",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>Solve equation <code>A*x=b</code> for <code>x</code> and compare results using the <code>np.linalg.solve()</code> function to the <code>np.linalg.inv()</code> approach.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-inv-solve.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-save-load-arrays.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-save-load-arrays.html",
+            "title": "Save and load arrays",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>NumPy arrays can be saved and loaded using different file formats. Examples of using the NumPy file formats <code>.npy</code> and <code>.npz</code> as well as a plain text format are given below.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-save-load-arrays.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-clip-array.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-clip-array.html",
+            "title": "Clip array values",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>The <code>clip</code> function limits the values in an array based on a given interval or minimum or maximum value.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-clip-array.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-setdiff.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-setdiff.html",
+            "title": "Set difference of two arrays",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>The <code>setdiff1d</code> function returns the unique values in array 1 that are not in array 2.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-setdiff.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-large-array.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-large-array.html",
+            "title": "Large array memory usage",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>In the examples below, a 500x2000x2000 three-dimensional NumPy array named <code>a</code> is initialized with zeros. At each iteration, a random two-dimensional array <code>r</code> is inserted into array <code>a</code>. This approach could represent a larger piece of code where the <code>r</code> array would be created from various calculations during each iteration of the for-loop. Consequently, each slice in the z dimension of the <code>a</code> array is calculated at each iteration.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-large-array.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/numerical/numpy-bool-index.html",
+            "url": "https://gavinw.me/pythonic/numerical/numpy-bool-index.html",
+            "title": "Boolean indexing",
+            "date_published": "2022-11-07T00:00:00Z",
+            "content_html": "<p>Use boolean indexing in NumPy arrays to assign values. The example below assigns a zero to array items that are less than zero.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-bool-index.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/matplotlib-line.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/matplotlib-line.html",
+            "title": "Line plot",
+            "date_published": "2022-11-06T00:00:00Z",
+            "content_html": "<p>Below is a simple example of plotting a line using Matplotlib.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/matplotlib-line.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/matplotlib-contour.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/matplotlib-contour.html",
+            "title": "Contour plot smoothing",
+            "date_published": "2022-11-06T00:00:00Z",
+            "content_html": "<p>The example below generates a contour plot of sparse data.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/matplotlib-contour.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/matplotlib-mosaic.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/matplotlib-mosaic.html",
+            "title": "Mosaic grid of plots",
+            "date_published": "2022-11-06T00:00:00Z",
+            "content_html": "<p>Example of using Matplotlib <code>subplot_mosaic()</code> to create a grid of plots.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/matplotlib-mosaic.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/matplotlib-animation.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/matplotlib-animation.html",
+            "title": "Animation",
+            "date_published": "2022-11-06T00:00:00Z",
+            "content_html": "<p>Matplotlib provides two animation classes for animating a plot figure. The example below uses the ArtistAnimation class. The animation can be displayed just like any other Matplotlib figure and saved to file as various video formats.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/matplotlib-animation.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/conda-env.html",
+            "url": "https://gavinw.me/pythonic/python/conda-env.html",
+            "title": "Conda environments",
+            "date_published": "2022-11-05T00:00:00Z",
+            "content_html": "<p>Similar to Python's <code>venv</code> module, Conda can also create virtual environments but these environments support languages other than Python.</p><p><a href=\"https://gavinw.me/pythonic/python/conda-env.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/install-python.html",
+            "url": "https://gavinw.me/pythonic/python/install-python.html",
+            "title": "Installing Python",
+            "date_published": "2022-11-05T00:00:00Z",
+            "content_html": "<p>The most common way to install Python is at <a href=\"https://www.python.org\">https://www.python.org</a>. Go to the Downloads section for step-by-step instructions on how to download and install Python for your operating system. For scientific computing, check out the Anaconda distribution of Python available at <a href=\"https://www.anaconda.com\">https://www.anaconda.com</a>. Go to the Products section and select the open source Individual Edition.</p><p><a href=\"https://gavinw.me/pythonic/python/install-python.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/virtual-env.html",
+            "url": "https://gavinw.me/pythonic/python/virtual-env.html",
+            "title": "Virtual environments",
+            "date_published": "2022-11-05T00:00:00Z",
+            "content_html": "<p>The <code>venv</code> module included with Python is used to create and manage virtual environments.</p><p><a href=\"https://gavinw.me/pythonic/python/virtual-env.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-plotly-htmx.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-plotly-htmx.html",
+            "title": "Plotly graph with Htmx",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://htmx.org\">Htmx</a> allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Plotly graph in a web page without updating the entire page.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-plotly-htmx.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-heroku.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-heroku.html",
+            "title": "Deploy on Heroku",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://www.heroku.com\">Heroku</a> makes it easy to deploy a Python Flask application. To get started, create a project folder and a virtual environment in that folder. Notice that <code>env</code> is the name of the virtual environment discussed below; it can be called <code>myenv</code> or something else.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-heroku.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-bokeh-htmx.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-bokeh-htmx.html",
+            "title": "Bokeh graph with Htmx",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://bokeh.org\">Bokeh</a> is a visualization library for Python that makes it easy to plot data in Jupyter notebooks or web pages. <a href=\"https://htmx.org\">Htmx</a> allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Bokeh graph in a web page without updating the entire page.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-bokeh-htmx.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-plotly.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-plotly.html",
+            "title": "Plotly graph",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://plotly.com\">Plotly</a> is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-plotly.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-form-input.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-form-input.html",
+            "title": "Form input",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p>An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the <code>app.py</code> file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-form-input.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-form-htmx.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-form-htmx.html",
+            "title": "Form input with Htmx",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://htmx.org\">Htmx</a> allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to submit a form when the page loads. Results calculated from the form values are displayed on the same page.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-form-htmx.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-ajax.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-ajax.html",
+            "title": "Update page with Ajax",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p>This Flask webapp example uses Ajax to update the page with results from the post request. The results are returned as JSON which is used to update the div tags.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-ajax.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-bokeh.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-bokeh.html",
+            "title": "Bokeh graph",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://bokeh.org\">Bokeh</a> is a visualization library for Python that makes it easy to plot data in Jupyter notebooks or web pages. The example below uses Flask to serve a web page, handle the form input data, then plot the data on a separate page using Bokeh.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-bokeh.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/web-visualization/flask-plotly-restyle.html",
+            "url": "https://gavinw.me/pythonic/web-visualization/flask-plotly-restyle.html",
+            "title": "Plotly graph restyle",
+            "date_published": "2022-11-01T00:00:00Z",
+            "content_html": "<p><a href=\"https://plotly.com\">Plotly</a> is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app. When the page first loads, a default line graph is shown. New data points are added to the graph using the form inputs. The <code>Plotly.restyle</code> function is used to redraw the graph when new data points are submitted; this approach avoids recreating an entirely new Plotly graph each time the data is updated.</p><p><a href=\"https://gavinw.me/pythonic/web-visualization/flask-plotly-restyle.html\">Continue reading...</a></p>"
+        }
+    ]
+}

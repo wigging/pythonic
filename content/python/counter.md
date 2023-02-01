@@ -1,7 +1,7 @@
-+++
-title = "Counter"
-date = 2022-11-08
-+++
+---
+title: Counter
+date: November 8, 2022
+---
 
 The `Counter` class counts the number of times an item appears in a list or hashable object. For example, you can count the number of times a string appears in a list or how often a letter occurs in a string.
 

@@ -8,7 +8,7 @@ Example code is located in the `python-projects` and `python-scripts` folders.
 
 ## Website
 
-The website is generated with [Zola](https://www.getzola.org) using the `content`, `static`, `templates` folders, and the `config.toml` file. It is hosted with GitHub Pages from the `docs` folder.
+The website is available at https://gavinw.me/pythonic. It is generated with the [genja](https://github.com/wigging/genja) tool using the `content`, `docs`, `templates` folders and the `config.json` file. The website is hosted with GitHub Pages from the `docs` folder.
 
 ## Contributing
 
