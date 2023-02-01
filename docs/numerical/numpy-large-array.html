@@ -16,7 +16,7 @@
     <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/pythonic/styles.css">
 
     <title>Pythonic Programming</title>
 </head>
@@ -68,7 +68,7 @@ if __name__ == '__main__':
 elapsed time = 16.56 sec
 calculated storage = 16.0 GB
 </code></pre>
-<p><img src="/img/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
+<p><img src="/pythonic/img/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
 
 <h2>Example 2</h2>
 <p>An example of building a large NumPy array with random values where the data type is
@@ -105,7 +105,7 @@ if __name__ == '__main__':
 elapsed time = 19.41 sec
 calculated storage = 8.0 GB
 </code></pre>
-<p><img src="/img/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
+<p><img src="/pythonic/img/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
 
 <h2>Example 3</h2>
 <p>Using the h5py package, this example creates an hdf5 file that contains a dataset that represents the <code>a</code> array. The <code>dset</code> variable is similar to the <code>a</code> variable in the previous examples. This approach allows the array to reside on disk, not in memory.</p>
@@ -143,7 +143,7 @@ if __name__ == '__main__':
 elapsed time = 21.34 sec
 calculated storage = 8.0 GB
 </code></pre>
-<p><img src="/img/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
+<p><img src="/pythonic/img/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
 
 <h2>Summary</h2>
 <p>A comparison of the three examples is shown below in the table. Changing the array data type from float64 to float32 cut the memory usage in half. Writing the array to disk drastically reduced memory use. The generated hdf5 file is about 8 GB on disk which is the size of the array containing float32 values. The elapsed time for the hdf5 approach is similar to the other examples; therefore, writing to the hdf5 file seems to have a negligible performance impact. Based on these examples, writing the array to disk using an hdf5 file allows substantial memory reduction as long as disk space is available for storing the array.</p>
