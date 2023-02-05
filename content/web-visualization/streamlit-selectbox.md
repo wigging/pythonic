@@ -1,6 +1,6 @@
 ---
 title: Selectbox widget
-date: November 8, 2022
+date: February 4, 2023
 ---
 
 Example of a selectbox widget using a callback function and session state.
@@ -20,4 +20,4 @@ st.selectbox('Select at item', data, key='selected', on_change=print_selected)
 st.write('You selected: ', st.session_state.selected)
 ```
 
-<p><img src="/img/streamlit-selectbox.png" style="max-width:100%;" alt="selectbox"></p>
+<p><img src="../img/streamlit-selectbox.png" style="max-width:100%;" alt="selectbox"></p>

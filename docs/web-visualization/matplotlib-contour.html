@@ -16,7 +16,7 @@
     <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/pythonic/styles.css">
+    <link rel="stylesheet" href="../styles.css">
 
     <title>Pythonic Programming</title>
 </head>
@@ -26,7 +26,7 @@
         <div class="col-md">
 
         <h1>Contour plot smoothing</h1>
-        <h6>November 6, 2022</h6>
+        <h6>February 4, 2023</h6>
         <hr>
 
         <p>The example below generates a contour plot of sparse data.</p>
@@ -42,7 +42,7 @@ _, (ax1, ax2) = plt.subplots(ncols=2, tight_layout=True, figsize=[10, 4.8])
 ax1.contour(data)
 ax2.contourf(data)
 </code></pre>
-<p><img src="/pythonic/img/matplotlib-contour-orig.pdf" style="max-width:100%;" alt="original"></p>
+<p><img src="../img/matplotlib-contour-orig.pdf" style="max-width:100%;" alt="original"></p>
 
 <p>The plot can be smoothed by using SciPy's zoom function or gaussian filter function. Input parameters for each function should be adjusted accordingly for the data.</p>
 <pre><code class="language-python"># Resample the data with zoom then create contour plot
@@ -52,7 +52,7 @@ _, (ax1, ax2) = plt.subplots(ncols=2, tight_layout=True, figsize=[10, 4.8])
 ax1.contour(data2)
 ax2.contourf(data2)
 </code></pre>
-<p><img src="/pythonic/img/matplotlib-contour-zoom.pdf" style="max-width:100%;" alt="zoom"></p>
+<p><img src="../img/matplotlib-contour-zoom.pdf" style="max-width:100%;" alt="zoom"></p>
 
 <pre><code class="language-python"># Resample data with gaussian filter then create contour plot
 data3 = gaussian_filter(data, 0.7)
@@ -61,7 +61,7 @@ _, (ax1, ax2) = plt.subplots(ncols=2, tight_layout=True, figsize=[10, 4.8])
 ax1.contour(data3)
 ax2.contourf(data3)
 </code></pre>
-<p><img src="/pythonic/img/matplotlib-contour-gauss.pdf" style="max-width:100%;" alt="gaussian"></p>
+<p><img src="../img/matplotlib-contour-gauss.pdf" style="max-width:100%;" alt="gaussian"></p>
 
 <p>The contour plot examples in this article are based on a Stack Overflow <a href="https://stackoverflow.com/q/12274529/1084875">post</a> which is where the original data was obtained from.</p>
 

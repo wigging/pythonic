@@ -1,6 +1,5 @@
 {
     "base_url": "https://gavinw.me/pythonic",
-    "repo_name": "pythonic",
     "input_dir": "content",
     "output_dir": "docs"
 }

@@ -43,6 +43,10 @@ pre code {
     max-width: 700px;
 }
 
+.pre1000 code {
+    max-width: 1000px;
+}
+
 @media screen and (prefers-color-scheme: dark) {
 
     a {

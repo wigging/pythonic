@@ -1,6 +1,6 @@
 ---
 title: View data with Matplotlib
-date: November 8, 2022
+date: February 4, 2023
 ---
 
 Below is an example of using Matplotlib to plot data in a Tkinter app. The plot figure is shown in a separate window when the button is pressed.
@@ -53,4 +53,4 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="/img/tkinter-matplotlib.png" style="max-width: 680px;" alt="tkinter matplotlib"></p>
+<p><img src="../img/tkinter-matplotlib.png" style="max-width: 680px;" alt="tkinter matplotlib"></p>

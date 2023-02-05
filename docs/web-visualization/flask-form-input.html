@@ -16,7 +16,7 @@
     <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/pythonic/styles.css">
+    <link rel="stylesheet" href="../styles.css">
 
     <title>Pythonic Programming</title>
 </head>
@@ -26,7 +26,7 @@
         <div class="col-md">
 
         <h1>Form input</h1>
-        <h6>November 1, 2022</h6>
+        <h6>February 4, 2023</h6>
         <hr>
 
         <p>An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the <code>app.py</code> file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.</p>
@@ -60,9 +60,9 @@ def results():
 
     return render_template('results.html', results=res)
 </code></pre>
-<p><img src="/pythonic/img/flask-form-input-index.png" style="max-width:500px;" alt="index page"></p>
+<p><img src="../img/flask-form-input-index.png" style="max-width:500px;" alt="index page"></p>
 
-<p><img src="/pythonic/img/flask-form-input-results.png" style="max-width:400px;" alt="results page"></p>
+<p><img src="../img/flask-form-input-results.png" style="max-width:400px;" alt="results page"></p>
 
 <p>The HTML templates used by the app are shown below. Notice that <a href="https://getbootstrap.com">Bootstrap</a> is used for the style and layout of the pages.</p>
 <pre><code class="language-html">&lt;!-- index.html --&gt;

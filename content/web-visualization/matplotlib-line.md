@@ -1,6 +1,6 @@
 ---
 title: Line plot
-date: November 6, 2022
+date: February 4, 2023
 ---
 
 Below is a simple example of plotting a line using Matplotlib.
@@ -12,4 +12,4 @@ Below is a simple example of plotting a line using Matplotlib.
 >>> plt.show()
 ```
 
-<p><img src="/img/matplotlib-line.png" style="max-width:100%;" alt="line plot"></p>
+<p><img src="../img/matplotlib-line.png" style="max-width:100%;" alt="line plot"></p>

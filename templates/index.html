@@ -11,7 +11,7 @@
     <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ repo_url }}/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Pythonic Programming</title>
 </head>
@@ -33,7 +33,7 @@
         <ul style="columns:2;">
         {% for page in pages %}
         {% if page.section == 'python' %}
-            <li><a href="{{ repo_url }}{{ page.link }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
@@ -43,7 +43,7 @@
         <ul style="columns:2;">
         {% for page in pages %}
         {% if page.section == 'numerical' %}
-            <li><a href="{{ repo_url }}{{ page.link }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
@@ -53,7 +53,7 @@
         <ul style="columns:2;">
         {% for page in pages %}
         {% if page.section == 'web-visualization' %}
-            <li><a href="{{ repo_url }}{{ page.link }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
