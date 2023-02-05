@@ -12,6 +12,13 @@
             "content_html": "<p>In the examples below, a 500x2000x2000 three-dimensional NumPy array named <code>a</code> is initialized with zeros. At each iteration, a random two-dimensional array <code>r</code> is inserted into array <code>a</code>. This approach could represent a larger piece of code where the <code>r</code> array would be created from various calculations during each iteration of the for-loop. Consequently, each slice in the z dimension of the <code>a</code> array is calculated at each iteration.</p><p><a href=\"https://gavinw.me/pythonic/numerical/numpy-large-array.html\">Continue reading...</a></p>"
         },
         {
+            "id": "https://gavinw.me/pythonic/python/sorted-list.html",
+            "url": "https://gavinw.me/pythonic/python/sorted-list.html",
+            "title": "Sorted list of items",
+            "date_published": "2023-02-04T00:00:00Z",
+            "content_html": "<p>A list of dictionaries can be sorted using the keys in the dictionaries, while a list of tuples can be sorted using the tuple's index.</p><p><a href=\"https://gavinw.me/pythonic/python/sorted-list.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/web-visualization/flask-plotly-htmx.html",
             "url": "https://gavinw.me/pythonic/web-visualization/flask-plotly-htmx.html",
             "title": "Plotly graph with Htmx",
