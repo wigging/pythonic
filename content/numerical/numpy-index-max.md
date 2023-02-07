@@ -6,6 +6,8 @@ date: February 6, 2023
 Use NumPy's `argmax()` function to get the index of the maximum value in an array.
 
 ```python
+import numpy as np
+
 x = np.array([1, 8, 2.5, 4])
 ind = x.argmax()
 
@@ -13,7 +15,7 @@ print('1D array', x)
 print('Max value at index', ind)
 ```
 
-```
+```text
 1D array [1 8 2.5 4]
 Max value at index 1
 ```
@@ -28,7 +30,7 @@ print('1D array', y)
 print('Max value at index', ind)
 ```
 
-```
+```text
 1D array [1 8 2.5 4 8]
 Max value at index 1
 ```
@@ -43,7 +45,7 @@ print('2D array\n', z)
 print('Max value at index', ind)
 ```
 
-```
+```text
 2D array
 [[1   2.4  7  5  ]
  [0.2 8    7  4.9]

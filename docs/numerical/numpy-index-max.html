@@ -30,13 +30,15 @@
         <hr>
 
         <p>Use NumPy's <code>argmax()</code> function to get the index of the maximum value in an array.</p>
-<pre><code class="language-python">x = np.array([1, 8, 2.5, 4])
+<pre><code class="language-python">import numpy as np
+
+x = np.array([1, 8, 2.5, 4])
 ind = x.argmax()
 
 print('1D array', x)
 print('Max value at index', ind)
 </code></pre>
-<pre><code>1D array [1 8 2.5 4]
+<pre><code class="language-text">1D array [1 8 2.5 4]
 Max value at index 1
 </code></pre>
 <p>If there are multiple occurrences of the max value, then the first index is returned.</p>
@@ -46,7 +48,7 @@ ind = y.argmax()
 print('1D array', y)
 print('Max value at index', ind)
 </code></pre>
-<pre><code>1D array [1 8 2.5 4 8]
+<pre><code class="language-text">1D array [1 8 2.5 4 8]
 Max value at index 1
 </code></pre>
 <p>Use the <code>unravel_index()</code> function to get the row and column indices of the max value in a two-dimensional array.</p>
@@ -56,7 +58,7 @@ ind = np.unravel_index(z.argmax(), z.shape)
 print('2D array\n', z)
 print('Max value at index', ind)
 </code></pre>
-<pre><code>2D array
+<pre><code class="language-text">2D array
 [[1   2.4  7  5  ]
  [0.2 8    7  4.9]
  [5   3.1  4  1  ]
