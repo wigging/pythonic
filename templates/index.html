@@ -38,21 +38,81 @@
         {% endfor %}
         </ul>
 
-        <h2>Numerical</h2>
+        <h2>NumPy</h2>
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'numerical' %}
+        {% if page.section == 'numpy' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
 
-        <h2>Web and Visualization</h2>
+        <h2>Dask</h2>
+        <hr>
+        <ul>
+        {% for page in pages %}
+        {% if page.section == 'dask' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Ray</h2>
+        <hr>
+        <ul>
+        {% for page in pages %}
+        {% if page.section == 'ray' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>SciPy</h2>
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'web-visualization' %}
+        {% if page.section == 'scipy' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Flask</h2>
+        <hr>
+        <ul style="columns:2;">
+        {% for page in pages %}
+        {% if page.section == 'flask' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Matplotlib</h2>
+        <hr>
+        <ul>
+        {% for page in pages %}
+        {% if page.section == 'matplotlib' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Streamlit</h2>
+        <hr>
+        <ul>
+        {% for page in pages %}
+        {% if page.section == 'streamlit' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Tkinter</h2>
+        <hr>
+        <ul style="columns:2;">
+        {% for page in pages %}
+        {% if page.section == 'tkinter' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
