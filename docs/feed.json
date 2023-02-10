@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/matplotlib/bar-plot.html",
+            "url": "https://gavinw.me/pythonic/matplotlib/bar-plot.html",
+            "title": "Bar plot",
+            "date_published": "2023-02-09T00:00:00Z",
+            "content_html": "<p>The example below creates a bar plot and adds value labels to each bar.</p><p><a href=\"https://gavinw.me/pythonic/matplotlib/bar-plot.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/numpy/index-max.html",
             "url": "https://gavinw.me/pythonic/numpy/index-max.html",
             "title": "Index of max value",
