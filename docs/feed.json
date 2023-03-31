@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/cached.html",
+            "url": "https://gavinw.me/pythonic/python/cached.html",
+            "title": "Cached property",
+            "date_published": "2023-03-30T00:00:00Z",
+            "content_html": "<p>The class below sets the pressure coefficients <code>coeffs</code> based on the chemical name. In a real application, these coefficients might be read from a chemical database; therefore, getting the coefficients could take time to retrieve. This is demonstrated by the <code>time.sleep()</code> associated with the coefficients variable.</p><p><a href=\"https://gavinw.me/pythonic/python/cached.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/matplotlib/bar-plot.html",
             "url": "https://gavinw.me/pythonic/matplotlib/bar-plot.html",
             "title": "Bar plot",
