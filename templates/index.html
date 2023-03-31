@@ -32,7 +32,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'python' %}
+        {% if page.category == 'python' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -42,7 +42,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'numpy' %}
+        {% if page.category == 'numpy' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -52,7 +52,7 @@
         <hr>
         <ul>
         {% for page in pages %}
-        {% if page.section == 'dask' %}
+        {% if page.category == 'dask' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -62,7 +62,7 @@
         <hr>
         <ul>
         {% for page in pages %}
-        {% if page.section == 'ray' %}
+        {% if page.category == 'ray' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -72,7 +72,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'scipy' %}
+        {% if page.category == 'scipy' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -82,7 +82,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'flask' %}
+        {% if page.category == 'flask' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -92,7 +92,7 @@
         <hr>
         <ul>
         {% for page in pages %}
-        {% if page.section == 'matplotlib' %}
+        {% if page.category == 'matplotlib' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -102,7 +102,7 @@
         <hr>
         <ul>
         {% for page in pages %}
-        {% if page.section == 'streamlit' %}
+        {% if page.category == 'streamlit' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -112,7 +112,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'tkinter' %}
+        {% if page.category == 'tkinter' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
