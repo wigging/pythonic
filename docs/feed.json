@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/count-letters.html",
+            "url": "https://gavinw.me/pythonic/python/count-letters.html",
+            "title": "Count letters",
+            "date_published": "2023-04-15T00:00:00Z",
+            "content_html": "<p>Given the string <code>Mary had a little Mommy lamb</code>, count the number of times a letter appears in the string. See the examples below for different approaches.</p><p><a href=\"https://gavinw.me/pythonic/python/count-letters.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/cached.html",
             "url": "https://gavinw.me/pythonic/python/cached.html",
             "title": "Cached property",
