@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/pythonic/matplotlib/matshow-plot.html",
+            "url": "https://wigging.me/pythonic/matplotlib/matshow-plot.html",
+            "title": "Matshow plot",
+            "date_published": "2023-05-10T00:00:00Z",
+            "content_html": "<p>Visualize an array using Matplotlib's matshow function. The first example shown below plots a 2D array and the second example plots a diagonal array.</p><p><a href=\"https://wigging.me/pythonic/matplotlib/matshow-plot.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/pythonic/python/count-letters.html",
             "url": "https://wigging.me/pythonic/python/count-letters.html",
             "title": "Count letters",
