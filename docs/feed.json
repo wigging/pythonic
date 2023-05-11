@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/pythonic/matplotlib/imshow-plot.html",
+            "url": "https://wigging.me/pythonic/matplotlib/imshow-plot.html",
+            "title": "Imshow plot",
+            "date_published": "2023-05-10T00:00:00Z",
+            "content_html": "<p>Display data as an image using Matplotlib's imshow method.</p><p><a href=\"https://wigging.me/pythonic/matplotlib/imshow-plot.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/pythonic/matplotlib/matshow-plot.html",
             "url": "https://wigging.me/pythonic/matplotlib/matshow-plot.html",
             "title": "Matshow plot",
