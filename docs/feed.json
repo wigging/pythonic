@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/pythonic/python/package-name.html",
+            "url": "https://wigging.me/pythonic/python/package-name.html",
+            "title": "Package name",
+            "date_published": "2023-06-11T00:00:00Z",
+            "content_html": "<p>The distribution name of a Python package can be different than the import name. Below is an example of a repository named <code>sklearn-model</code> which contains the <code>skmodel</code> package.</p><p><a href=\"https://wigging.me/pythonic/python/package-name.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/pythonic/matplotlib/imshow-plot.html",
             "url": "https://wigging.me/pythonic/matplotlib/imshow-plot.html",
             "title": "Imshow plot",
