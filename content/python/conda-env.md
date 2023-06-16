@@ -1,6 +1,6 @@
 ---
 title: Conda environments
-date: November 5, 2022
+date: June 15, 2023
 ---
 
 Similar to Python's `venv` module, Conda can also create virtual environments but these environments support languages other than Python.
@@ -23,4 +23,11 @@ $ conda env remove --name myenv
 
 # Create an environment using a config file
 $ conda env create --file environment.yml
+```
+
+If you want to run a single command using a conda environment (but don't want to activate the environment first), you can use `conda run` as shown below:
+
+```bash
+# Run a command in an environment without activating the environment first
+$ conda run -n myenv python --version
 ```

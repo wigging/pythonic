@@ -26,7 +26,7 @@
         <div class="col-md">
 
         <h1>Conda environments</h1>
-        <h6>November 5, 2022</h6>
+        <h6>June 15, 2023</h6>
         <hr>
 
         <p>Similar to Python's <code>venv</code> module, Conda can also create virtual environments but these environments support languages other than Python.</p>
@@ -47,6 +47,10 @@ $ conda env remove --name myenv
 
 # Create an environment using a config file
 $ conda env create --file environment.yml
+</code></pre>
+<p>If you want to run a single command using a conda environment (but don't want to activate the environment first), you can use <code>conda run</code> as shown below:</p>
+<pre><code class="language-bash"># Run a command in an environment without activating the environment first
+$ conda run -n myenv python --version
 </code></pre>
 
         </div>

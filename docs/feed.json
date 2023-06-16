@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/pythonic/python/conda-env.html",
+            "url": "https://wigging.me/pythonic/python/conda-env.html",
+            "title": "Conda environments",
+            "date_published": "2023-06-15T00:00:00Z",
+            "content_html": "<p>Similar to Python's <code>venv</code> module, Conda can also create virtual environments but these environments support languages other than Python.</p><p><a href=\"https://wigging.me/pythonic/python/conda-env.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/pythonic/python/package-name.html",
             "url": "https://wigging.me/pythonic/python/package-name.html",
             "title": "Package name",
@@ -423,13 +430,6 @@
             "title": "Save and load arrays",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>NumPy arrays can be saved and loaded using different file formats. Examples of using the NumPy file formats <code>.npy</code> and <code>.npz</code> as well as a plain text format are given below.</p><p><a href=\"https://wigging.me/pythonic/numpy/save-load-arrays.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://wigging.me/pythonic/python/conda-env.html",
-            "url": "https://wigging.me/pythonic/python/conda-env.html",
-            "title": "Conda environments",
-            "date_published": "2022-11-05T00:00:00Z",
-            "content_html": "<p>Similar to Python's <code>venv</code> module, Conda can also create virtual environments but these environments support languages other than Python.</p><p><a href=\"https://wigging.me/pythonic/python/conda-env.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://wigging.me/pythonic/python/install-python.html",
