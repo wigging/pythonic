@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/pythonic/python/debugger.html",
+            "url": "https://wigging.me/pythonic/python/debugger.html",
+            "title": "Debugger",
+            "date_published": "2023-07-18T00:00:00Z",
+            "content_html": "<p>The <a href=\"https://docs.python.org/3/library/pdb.html\">pdb</a> module provides an interactive debugger for Python programs. It supports breakpoints and stepping through the source code. To demonstrate using the debugger and setting a breakpoint, first consider the example shown below.</p><p><a href=\"https://wigging.me/pythonic/python/debugger.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/pythonic/python/conda-env.html",
             "url": "https://wigging.me/pythonic/python/conda-env.html",
             "title": "Conda environments",
