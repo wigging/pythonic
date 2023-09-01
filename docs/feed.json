@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/pythonic/numpy/gauss.html",
+            "url": "https://wigging.me/pythonic/numpy/gauss.html",
+            "title": "Gauss-Legendre points and weights",
+            "date_published": "2023-08-31T00:00:00Z",
+            "content_html": "<p>The function below returns the Gauss-Legendre integration points and weights for a 2D quadrilateral using values from a 1D quadrature. The 1D values are obtained from NumPy's <code>leggauss()</code> function.</p><p><a href=\"https://wigging.me/pythonic/numpy/gauss.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/pythonic/python/debugger.html",
             "url": "https://wigging.me/pythonic/python/debugger.html",
             "title": "Debugger",
