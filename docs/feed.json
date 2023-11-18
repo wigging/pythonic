@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/doctest.html",
+            "url": "https://gavinw.me/pythonic/python/doctest.html",
+            "title": "Doctest",
+            "date_published": "2023-11-17T00:00:00Z",
+            "content_html": "<p>The docstring of the <code>adder()</code> function shown below contains two examples of how to use the function. The function resides in a file named <code>example.py</code>. Use the <code>doctest</code> module to test the examples in this docstring.</p><p><a href=\"https://gavinw.me/pythonic/python/doctest.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/numpy/gauss.html",
             "url": "https://gavinw.me/pythonic/numpy/gauss.html",
             "title": "Gauss-Legendre points and weights",
