@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/sublime-project.html",
+            "url": "https://gavinw.me/pythonic/python/sublime-project.html",
+            "title": "Sublime Text project",
+            "date_published": "2023-11-25T00:00:00Z",
+            "content_html": "<p>Projects in <a href=\"https://www.sublimetext.com\">Sublime Text</a> are made up of two files: the <code>.sublime-project</code> file, which contains the project configuration, and the <code>.sublime-workspace</code> file, which contains user specific data such as the open files and the modifications to each file.</p><p><a href=\"https://gavinw.me/pythonic/python/sublime-project.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/doctest.html",
             "url": "https://gavinw.me/pythonic/python/doctest.html",
             "title": "Doctest",
