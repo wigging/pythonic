@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/version.html",
+            "url": "https://gavinw.me/pythonic/python/version.html",
+            "title": "Version number",
+            "date_published": "2023-11-30T00:00:00Z",
+            "content_html": "<p>Use the <a href=\"https://docs.python.org/3/library/importlib.metadata.html\">importlib.metadata</a> library in Python to get the version number of a package. The example below gets the version of the ipython package that has been installed in the environment.</p><p><a href=\"https://gavinw.me/pythonic/python/version.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/sublime-project.html",
             "url": "https://gavinw.me/pythonic/python/sublime-project.html",
             "title": "Sublime Text project",
