@@ -5,6 +5,20 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/cached-class-property.html",
+            "url": "https://gavinw.me/pythonic/python/cached-class-property.html",
+            "title": "Cached class property",
+            "date_published": "2024-01-13T00:00:00Z",
+            "content_html": "<p>The <a href=\"https://docs.python.org/3/library/functools.html\">functools</a> module provides a <code>@cached_property</code> decorator to store the value of a class property.</p><p><a href=\"https://gavinw.me/pythonic/python/cached-class-property.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/pythonic/python/cache-function.html",
+            "url": "https://gavinw.me/pythonic/python/cache-function.html",
+            "title": "Cache function",
+            "date_published": "2024-01-13T00:00:00Z",
+            "content_html": "<p>The <a href=\"https://docs.python.org/3/library/functools.html\">functools</a> module provides a <code>@cache</code> decorator to store the results of an expensive function; also known as memoize.</p><p><a href=\"https://gavinw.me/pythonic/python/cache-function.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/version.html",
             "url": "https://gavinw.me/pythonic/python/version.html",
             "title": "Version number",
@@ -73,13 +87,6 @@
             "title": "Count letters",
             "date_published": "2023-04-15T00:00:00Z",
             "content_html": "<p>Given the string <code>Mary had a little Mommy lamb</code>, count the number of times a letter appears in the string. See the examples below for different approaches.</p><p><a href=\"https://gavinw.me/pythonic/python/count-letters.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/pythonic/python/cached.html",
-            "url": "https://gavinw.me/pythonic/python/cached.html",
-            "title": "Cached property",
-            "date_published": "2023-03-30T00:00:00Z",
-            "content_html": "<p>The class below sets the pressure coefficients <code>coeffs</code> based on the chemical name. In a real application, these coefficients might be read from a chemical database; therefore, getting the coefficients could take time to retrieve. This is demonstrated by the <code>time.sleep()</code> associated with the coefficients variable.</p><p><a href=\"https://gavinw.me/pythonic/python/cached.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/matplotlib/bar-plot.html",
