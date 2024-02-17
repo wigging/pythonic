@@ -26,18 +26,26 @@
         <div class="col-md">
 
         <h1>Virtual environments</h1>
-        <h6>November 5, 2022</h6>
+        <h6>February 16, 2024</h6>
         <hr>
 
-        <p>The <code>venv</code> module included with Python is used to create and manage virtual environments.</p>
-<pre><code class="language-bash"># Create a virtual environment named `myenv` within the current folder
-$ python -m venv myenv
+        <p>The <code>venv</code> module included with Python is used to create and manage virtual environments. This page provides some useful commands for creating and working with virtual environments. A virtual environment should not be checked into source control via Git or other such systems.</p>
+<p>Create and activate a virtual environment named "myvenv" using the commands shown below. Notice the name of the environment is "myvenv" but the name of the module is "venv".</p>
+<pre><code class="language-text">python -m venv myvenv
+source myvenv/bin/activate
+</code></pre>
+<p>It is common to create virtual environments with the same name as the <code>venv</code> module. The commands below use "venv" and ".venv" for the environment name.</p>
+<pre><code class="language-text">python -m venv venv
+source venv/bin/activate
 
-# Activate the virtual environment
-$ source myenv/bin/activate
-
-# Deactivate the virtual environment
-$ deactivate
+python -m venv .venv
+source .venv/bin/activate
+</code></pre>
+<p>Create a virtual environment with the command shown below to automatically update dependencies in the environment. This ensures that you don't have to update things like pip after you activate the environment.</p>
+<pre><code class="language-text">python -m venv --upgrade-deps venv
+</code></pre>
+<p>Finally, use the command shown here to deactivate the environment.</p>
+<pre><code class="language-text">deactivate
 </code></pre>
 
         </div>

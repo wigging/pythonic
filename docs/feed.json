@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/virtual-env.html",
+            "url": "https://gavinw.me/pythonic/python/virtual-env.html",
+            "title": "Virtual environments",
+            "date_published": "2024-02-16T00:00:00Z",
+            "content_html": "<p>The <code>venv</code> module included with Python is used to create and manage virtual environments. This page provides some useful commands for creating and working with virtual environments. A virtual environment should not be checked into source control via Git or other such systems.</p><p><a href=\"https://gavinw.me/pythonic/python/virtual-env.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/cached-class-property.html",
             "url": "https://gavinw.me/pythonic/python/cached-class-property.html",
             "title": "Cached class property",
@@ -479,13 +486,6 @@
             "title": "Installing Python",
             "date_published": "2022-11-05T00:00:00Z",
             "content_html": "<p>The most common way to install Python is at <a href=\"https://www.python.org\">https://www.python.org</a>. Go to the Downloads section for step-by-step instructions on how to download and install Python for your operating system. For scientific computing, check out the Anaconda distribution of Python available at <a href=\"https://www.anaconda.com\">https://www.anaconda.com</a>. Go to the Products section and select the open source Individual Edition.</p><p><a href=\"https://gavinw.me/pythonic/python/install-python.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/pythonic/python/virtual-env.html",
-            "url": "https://gavinw.me/pythonic/python/virtual-env.html",
-            "title": "Virtual environments",
-            "date_published": "2022-11-05T00:00:00Z",
-            "content_html": "<p>The <code>venv</code> module included with Python is used to create and manage virtual environments.</p><p><a href=\"https://gavinw.me/pythonic/python/virtual-env.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/flask/heroku.html",
