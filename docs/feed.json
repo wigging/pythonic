@@ -166,13 +166,6 @@
             "content_html": "<p>An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the <code>app.py</code> file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.</p><p><a href=\"https://gavinw.me/pythonic/flask/form-input.html\">Continue reading...</a></p>"
         },
         {
-            "id": "https://gavinw.me/pythonic/streamlit/streamlit-selectbox.html",
-            "url": "https://gavinw.me/pythonic/streamlit/streamlit-selectbox.html",
-            "title": "Selectbox widget",
-            "date_published": "2023-02-04T00:00:00Z",
-            "content_html": "<p>Example of a selectbox widget using a callback function and session state.</p><p><a href=\"https://gavinw.me/pythonic/streamlit/streamlit-selectbox.html\">Continue reading...</a></p>"
-        },
-        {
             "id": "https://gavinw.me/pythonic/python/sorted-list.html",
             "url": "https://gavinw.me/pythonic/python/sorted-list.html",
             "title": "Sorted list of items",
