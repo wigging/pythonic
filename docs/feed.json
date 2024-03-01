@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/textwrap-dedent.html",
+            "url": "https://gavinw.me/pythonic/python/textwrap-dedent.html",
+            "title": "Textwrap dedent",
+            "date_published": "2024-02-29T00:00:00Z",
+            "content_html": "<p>Remove leading whitespace from every line in a string with the <code>textwrap.dedent()</code> function. The first example shown below prints a multiline string that is defined in a function. The second example prints the same string but removes the leading whitespace.</p><p><a href=\"https://gavinw.me/pythonic/python/textwrap-dedent.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/virtual-env.html",
             "url": "https://gavinw.me/pythonic/python/virtual-env.html",
             "title": "Virtual environments",
@@ -276,13 +283,6 @@
             "title": "Use Dask in a script",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>Since most Dask examples are demonstrated using Jupyter notebooks, here's an example of using Dask in a Python file or script. Notice how the Dask code must be in the <code>__main__</code> block or called from within a function.</p><p><a href=\"https://gavinw.me/pythonic/dask/dask-script.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/pythonic/python/textwrap-dedent.html",
-            "url": "https://gavinw.me/pythonic/python/textwrap-dedent.html",
-            "title": "Textwrap dedent",
-            "date_published": "2022-11-08T00:00:00Z",
-            "content_html": "<p>Remove leading whitespace from every line in text with the <code>textwrap.dedent()</code> function. The first example prints the leading white space in the string which is caused by the indentation of the function. The second example uses <code>textwrap.dedent()</code> to remove the leading white space.</p><p><a href=\"https://gavinw.me/pythonic/python/textwrap-dedent.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/python/argparse.html",

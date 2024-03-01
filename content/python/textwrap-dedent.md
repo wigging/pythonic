@@ -1,35 +1,53 @@
 ---
 title: Textwrap dedent
-date: November 8, 2022
+date: February 29, 2024
 ---
 
-Remove leading whitespace from every line in text with the `textwrap.dedent()` function. The first example prints the leading white space in the string which is caused by the indentation of the function. The second example uses `textwrap.dedent()` to remove the leading white space.
+Remove leading whitespace from every line in a string with the `textwrap.dedent()` function. The first example shown below prints a multiline string that is defined in a function. The second example prints the same string but removes the leading whitespace.
+
+This example prints a multiline string. The string is indented on each line due to the indentation of the function body.
+
+```python
+def printer():
+    s = """
+    This is a really long string
+    with multiple lines
+    of text.
+    """
+    print(s)
+
+printer()
+```
+
+The output is shown below. Notice the output includes the indentation from the string.
+
+```text
+    This is a really long string
+    with multiple lines
+    of text.
+```
+
+This example uses the `textwrap.dedent()` function to remove the leading whitespace from every line in the string.
 
 ```python
 from textwrap import dedent
 
-
-def print_ex1():
+def printer():
     s = """
-    This is a long line
-    of words.
+    This is a really long string
+    with multiple lines
+    of text.
     """
-    print(s)
+    v = dedent(s)
+    print(v)
 
+printer()
+```
 
-def print_ex2():
-    s = """
-    This is a long line
-    of words.
-    """
-    print(dedent(s))
+The output for the dedent example is shown below. Notice the leading white space has been removed from the output.
 
-
->>> print_ex1()
-    This is a long line
-    of words.
-
->>> print_ex2()
-This is a long line
-of words.
+```text
+This is a really long string
+with multiple lines
+of text.
 ```

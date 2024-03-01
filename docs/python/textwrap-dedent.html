@@ -26,36 +26,44 @@
         <div class="col-md">
 
         <h1>Textwrap dedent</h1>
-        <h6>November 8, 2022</h6>
+        <h6>February 29, 2024</h6>
         <hr>
 
-        <p>Remove leading whitespace from every line in text with the <code>textwrap.dedent()</code> function. The first example prints the leading white space in the string which is caused by the indentation of the function. The second example uses <code>textwrap.dedent()</code> to remove the leading white space.</p>
-<pre><code class="language-python">from textwrap import dedent
-
-
-def print_ex1():
+        <p>Remove leading whitespace from every line in a string with the <code>textwrap.dedent()</code> function. The first example shown below prints a multiline string that is defined in a function. The second example prints the same string but removes the leading whitespace.</p>
+<p>This example prints a multiline string. The string is indented on each line due to the indentation of the function body.</p>
+<pre><code class="language-python">def printer():
     s = &quot;&quot;&quot;
-    This is a long line
-    of words.
+    This is a really long string
+    with multiple lines
+    of text.
     &quot;&quot;&quot;
     print(s)
 
+printer()
+</code></pre>
+<p>The output is shown below. Notice the output includes the indentation from the string.</p>
+<pre><code class="language-text">    This is a really long string
+    with multiple lines
+    of text.
+</code></pre>
+<p>This example uses the <code>textwrap.dedent()</code> function to remove the leading whitespace from every line in the string.</p>
+<pre><code class="language-python">from textwrap import dedent
 
-def print_ex2():
+def printer():
     s = &quot;&quot;&quot;
-    This is a long line
-    of words.
+    This is a really long string
+    with multiple lines
+    of text.
     &quot;&quot;&quot;
-    print(dedent(s))
+    v = dedent(s)
+    print(v)
 
-
-&gt;&gt;&gt; print_ex1()
-    This is a long line
-    of words.
-
-&gt;&gt;&gt; print_ex2()
-This is a long line
-of words.
+printer()
+</code></pre>
+<p>The output for the dedent example is shown below. Notice the leading white space has been removed from the output.</p>
+<pre><code class="language-text">This is a really long string
+with multiple lines
+of text.
 </code></pre>
 
         </div>
