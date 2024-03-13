@@ -88,3 +88,5 @@ check   ruff linter and formatter checks
 clean   delete cache directories
 test    run unit tests with pytest
 ```
+
+See the [GNU Make website](https://www.gnu.org/software/make/) for more information about Makefiles and the Make tool.
