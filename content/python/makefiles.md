@@ -1,6 +1,6 @@
 ---
 title: Makefiles
-date: March 12, 2024
+date: March 14, 2024
 ---
 
 Makefiles are typically used for C and C++ projects to build source code but they can be useful for Python projects too. A Makefile is just a text file used by the GNU Make tool to run commands. For a Python project, these commands can run unit tests, format your code, or publish a package to PyPI.
@@ -13,7 +13,7 @@ target: dependencies ...
     ...
 ```
 
-The content of a simple Makefile that can be used for a Python project is shown below. Use the `make` command in the terminal to execute a target in the file. For example, run `make check` to perform the linter and formatter checks with the ruff tool, run `make test` to use pytest, run `make clean` to remove the cache directories.
+The content of a simple Makefile that can be used for a Python project is shown below. Use the `make` command in the terminal to execute a rule in the file. For example, run `make check` to perform the linter and formatter checks with the ruff tool, run `make test` to use pytest, run `make clean` to remove the cache directories. The `all` target uses the check, test, and clean targets as dependencies. When you execute `make all`, the check, test, and clean rules will be run in that order.
 
 ```makefile
 check:
@@ -27,6 +27,8 @@ clean:
 
 test:
     pytest --verbose --cache-clear
+
+all: check test clean
 ```
 
 ## Example
@@ -49,6 +51,7 @@ help:
     @printf "\033[32mcheck\033[0m   ruff linter and formatter checks\n"
     @printf "\033[32mclean\033[0m   delete cache directories\n"
     @printf "\033[32mtest\033[0m    run unit tests with pytest\n"
+    @printf "\033[32mall\033[0m     run check, test, and clean rules\n"
 
 check:
     ruff check .
@@ -61,6 +64,8 @@ clean:
 
 test:
     pytest --verbose --cache-clear
+
+all: check test clean
 ```
 
 Running `make check` in the `makefile-project` directory should output the linter warnings shown below. Running `make test` should display a failed pytest and running `make clean` will remove the cache directories created by ruff and pytest.
@@ -87,6 +92,7 @@ Commands:
 check   ruff linter and formatter checks
 clean   delete cache directories
 test    run unit tests with pytest
+all     run check, test, and clean rules
 ```
 
-See the [GNU Make website](https://www.gnu.org/software/make/) for more information about Makefiles and the Make tool.
+See the [GNU Make website](https://www.gnu.org/software/make/) for more information about Makefiles and the Make tool. Some Python projects that use a Makefile are [FastUI](https://github.com/pydantic/FastUI) and [LEAP](https://github.com/AureumChaos/LEAP).

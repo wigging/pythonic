@@ -33,7 +33,7 @@
         <div class="col-md">
 
         <h1>Makefiles</h1>
-        <h6>March 12, 2024</h6>
+        <h6>March 14, 2024</h6>
         <hr>
 
         <p>Makefiles are typically used for C and C++ projects to build source code but they can be useful for Python projects too. A Makefile is just a text file used by the GNU Make tool to run commands. For a Python project, these commands can run unit tests, format your code, or publish a package to PyPI.</p>
@@ -42,7 +42,7 @@
     commands
     ...
 </code></pre>
-<p>The content of a simple Makefile that can be used for a Python project is shown below. Use the <code>make</code> command in the terminal to execute a target in the file. For example, run <code>make check</code> to perform the linter and formatter checks with the ruff tool, run <code>make test</code> to use pytest, run <code>make clean</code> to remove the cache directories.</p>
+<p>The content of a simple Makefile that can be used for a Python project is shown below. Use the <code>make</code> command in the terminal to execute a rule in the file. For example, run <code>make check</code> to perform the linter and formatter checks with the ruff tool, run <code>make test</code> to use pytest, run <code>make clean</code> to remove the cache directories. The <code>all</code> target uses the check, test, and clean targets as dependencies. When you execute <code>make all</code>, the check, test, and clean rules will be run in that order.</p>
 <pre><code class="language-makefile">check:
     ruff check .
     ruff format --check .
@@ -54,6 +54,8 @@ clean:
 
 test:
     pytest --verbose --cache-clear
+
+all: check test clean
 </code></pre>
 <h2>Example</h2>
 <p>A Makefile example for Python is available in the <code>pythonic/python-projects/makefile-project</code> directory on <a href="https://github.com/wigging/pythonic">GitHub</a>. The file structure for the example is shown here along with the contents of the Makefile. Settings for the ruff linter are in the <code>pyproject.toml</code>.</p>
@@ -70,6 +72,7 @@ help:
     @printf &quot;\033[32mcheck\033[0m   ruff linter and formatter checks\n&quot;
     @printf &quot;\033[32mclean\033[0m   delete cache directories\n&quot;
     @printf &quot;\033[32mtest\033[0m    run unit tests with pytest\n&quot;
+    @printf &quot;\033[32mall\033[0m     run check, test, and clean rules\n&quot;
 
 check:
     ruff check .
@@ -82,6 +85,8 @@ clean:
 
 test:
     pytest --verbose --cache-clear
+
+all: check test clean
 </code></pre>
 <p>Running <code>make check</code> in the <code>makefile-project</code> directory should output the linter warnings shown below. Running <code>make test</code> should display a failed pytest and running <code>make clean</code> will remove the cache directories created by ruff and pytest.</p>
 <pre><code class="language-text">$ make check
@@ -102,8 +107,9 @@ make: *** [check] Error 1
 check   ruff linter and formatter checks
 clean   delete cache directories
 test    run unit tests with pytest
+all     run check, test, and clean rules
 </code></pre>
-<p>See the <a href="https://www.gnu.org/software/make/">GNU Make website</a> for more information about Makefiles and the Make tool.</p>
+<p>See the <a href="https://www.gnu.org/software/make/">GNU Make website</a> for more information about Makefiles and the Make tool. Some Python projects that use a Makefile are <a href="https://github.com/pydantic/FastUI">FastUI</a> and <a href="https://github.com/AureumChaos/LEAP">LEAP</a>.</p>
 
         </div>
     </div>
