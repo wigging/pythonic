@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/python/protocol.html",
+            "url": "https://gavinw.me/pythonic/python/protocol.html",
+            "title": "Protocol",
+            "date_published": "2024-07-13T00:00:00Z",
+            "content_html": "<p>A protocol is a way to define structural typing or \"duck typing\" in Python. It defines a set of attributes and/or methods that an object must have in order to be considered compatible with that protocol. Below is a protocol defined as an <code>Activity</code> class which must have <code>name</code> and <code>duration</code> attributes along with a <code>get_message</code> method.</p><p><a href=\"https://gavinw.me/pythonic/python/protocol.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/python/makefiles.html",
             "url": "https://gavinw.me/pythonic/python/makefiles.html",
             "title": "Makefiles",
