@@ -1,3 +1,9 @@
+---
+title: SQLAlchemy Example Script
+date: September 30, 2024
+---
+
+
 # SQLAlchemy Example Script
 
 ## What is this code?
