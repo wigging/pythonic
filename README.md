@@ -1,18 +1,50 @@
 # :snake: Pythonic Programming
 
-Python is a great programming language for all ages and skill levels. It's ecosystem of packages extends the language to many areas of software development. This repository and accompanying website provide concise code examples about basic Python features as well as more advanced topics relevant to scientific computing. The website is available at https://gavinw.me/pythonic.
+Python is a great programming language for all ages and skill levels. It's ecosystem of packages extends the language to many areas of software development. This repository provides concise code examples about basic Python features as well as more advanced topics relevant to scientific computing.
 
-## Examples
+## Contents
 
-Example code is located in the `python-projects` and `python-scripts` folders.
+Links to articles that explain each code example are provided below. Code files are located in the **projects** and **scripts** directories. Some articles do not have code files in this repository.
 
-## Website
+### Python
 
-The website is available at https://gavinw.me/pythonic. It is generated with the [genja](https://github.com/wigging/genja) tool using the `content`, `docs`, `templates` folders and the `config.json` file. The website is hosted with GitHub Pages from the `docs` folder.
+- [Argparse](https://gavinw.me/notes/python/argparse.html), `scripts/argparse_cli.py`
+- [Cache function](https://gavinw.me/notes/python/cache-function.html), `scripts/cache_function.py`
+- [Cached class property](https://gavinw.me/notes/python/cached-class-property.html), `scripts/cached_class_property.py`
+- [Conda environments](https://gavinw.me/notes/python/conda-env.html)
+- [Configuration using a dataclass](https://gavinw.me/notes/python/config-dataclass.html)
+- [Count letters](https://gavinw.me/notes/python/count-letters.html), `scripts/count_letters.py`
+- [Counter](https://gavinw.me/notes/python/counter.html)
+- [cProfile](https://gavinw.me/notes/python/cprofile.html)
+- [Debugger](https://gavinw.me/notes/python/debugger.html), `projects/debugger/`
+- [Dictionaries](https://gavinw.me/notes/python/dictionaries.html)
+- [Doctest](https://gavinw.me/notes/python/doctest.html)
+- [Enumerations](https://gavinw.me/notes/python/enums.html)
+- [Fizz buzz](https://gavinw.me/notes/python/fizzbuzz.html), `scripts/fizzbuzz.py`
+
+### Dask and Ray
+
+- here
+
+### Flask
+
+- here
+
+### Matplotlib
+
+- here
+
+### NumPy and SciPy
+
+- here
+
+### Tkinter
+
+- here
 
 ## Contributing
 
-Submit a Pull Request if you would like to contribute to this project. Please use [flake8](https://github.com/PyCQA/flake8) to check the style and quality of the code before submitting. Questions and other comments can be posted on the Issues page.
+Submit a Pull Request if you would like to contribute to this project. Please use [ruff](https://github.com/PyCQA/flake8) to check the style and quality of the code before submitting. Questions and other comments can be posted on the Issues page.
 
 ## Support
 
