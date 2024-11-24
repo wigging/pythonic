@@ -46,11 +46,22 @@ Links to articles that explain each code example are provided below. Code files 
 
 ### Dask and Ray
 
-- here
+- [Dask arrays](https://gavinw.me/notes/dask/arrays.html), `scripts/dask_array_1.py`, `scripts/dask_array_2.py`
+- [Ray actors](https://gavinw.me/notes/ray/actors.html), `scripts/ray_actor.py`
+- [Ray functions](https://gavinw.me/notes/ray/functions.html), `scripts/ray_function.py`
+- [Run Dask code as a script](https://gavinw.me/notes/dask/run-as-script.html), `scripts/dask_script.py`
 
 ### Flask
 
-- here
+- [Bokeh graph](https://gavinw.me/notes/flask/bokeh-graph.html), `projects/flask-bokeh/`
+- [Bokeh graph with Htmx](https://gavinw.me/notes/flask/bokeh-htmx.html), `projects/flask-bokeh-htmx/`
+- [Deploy on Heroku](https://gavinw.me/notes/flask/heroku.html), `projects/flask-heroku/`
+- [Form input](https://gavinw.me/notes/flask/form-input.html), `projects/flask-form-input/`
+- [Form input with Htmx](https://gavinw.me/notes/flask/form-htmx.html), `projects/flask-form-htmx/`
+- [Plotly graph](https://gavinw.me/notes/flask/plotly-graph.html), `projects/flask-plotly/`
+- [Plotly graph restyle](https://gavinw.me/notes/flask/plotly-restyle.html), `projects/flask-plotly-restyle/`
+- [Plotly graph with Htmx](https://gavinw.me/notes/flask/plotly-htmx.html), `projects/flask-plotly-htmx/`
+- [Update page with Ajax](https://gavinw.me/notes/flask/ajax.html), `projects/flask-ajax/`
 
 ### Matplotlib
 
