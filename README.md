@@ -27,7 +27,7 @@ Links to articles that explain each code example are provided below. Code files 
 - [Makefiles](https://gavinw.me/notes/python/makefiles.html), `projects/makefile-project/`
 - [Numbers](https://gavinw.me/notes/python/numbers.html)
 - [Package name](https://gavinw.me/notes/python/package-name.html)
-- [Package with data](https://gavinw.me/notes/python/package-data.html), `projects/mypackage-data/`
+- [Package with data](https://gavinw.me/notes/python/package-data.html), `projects/package-data/`
 - [Pathlib](https://gavinw.me/notes/python/pathlib.html), `projects/pathlib-read-text/`
 - [Pre-allocate list](https://gavinw.me/notes/python/prealloc-list.html), `scripts/prealloc_list.py`
 - [Protocol](https://gavinw.me/notes/python/protocol.html)

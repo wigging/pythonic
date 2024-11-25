@@ -1,0 +1,11 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mypackage"
+version = "0.1"
+authors = [{name = "Bart Simpson"}]
+description = "A small example package"
+requires-python = ">=3.10"
+dependencies = ["pandas", "ruff"]
