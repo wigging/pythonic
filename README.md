@@ -65,15 +65,37 @@ Links to articles that explain each code example are provided below. Code files 
 
 ### Matplotlib
 
-- here
+- [Animation](https://gavinw.me/notes/matplotlib/animation.html), `projects/matplotlib-animation/`
+- [Bar plot](https://gavinw.me/notes/matplotlib/bar-plot.html), `scripts/matplotlib_bar.py`
+- [Contour plot smoothing](https://gavinw.me/notes/matplotlib/contour-smoothing.html), `projects/matplotlib-contour-interp/`
+- [Imshow plot](https://gavinw.me/notes/matplotlib/imshow-plot.html), `scripts/matplotlib_imshow.py`
+- [Line plot](https://gavinw.me/notes/matplotlib/line-plot.html)
+- [Matshow plot](https://gavinw.me/notes/matplotlib/matshow-plot.html), `scripts/matplotlib_matshow.py`
+- [Mosaic grid of plots](https://gavinw.me/notes/matplotlib/mosaic-grid.html), `scripts/matplotlib_mosaic.py`
 
 ### NumPy and SciPy
 
-- here
+- [Boolean indexing](https://gavinw.me/notes/numpy/bool-index.html)
+- [Clip array values](https://gavinw.me/notes/numpy/clip-array.html)
+- [Compare inv and solve functions](https://gavinw.me/notes/numpy/compare-inv-solve.html), `scripts/numpy_inv_solve.py`
+- [Full array](https://gavinw.me/notes/numpy/full-array.html)
+- [Gauss-Legendre points and weights](https://gavinw.me/notes/numpy/gauss.html), `scripts/numpy_gauss2d.py`
+- [Index of max value](https://gavinw.me/notes/numpy/index-max.html), `scripts/numpy_index_max.py`
+- [Large array memory usage](https://gavinw.me/notes/numpy/large-array-memory.html), `projects/numpy-large-array/`
+- [Loop over columns](https://gavinw.me/notes/numpy/loop-columns.html)
+- [Maximum array](https://gavinw.me/notes/numpy/maximum-array.html)
+- [Save and load arrays](https://gavinw.me/notes/numpy/save-load-arrays.html), `projects/numpy-save-load/`
+- [Set difference of two arrays](https://gavinw.me/notes/numpy/difference.html)
+- [Sparse diagonal matrix](https://gavinw.me/notes/scipy/sparse-diag.html)
 
 ### Tkinter
 
-- here
+- [Basic Tkinter application](https://gavinw.me/notes/tkinter/basic-app.html), `scripts/tkinter_basicapp.py`
+- [Open JSON file](https://gavinw.me/notes/tkinter/open-json-file.html), `scripts/tkinter_openjsonfile.py`
+- [Theme customtkinter](https://gavinw.me/notes/tkinter/customtkinter.html), `scripts/tkinter_customtkinter.py`
+- [Theme ttkbootstrap](https://gavinw.me/notes/tkinter/ttkbootstrap.html), `scripts/tkinter_ttkbootstrap.py`
+- [Update Label text](https://gavinw.me/notes/tkinter/label.html), `scripts/tkinter_label.py`
+- [View data with Matplotlib](https://gavinw.me/notes/tkinter/matplotlib.html), `scripts/tkinter_matplotlib.py`
 
 ## Contributing
 
