@@ -99,7 +99,7 @@ Links to articles that explain each code example are provided below. Code files 
 
 ## Contributing
 
-Submit a Pull Request if you would like to contribute to this project. Please use [ruff](https://github.com/PyCQA/flake8) to check the style and quality of the code before submitting. Questions and other comments can be posted on the Issues page.
+If you have questions or find errors in the code examples then please submit an issue. Pull requests for new code examples are not accepted because this repository is for my own personal notes. However, pull requests to fix errors in existing code are welcome.
 
 ## Support
 
