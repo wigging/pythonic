@@ -38,49 +38,29 @@
         <h2>Python</h2>
         <hr>
         <ul style="columns:2;">
-        {% for page in pages %}
-        {% if page.category == 'python' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% for post in posts | sort(attribute='title') %}
+        {% if post.category == 'python' %}
+            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
 
-        <h2>NumPy</h2>
+        <h2>NumPy and SciPy</h2>
         <hr>
         <ul style="columns:2;">
-        {% for page in pages %}
-        {% if page.category == 'numpy' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% for post in posts | sort(attribute='title') %}
+        {% if post.category == 'numpy' or post.category == 'scipy' %}
+            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
 
-        <h2>Dask</h2>
+        <h2>Dask and Ray</h2>
         <hr>
         <ul>
-        {% for page in pages %}
-        {% if page.category == 'dask' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
-        {% endif %}
-        {% endfor %}
-        </ul>
-
-        <h2>Ray</h2>
-        <hr>
-        <ul>
-        {% for page in pages %}
-        {% if page.category == 'ray' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
-        {% endif %}
-        {% endfor %}
-        </ul>
-
-        <h2>SciPy</h2>
-        <hr>
-        <ul style="columns:2;">
-        {% for page in pages %}
-        {% if page.category == 'scipy' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% for post in posts | sort(attribute='title') %}
+        {% if post.category == 'dask' or post.category == 'ray' %}
+            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
@@ -88,9 +68,9 @@
         <h2>Flask</h2>
         <hr>
         <ul style="columns:2;">
-        {% for page in pages %}
-        {% if page.category == 'flask' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% for post in posts | sort(attribute='title') %}
+        {% if post.category == 'flask' %}
+            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
@@ -98,9 +78,9 @@
         <h2>Matplotlib</h2>
         <hr>
         <ul style="columns:2;">
-        {% for page in pages %}
-        {% if page.category == 'matplotlib' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% for post in posts | sort(attribute='title') %}
+        {% if post.category == 'matplotlib' %}
+            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
@@ -108,9 +88,9 @@
         <h2>Tkinter</h2>
         <hr>
         <ul style="columns:2;">
-        {% for page in pages %}
-        {% if page.category == 'tkinter' %}
-            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% for post in posts | sort(attribute='title') %}
+        {% if post.category == 'tkinter' %}
+            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
         </ul>
@@ -120,7 +100,7 @@
     <div class="row my-5">
     <div class="col">
         <p class="text-center small my-5">
-            Pythonic Programming © 2024 <br>
+            Pythonic Programming © 2025 <br>
             Built by <a href="https://gavinw.me">Gavin Wiggins</a>
         </p>
     </div>
