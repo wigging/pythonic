@@ -37,16 +37,18 @@
 
         <h2>Recent Posts</h2>
         <hr>
-        <ul>
         {% for post in posts | sort(attribute='iso_date', reverse=true) %}
         {% if loop.index0 < 10 %}
-            <li>
-                <span style="float:left;"><a href="{{ post.link }}">{{ post.title }}</a></span>
-                <span style="float:right">{{ post.date }}</span>
-            </li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         <h2>Categories</h2>
         <hr>
