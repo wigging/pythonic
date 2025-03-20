@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/pythonic/./python/xml.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pythonic Programming">
+    <meta property="og:description" content="Parsing XML with Python">
+    <meta property="og:image" content="https://gavinw.me/pythonic/img/opengraph.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Parsing XML with Python</h1>
+        <h6>November 8, 2022</h6>
+        <hr>
+
+        <p>There are several XML parsers available in the Python standard library. Below is an example of using the ElementTree module.</p>
+<pre><code class="language-xml">&lt;!-- Example XML file named sample.xml --&gt;
+
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;Tests xmlns=&quot;http://www.adatum.com&quot;&gt;
+  &lt;Test TestId=&quot;0001&quot; TestType=&quot;CMD&quot;&gt;
+    &lt;Name&gt;Convert number to string&lt;/Name&gt;
+    &lt;CommandLine&gt;Examp1.EXE&lt;/CommandLine&gt;
+    &lt;Input&gt;1&lt;/Input&gt;
+    &lt;Output&gt;One&lt;/Output&gt;
+  &lt;/Test&gt;
+  &lt;Test TestId=&quot;0002&quot; TestType=&quot;CMD&quot;&gt;
+    &lt;Name&gt;Find succeeding characters&lt;/Name&gt;
+    &lt;CommandLine&gt;Examp2.EXE&lt;/CommandLine&gt;
+    &lt;Input&gt;abc&lt;/Input&gt;
+    &lt;Output&gt;def&lt;/Output&gt;
+  &lt;/Test&gt;
+  &lt;Test TestId=&quot;0003&quot; TestType=&quot;GUI&quot;&gt;
+    &lt;Name&gt;Convert multiple numbers to strings&lt;/Name&gt;
+    &lt;CommandLine&gt;Examp2.EXE /Verbose&lt;/CommandLine&gt;
+    &lt;Input&gt;123&lt;/Input&gt;
+    &lt;Output&gt;One Two Three&lt;/Output&gt;
+  &lt;/Test&gt;
+  &lt;Test TestId=&quot;0004&quot; TestType=&quot;GUI&quot;&gt;
+    &lt;Name&gt;Find correlated key&lt;/Name&gt;
+    &lt;CommandLine&gt;Examp3.EXE&lt;/CommandLine&gt;
+    &lt;Input&gt;a1&lt;/Input&gt;
+    &lt;Output&gt;b1&lt;/Output&gt;
+  &lt;/Test&gt;
+  &lt;Test TestId=&quot;0005&quot; TestType=&quot;GUI&quot;&gt;
+    &lt;Name&gt;Count characters&lt;/Name&gt;
+    &lt;CommandLine&gt;FinalExamp.EXE&lt;/CommandLine&gt;
+    &lt;Input&gt;This is a test&lt;/Input&gt;
+    &lt;Output&gt;14&lt;/Output&gt;
+  &lt;/Test&gt;
+  &lt;Test TestId=&quot;0006&quot; TestType=&quot;GUI&quot;&gt;
+    &lt;Name&gt;Another Test&lt;/Name&gt;
+    &lt;CommandLine&gt;Examp2.EXE&lt;/CommandLine&gt;
+    &lt;Input&gt;Test Input&lt;/Input&gt;
+    &lt;Output&gt;10&lt;/Output&gt;
+  &lt;/Test&gt;
+&lt;/Tests&gt;
+</code></pre>
+<pre><code class="language-python">&quot;&quot;&quot;
+Example of parsing an XML file named sample.xml and printing the parsed data
+to the screen.
+&quot;&quot;&quot;
+
+import xml.etree.ElementTree as ET
+
+with open('sample.xml') as file:
+    tree = ET.parse(file)
+    root = tree.getroot()
+
+for rt in root:
+    testid = rt.attrib['TestId']
+    testtype = rt.attrib['TestType']
+    name = rt[0].text
+    cmdline = rt[1].text
+    enput = rt[2].text
+    output = rt[3].text
+
+    print(
+        '---\n'
+        f'TestId        {testid}\n'
+        f'TestType      {testtype}\n'
+        f'Name          {name}\n'
+        f'CommandLine   {cmdline}\n'
+        f'Input         {enput}\n'
+        f'Output        {output}\n'
+        '---\n')
+</code></pre>
+<p>Running the above example in the terminal prints the following:</p>
+<pre><code>---
+TestId        0001
+TestType      CMD
+Name          Convert number to string
+CommandLine   Examp1.EXE
+Input         1
+Output        One
+---
+
+---
+TestId        0002
+TestType      CMD
+Name          Find succeeding characters
+CommandLine   Examp2.EXE
+Input         abc
+Output        def
+---
+
+---
+TestId        0003
+TestType      GUI
+Name          Convert multiple numbers to strings
+CommandLine   Examp2.EXE /Verbose
+Input         123
+Output        One Two Three
+---
+
+---
+TestId        0004
+TestType      GUI
+Name          Find correlated key
+CommandLine   Examp3.EXE
+Input         a1
+Output        b1
+---
+
+---
+TestId        0005
+TestType      GUI
+Name          Count characters
+CommandLine   FinalExamp.EXE
+Input         This is a test
+Output        14
+---
+
+---
+TestId        0006
+TestType      GUI
+Name          Another Test
+CommandLine   Examp2.EXE
+Input         Test Input
+Output        10
+---
+</code></pre>
+<h2>Further reading</h2>
+<p>See the resources below for more information about XML parsing in Python.</p>
+<ul>
+<li><a href="https://realpython.com/python-xml-parser/#choose-the-right-xml-parsing-model">A Roadmap to XML Parsers in Python</a></li>
+<li><a href="https://docs.python.org/3/library/xml.html">XML Processing Modules</a></li>
+</ul>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

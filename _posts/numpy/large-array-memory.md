@@ -52,7 +52,7 @@ elapsed time = 16.56 sec
 calculated storage = 16.0 GB
 ```
 
-<p><img src="../../assets/images/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
+<p><img src="../images/numpy-large-array1.png" style="max-width:100%;" alt="figure 1"></p>
 
 ## Example 2
 
@@ -95,7 +95,7 @@ elapsed time = 19.41 sec
 calculated storage = 8.0 GB
 ```
 
-<p><img src="../../assets/images/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
+<p><img src="../images/numpy-large-array2.png" style="max-width:100%;" alt="figure 2"></p>
 
 ## Example 3
 
@@ -139,7 +139,7 @@ elapsed time = 21.34 sec
 calculated storage = 8.0 GB
 ```
 
-<p><img src="../../assets/images/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
+<p><img src="../images/numpy-large-array3.png" style="max-width:100%;" alt="figure 3"></p>
 
 ## Summary
 

@@ -12,4 +12,4 @@ Below is a simple example of plotting a line using Matplotlib.
 >>> plt.show()
 ```
 
-<p><img src="../../assets/images/matplotlib-line.png" style="max-width:100%;" alt="line plot"></p>
+<p><img src="../images/matplotlib-line.png" style="max-width:100%;" alt="line plot"></p>

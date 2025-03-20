@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/pythonic/./python/makefiles.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pythonic Programming">
+    <meta property="og:description" content="Makefiles for Python projects">
+    <meta property="og:image" content="https://gavinw.me/pythonic/img/opengraph.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Makefiles for Python projects</h1>
+        <h6>March 14, 2024</h6>
+        <hr>
+
+        <p>Makefiles are typically used for C and C++ projects to build source code but they can be useful for Python projects too. A Makefile is just a text file used by the GNU Make tool to run commands. For a Python project, these commands can run unit tests, format your code, or publish a package to PyPI.</p>
+<p>A rule in a Makefile is structured as shown below. A <em>target</em> is the name of a file or the name of an action to carry out. A <em>dependency</em> or <em>prerequisite</em> is a file that is used as input to create the target (this is optional). The <em>command</em> or <em>recipe</em> is an action that Make carries out. Note that commands are indented with a tab (not spaces).</p>
+<pre><code class="language-text">target: dependencies ...
+    commands
+    ...
+</code></pre>
+<p>The content of a simple Makefile that can be used for a Python project is shown below. Use the <code>make</code> command in the terminal to execute a rule in the file. For example, run <code>make check</code> to perform the linter and formatter checks with the ruff tool, run <code>make test</code> to use pytest, run <code>make clean</code> to remove the cache directories. The <code>all</code> target uses the check, test, and clean targets as dependencies. When you execute <code>make all</code>, the check, test, and clean rules will be run in that order.</p>
+<pre><code class="language-makefile">check:
+    ruff check .
+    ruff format --check .
+
+clean:
+    rm -rf .ruff_cache
+    rm -rf .pytest_cache
+    rm -rf __pycache__
+
+test:
+    pytest --verbose --cache-clear
+
+all: check test clean
+</code></pre>
+<h2>Example</h2>
+<p>A Makefile example for Python is available in the <code>pythonic/python-projects/makefile-project</code> directory on <a href="https://github.com/wigging/pythonic">GitHub</a>. The file structure for the example is shown here along with the contents of the Makefile. Settings for the ruff linter are in the <code>pyproject.toml</code>.</p>
+<pre><code class="language-text">makefile-project/
+├── Makefile
+├── main.py
+├── pyproject.toml
+└── test_adder.py
+</code></pre>
+<pre><code class="language-makefile"># Contents of the Makefile
+
+help:
+    @printf &quot;\nCommands:\n&quot;
+    @printf &quot;\033[32mcheck\033[0m   ruff linter and formatter checks\n&quot;
+    @printf &quot;\033[32mclean\033[0m   delete cache directories\n&quot;
+    @printf &quot;\033[32mtest\033[0m    run unit tests with pytest\n&quot;
+    @printf &quot;\033[32mall\033[0m     run check, test, and clean rules\n&quot;
+
+check:
+    ruff check .
+    ruff format --check .
+
+clean:
+    rm -rf .ruff_cache
+    rm -rf .pytest_cache
+    rm -rf __pycache__
+
+test:
+    pytest --verbose --cache-clear
+
+all: check test clean
+</code></pre>
+<p>Running <code>make check</code> in the <code>makefile-project</code> directory should output the linter warnings shown below. Running <code>make test</code> should display a failed pytest and running <code>make clean</code> will remove the cache directories created by ruff and pytest.</p>
+<pre><code class="language-text">$ make check
+
+ruff check .
+main.py:1:1: D100 Missing docstring in public module
+main.py:1:17: F401 [*] `numpy` imported but unused
+main.py:11:5: D400 First line should end with a period
+main.py:11:5: D401 First line of docstring should be in imperative mood: &quot;here&quot;
+test_adder.py:1:1: D100 Missing docstring in public module
+test_adder.py:3:5: D103 Missing docstring in public function
+Found 6 errors.
+[*] 1 fixable with the `--fix` option (1 hidden fix can be enabled with the `--unsafe-fixes` option).
+make: *** [check] Error 1
+</code></pre>
+<p>Run <code>make</code> or <code>make help</code> to print the help information to the screen (shown below). When <code>make</code> is run without specifying a target, it executes the first target in the Makefile; which is the <code>help</code> target in this example.</p>
+<pre><code class="language-text">Commands:
+check   ruff linter and formatter checks
+clean   delete cache directories
+test    run unit tests with pytest
+all     run check, test, and clean rules
+</code></pre>
+<p>See the <a href="https://www.gnu.org/software/make/">GNU Make website</a> for more information about Makefiles and the Make tool. Some Python projects that use a Makefile are <a href="https://github.com/pydantic/FastUI">FastUI</a> and <a href="https://github.com/AureumChaos/LEAP">LEAP</a>.</p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/pythonic/./python/run-script-uv.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pythonic Programming">
+    <meta property="og:description" content="Run Python scripts with uv">
+    <meta property="og:image" content="https://gavinw.me/pythonic/img/opengraph.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Run Python scripts with uv</h1>
+        <h6>January 6, 2025</h6>
+        <hr>
+
+        <p>A Python script is a file intended for standalone execution. The uv tool can be used to directly run a script even if other Python packages are needed to run it. This offers a more streamlined approach for running scripts compared to manually managing a virtual environment and its dependencies.</p>
+<p>A simple Python script that imports the NumPy package is shown below. The typical method to run this script is to create a Python virtual environment, activate the virtual environment, install the NumPy package in the environment, and finally run the script with <code>python hello.py</code>.</p>
+<pre><code class="language-python">&quot;&quot;&quot;Example of a simple script named .&quot;&quot;&quot;
+
+import numpy as np
+
+def main():
+    print(&quot;hello there&quot;)
+
+    a = np.array([1, 2, 3, 4, 5])
+    print(f&quot;a is {a}&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Alternatively, uv can be used to run the script by utilizing metadata at the top of the file as demonstrated below. The metadata defines the Python version and dependencies needed to run the script with <code>uv run hello.py</code>. The metadata can be written manually or added by uv with the <code>uv add --script hello.py numpy</code> command for this particular example. By using the inline metadata, uv will automatically install the required version of Python along with the dependencies in a virtual environment and then run the code.</p>
+<pre><code class="language-python"># /// script
+# requires-python = &quot;&gt;=3.13&quot;
+# dependencies = [
+#     &quot;numpy&quot;,
+# ]
+# ///
+
+&quot;&quot;&quot;Example of a simple script.&quot;&quot;&quot;
+
+import numpy as np
+
+def main():
+    print(&quot;hello there&quot;)
+
+    a = np.array([1, 2, 3, 4, 5])
+    print(f&quot;a is {a}&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>An animated terminal session that demonstrates running the script with inline metadata is shown next. Notice how this is done with one terminal command compared to the multiple steps needed for the standard Python method discussed earlier. More information about uv is available on the Astral website at <a href="https://astral.sh">https://astral.sh</a>.</p>
+<p>
+<script src="https://asciinema.org/a/nefJzdwxIQldr9HmHvqiO23HH.js" id="asciicast-nefJzdwxIQldr9HmHvqiO23HH" async="true"></script>
+</p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

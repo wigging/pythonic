@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/pythonic/./python/projects-uv.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pythonic Programming">
+    <meta property="og:description" content="Python projects with uv">
+    <meta property="og:image" content="https://gavinw.me/pythonic/img/opengraph.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Python projects with uv</h1>
+        <h6>January 7, 2025</h6>
+        <hr>
+
+        <p>Managing a virtual environment and its dependencies can be a hassle for Python projects. Choosing between the different techniques to install Python and different package managers can be a daunting task. Luckily, uv makes this process much easier.</p>
+<p>The uv tool manages the Python installation, dependencies, and virtual environment for a project. To create a Python project, use <code>uv init myproject</code> to initialize the project in the <code>myproject</code> directory. This will create several files as shown in the tree diagram below.</p>
+<pre><code class="language-text">myproject/
+├── .git/
+├── .gitignore
+├── .python-version
+├── README.md
+├── hello.py
+└── pyproject.toml
+</code></pre>
+<p>To add dependencies like ruff and NumPy to the project, run the <code>uv add ruff numpy</code> command. This will create a virtual environment, add packages to the environment and the <code>pyproject.toml</code> file, and create a <code>uv.lock</code> file in the project directory (see below). Use the <code>uv run hello.py</code> command to run the <code>hello.py</code> script using the project's virtual environment.</p>
+<pre><code class="language-toml">[project]
+name = &quot;myproject&quot;
+version = &quot;0.1.0&quot;
+description = &quot;Add your description here&quot;
+readme = &quot;README.md&quot;
+requires-python = &quot;&gt;=3.13&quot;
+dependencies = [
+    &quot;numpy&gt;=2.2.1&quot;,
+    &quot;ruff&gt;=0.8.6&quot;,
+]
+</code></pre>
+<pre><code class="language-text">myproject/
+├── .git/
+├── .gitignore
+├── .python-version
+├── .venv/          &lt;-- virtual environment for dependencies
+├── README.md
+├── hello.py
+├── pyproject.toml
+└── uv.lock         &lt;-- lock file for reproducible installs
+</code></pre>
+<p>An example of this workflow is demonstrated in the terminal session shown below. Notice that uv will also initialize the project as a git repository. More information about uv is available on the Astral website at <a href="https://astral.sh">https://astral.sh</a>.</p>
+<p>
+<script src="https://asciinema.org/a/xoT3NKFJfcxp1eN4ovG60iqda.js" id="asciicast-xoT3NKFJfcxp1eN4ovG60iqda" async="true"></script>
+</p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

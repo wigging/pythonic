@@ -51,6 +51,6 @@ if __name__ == '__main__':
     root.mainloop()
 ```
 
-<p><img src="../../assets/images/tkinter-customtkinter-light.png" style="max-width: 400px;" alt="customtkinter-light"></p>
+<p><img src="../images/tkinter-customtkinter-light.png" style="max-width: 400px;" alt="customtkinter-light"></p>
 
-<p><img src="../../assets/images/tkinter-customtkinter-dark.png" style="max-width: 400px;" alt="customtkinter-dark"></p>
+<p><img src="../images/tkinter-customtkinter-dark.png" style="max-width: 400px;" alt="customtkinter-dark"></p>

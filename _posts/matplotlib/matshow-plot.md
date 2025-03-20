@@ -18,7 +18,7 @@ fig.colorbar(im, ax=ax)
 plt.show()
 ```
 
-<p><img src="../../assets/images/matplotlib-matshow-1.png" style="max-width:80%;" alt="matshow plot"></p>
+<p><img src="../images/matplotlib-matshow-1.png" style="max-width:80%;" alt="matshow plot"></p>
 
 ```python
 import matplotlib.pyplot as plt
@@ -32,4 +32,4 @@ ax.matshow(b, cmap='binary')
 plt.show()
 ```
 
-<p><img src="../../assets/images/matplotlib-matshow-2.png" style="max-width:80%;" alt="matshow plot"></p>
+<p><img src="../images/matplotlib-matshow-2.png" style="max-width:80%;" alt="matshow plot"></p>

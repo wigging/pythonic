@@ -17,4 +17,4 @@ ax.imshow(a, interpolation='bilinear')
 plt.show()
 ```
 
-<p><img src="../../assets/images/matplotlib-imshow.png" style="max-width:80%;" alt="imshow plot"></p>
+<p><img src="../images/matplotlib-imshow.png" style="max-width:80%;" alt="imshow plot"></p>

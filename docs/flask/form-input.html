@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/pythonic/./flask/form-input.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pythonic Programming">
+    <meta property="og:description" content="Form input with Flask">
+    <meta property="og:image" content="https://gavinw.me/pythonic/img/opengraph.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Form input with Flask</h1>
+        <h6>February 4, 2023</h6>
+        <hr>
+
+        <p>An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the <code>app.py</code> file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.</p>
+<pre><code class="language-python"># app.py
+
+from flask import Flask
+from flask import render_template
+from flask import request
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+@app.route('/results', methods=['POST'])
+def results():
+    a = float(request.form['numberA'])
+    b = float(request.form['numberB'])
+
+    sum_ab = a + b
+    mult_ab = a * b
+    div_ab = a / b
+
+    res = {
+        'a': a, 'b': b,
+        'sum_ab': sum_ab, 'mult_ab': mult_ab, 'div_ab': div_ab
+    }
+
+    return render_template('results.html', results=res)
+</code></pre>
+<p><img src="../images/flask-form-input-index.png" style="max-width:500px;" alt="index page"></p>
+
+<p><img src="../images/flask-form-input-results.png" style="max-width:400px;" alt="results page"></p>
+
+<p>The HTML templates used by the app are shown below. Notice that <a href="https://getbootstrap.com">Bootstrap</a> is used for the style and layout of the pages.</p>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;title&gt;Home Page&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        body { background-color: lightgray; }
+        input { max-width: 200px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+
+                &lt;h1 class=&quot;mt-3&quot;&gt;Submit numbers&lt;/h1&gt;
+
+                &lt;p&gt;Input numbers A and B into the form below then click the Submit button to see the results.&lt;/p&gt;
+
+                &lt;h2&gt;Form&lt;/h2&gt;
+                &lt;form action=&quot;/results&quot; method=&quot;POST&quot;&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;numberA&quot; class=&quot;form-label&quot;&gt;Number A&lt;/label&gt;
+                        &lt;input type=&quot;number&quot; step=&quot;any&quot; class=&quot;form-control&quot; name=&quot;numberA&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;numberB&quot; class=&quot;form-label&quot;&gt;Number B&lt;/label&gt;
+                        &lt;input type=&quot;number&quot; step=&quot;any&quot; class=&quot;form-control&quot; name=&quot;numberB&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- results.html --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;title&gt;Results Page&lt;/title&gt;
+
+    &lt;style type=&quot;text/css&quot;&gt;
+        body { background-color: lightgray; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col&quot;&gt;
+
+                &lt;h1 class=&quot;mt-3&quot;&gt;Results&lt;/h1&gt;
+
+                &lt;p&gt;Below are the results calculated from the form values.&lt;/p&gt;
+
+                &lt;p&gt;Number A = {{ results['a'] }}&lt;/p&gt;
+                &lt;p&gt;Number B = {{ results['b'] }}&lt;/p&gt;
+                &lt;p&gt;A + B = {{ results['sum_ab'] }}&lt;/p&gt;
+                &lt;p&gt;A x B = {{ results['mult_ab'] }}&lt;/p&gt;
+                &lt;p&gt;A / B = {{ results['div_ab'] }}&lt;/p&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

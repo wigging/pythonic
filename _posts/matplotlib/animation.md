@@ -69,6 +69,6 @@ plt.show()
 Both examples generate the animated line plot shown below.
 
 <p><video controls style="max-width:600px;">
-    <source src="../../assets/images/matplotlib-animation.mp4" type="video/mp4">
+    <source src="../images/matplotlib-animation.mp4" type="video/mp4">
     Sorry, your browser doesn't support this embedded video.
 </video></p>

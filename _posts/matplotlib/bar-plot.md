@@ -20,4 +20,4 @@ ax.set_ylabel('Drinks')
 plt.show()
 ```
 
-![bar plot](../../assets/images/matplotlib-bar.pdf)
+![bar plot](../images/matplotlib-bar.pdf)
