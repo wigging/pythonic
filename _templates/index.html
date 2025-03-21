@@ -40,10 +40,10 @@
         {% for post in posts | sort(attribute='iso_date', reverse=true) %}
         {% if loop.index0 < 10 %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
-            <div class="col-md">
+            <div class="col-md px-0">
                 <a href="{{ post.link }}">{{ post.title }}</a>
             </div>
-            <div class="col-md text-md-end">
+            <div class="col-md text-md-end px-0">
                 {{ post.date }}
             </div>
         </div>
@@ -54,58 +54,88 @@
         <hr>
 
         <h3>Python</h3>
-        <ul style="columns:2;">
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'python' %}
-            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md px-0">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end px-0">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         <h3>NumPy and SciPy</h3>
-        <ul style="columns:2;">
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'numpy' or post.category == 'scipy' %}
-            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md-9 px-0">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end px-0">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         <h3>Dask and Ray</h3>
-        <ul>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'dask' or post.category == 'ray' %}
-            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md px-0">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end px-0">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         <h3>Flask</h3>
-        <ul style="columns:2;">
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'flask' %}
-            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md px-0">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end px-0">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         <h3>Matplotlib</h3>
-        <ul style="columns:2;">
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'matplotlib' %}
-            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md px-0">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end px-0">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         <h3>Tkinter</h3>
-        <ul style="columns:2;">
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'tkinter' %}
-            <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        <div class="row mx-auto mb-2" style="max-width:700px;">
+            <div class="col-md px-0">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+            </div>
+            <div class="col-md text-md-end px-0">
+                {{ post.date }}
+            </div>
+        </div>
         {% endif %}
         {% endfor %}
-        </ul>
 
         </div>
     </div>
