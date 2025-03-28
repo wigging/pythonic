@@ -1,5 +1,5 @@
 ---
-title: Run Dask code as a script
+title: Run Dask Code as a Script
 date: November 8, 2022
 ---
 

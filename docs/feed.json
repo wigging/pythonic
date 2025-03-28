@@ -14,7 +14,7 @@
         {
             "id": "https://gavinw.me/pythonic/./flask/config.html",
             "url": "https://gavinw.me/pythonic/./flask/config.html",
-            "title": "Flask app configuration",
+            "title": "Flask App Configuration",
             "date_published": "2025-03-12T00:00:00Z",
             "content_html": "<p>The <a href=\"https://pypi.org/project/python-dotenv/\">dotenv</a> package can be used to load configuration settings for a Flask app. The configuration is defined in a <code>.env</code> file which is ignored by version control to ensure items like API keys and passwords are not shared with others.</p><p><a href=\"https://gavinw.me/pythonic/./flask/config.html\">Continue reading...</a></p>"
         },
@@ -189,56 +189,56 @@
         {
             "id": "https://gavinw.me/pythonic/./flask/form-htmx.html",
             "url": "https://gavinw.me/pythonic/./flask/form-htmx.html",
-            "title": "Form input with Htmx and Flask",
+            "title": "Form Input with Htmx and Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p><a href=\"https://htmx.org\">Htmx</a> allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to submit a form when the page loads. Results calculated from the form values are displayed on the same page.</p><p><a href=\"https://gavinw.me/pythonic/./flask/form-htmx.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/plotly-restyle.html",
             "url": "https://gavinw.me/pythonic/./flask/plotly-restyle.html",
-            "title": "Plotly graph restyle with Flask",
+            "title": "Plotly Graph Restyle with Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p><a href=\"https://plotly.com\">Plotly</a> is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app. When the page first loads, a default line graph is shown. New data points are added to the graph using the form inputs. The <code>Plotly.restyle</code> function is used to redraw the graph when new data points are submitted; this approach avoids recreating an entirely new Plotly graph each time the data is updated.</p><p><a href=\"https://gavinw.me/pythonic/./flask/plotly-restyle.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/ajax.html",
             "url": "https://gavinw.me/pythonic/./flask/ajax.html",
-            "title": "Update page with Ajax and Flask",
+            "title": "Update Page with Ajax and Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>This Flask webapp example uses Ajax to update the page with results from the post request. The results are returned as JSON which is used to update the div tags.</p><p><a href=\"https://gavinw.me/pythonic/./flask/ajax.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/bokeh-htmx.html",
             "url": "https://gavinw.me/pythonic/./flask/bokeh-htmx.html",
-            "title": "Bokeh graph with Htmx and Flask",
+            "title": "Bokeh Graph with Htmx and Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p><a href=\"https://bokeh.org\">Bokeh</a> is a visualization library for Python that makes it easy to plot data in Jupyter notebooks or web pages. <a href=\"https://htmx.org\">Htmx</a> allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Bokeh graph in a web page without updating the entire page.</p><p><a href=\"https://gavinw.me/pythonic/./flask/bokeh-htmx.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/plotly-graph.html",
             "url": "https://gavinw.me/pythonic/./flask/plotly-graph.html",
-            "title": "Plotly graph with Flask",
+            "title": "Plotly Graph with Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p><a href=\"https://plotly.com\">Plotly</a> is a great graphing library for scientific applications. The example below demonstrates using the Plotly JavaScript library in a Flask app.</p><p><a href=\"https://gavinw.me/pythonic/./flask/plotly-graph.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/plotly-htmx.html",
             "url": "https://gavinw.me/pythonic/./flask/plotly-htmx.html",
-            "title": "Plotly graph with Htmx and Flask",
+            "title": "Plotly Graph with Htmx and Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p><a href=\"https://htmx.org\">Htmx</a> allows you to develop dynamic, interactive web pages without complex JavaScript. The example below uses Htmx in a Flask app to display a Plotly graph in a web page without updating the entire page.</p><p><a href=\"https://gavinw.me/pythonic/./flask/plotly-htmx.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/bokeh-graph.html",
             "url": "https://gavinw.me/pythonic/./flask/bokeh-graph.html",
-            "title": "Bokeh graph with Flask",
+            "title": "Bokeh Graph with Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p><a href=\"https://bokeh.org\">Bokeh</a> is a visualization library for Python that makes it easy to plot data in Jupyter notebooks or web pages. The example below uses Flask to serve a web page, handle the form input data, then plot the data on a separate page using Bokeh.</p><p><a href=\"https://gavinw.me/pythonic/./flask/bokeh-graph.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./flask/form-input.html",
             "url": "https://gavinw.me/pythonic/./flask/form-input.html",
-            "title": "Form input with Flask",
+            "title": "Form Input with Flask",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>An HTML form collects user input on a web page. Using Flask, the input can be evaluated in Python and used elsewhere in the web application. As an example, in the <code>app.py</code> file shown below, the index or home page renders the HTML form. The input from the form is handled as two numbers. The sum, product, and fraction of the numbers are calculated then passed to the results page.</p><p><a href=\"https://gavinw.me/pythonic/./flask/form-input.html\">Continue reading...</a></p>"
         },
@@ -343,14 +343,14 @@
         {
             "id": "https://gavinw.me/pythonic/./dask/arrays.html",
             "url": "https://gavinw.me/pythonic/./dask/arrays.html",
-            "title": "Dask arrays",
+            "title": "Dask Arrays",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>Dask Array is similar to a NumPy array and allows cutting up a large array into smaller arrays (chunks). This enables working with arrays that are larger than memory. Computations can be applied in parallel for fast execution. Below is an example of using Dask array <code>map_blocks()</code> to map a function that returns a single value. Using an 8 CPU core MacBook Pro running macOS v11.6, the serial elapsed time is 513.51 seconds and the Dask elapsed time is 3.21 seconds.</p><p><a href=\"https://gavinw.me/pythonic/./dask/arrays.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./dask/run-as-script.html",
             "url": "https://gavinw.me/pythonic/./dask/run-as-script.html",
-            "title": "Run Dask code as a script",
+            "title": "Run Dask Code as a Script",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>Since most Dask examples are demonstrated using Jupyter notebooks, here's an example of using Dask in a Python file or script. Notice how the Dask code must be in the <code>__main__</code> block or called from within a function.</p><p><a href=\"https://gavinw.me/pythonic/./dask/run-as-script.html\">Continue reading...</a></p>"
         },

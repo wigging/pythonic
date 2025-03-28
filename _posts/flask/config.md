@@ -1,5 +1,5 @@
 ---
-title: Flask app configuration
+title: Flask App Configuration
 date: March 12, 2025
 ---
 

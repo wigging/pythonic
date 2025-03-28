@@ -1,5 +1,5 @@
 ---
-title: Bokeh graph with Flask
+title: Bokeh Graph with Flask
 date: February 4, 2023
 ---
 

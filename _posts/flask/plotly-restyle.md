@@ -1,5 +1,5 @@
 ---
-title: Plotly graph restyle with Flask
+title: Plotly Graph Restyle with Flask
 date: February 4, 2023
 ---
 

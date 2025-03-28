@@ -1,5 +1,5 @@
 ---
-title: Plotly graph with Flask
+title: Plotly Graph with Flask
 date: February 4, 2023
 ---
 

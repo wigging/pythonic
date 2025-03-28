@@ -1,5 +1,5 @@
 ---
-title: Dask arrays
+title: Dask Arrays
 date: November 8, 2022
 ---
 
