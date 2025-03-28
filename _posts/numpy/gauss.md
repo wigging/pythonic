@@ -1,5 +1,5 @@
 ---
-title: Gauss-Legendre points and weights with NumPy
+title: Gauss-Legendre Points and Weights with NumPy
 date: August 31, 2023
 ---
 

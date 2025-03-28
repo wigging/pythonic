@@ -1,5 +1,5 @@
 ---
-title: Compare inv and solve functions in NumPy
+title: Compare inv and solve Functions in NumPy
 date: November 7, 2022
 ---
 

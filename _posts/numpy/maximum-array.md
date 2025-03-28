@@ -1,5 +1,5 @@
 ---
-title: Maximum array with NumPy
+title: Maximum Array with NumPy
 date: November 7, 2022
 ---
 

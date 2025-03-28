@@ -126,7 +126,7 @@
         {
             "id": "https://gavinw.me/pythonic/./numpy/gauss.html",
             "url": "https://gavinw.me/pythonic/./numpy/gauss.html",
-            "title": "Gauss-Legendre points and weights with NumPy",
+            "title": "Gauss-Legendre Points and Weights with NumPy",
             "date_published": "2023-08-31T00:00:00Z",
             "content_html": "<p>The function below returns the Gauss-Legendre integration points and weights for a 2D quadrilateral using values from a 1D quadrature. The 1D values are obtained from NumPy's <code>leggauss()</code> function.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/gauss.html\">Continue reading...</a></p>"
         },
@@ -154,14 +154,14 @@
         {
             "id": "https://gavinw.me/pythonic/./matplotlib/imshow-plot.html",
             "url": "https://gavinw.me/pythonic/./matplotlib/imshow-plot.html",
-            "title": "Imshow plot with Matplotlib",
+            "title": "Imshow Plot with Matplotlib",
             "date_published": "2023-05-10T00:00:00Z",
             "content_html": "<p>Display data as an image using Matplotlib's imshow method.</p><p><a href=\"https://gavinw.me/pythonic/./matplotlib/imshow-plot.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./matplotlib/matshow-plot.html",
             "url": "https://gavinw.me/pythonic/./matplotlib/matshow-plot.html",
-            "title": "Matshow plot with Matplotlib",
+            "title": "Matshow Plot with Matplotlib",
             "date_published": "2023-05-10T00:00:00Z",
             "content_html": "<p>Visualize an array using Matplotlib's matshow function. The first example shown below plots a 2D array and the second example plots a diagonal array.</p><p><a href=\"https://gavinw.me/pythonic/./matplotlib/matshow-plot.html\">Continue reading...</a></p>"
         },
@@ -175,14 +175,14 @@
         {
             "id": "https://gavinw.me/pythonic/./matplotlib/bar-plot.html",
             "url": "https://gavinw.me/pythonic/./matplotlib/bar-plot.html",
-            "title": "Bar plot with Matplotlib",
+            "title": "Bar Plot with Matplotlib",
             "date_published": "2023-02-09T00:00:00Z",
             "content_html": "<p>The example below creates a bar plot and adds value labels to each bar.</p><p><a href=\"https://gavinw.me/pythonic/./matplotlib/bar-plot.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/index-max.html",
             "url": "https://gavinw.me/pythonic/./numpy/index-max.html",
-            "title": "Index of max value with NumPy",
+            "title": "Index of Max Value with NumPy",
             "date_published": "2023-02-06T00:00:00Z",
             "content_html": "<p>Use NumPy's <code>argmax()</code> function to get the index of the maximum value in an array.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/index-max.html\">Continue reading...</a></p>"
         },
@@ -294,14 +294,14 @@
         {
             "id": "https://gavinw.me/pythonic/./numpy/large-array-memory.html",
             "url": "https://gavinw.me/pythonic/./numpy/large-array-memory.html",
-            "title": "Memory usage of large NumPy array",
+            "title": "Memory Usage of a Large NumPy Array",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>In the examples below, a 500x2000x2000 three-dimensional NumPy array named <code>a</code> is initialized with zeros. At each iteration, a random two-dimensional array <code>r</code> is inserted into array <code>a</code>. This approach could represent a larger piece of code where the <code>r</code> array would be created from various calculations during each iteration of the for-loop. Consequently, each slice in the z dimension of the <code>a</code> array is calculated at each iteration.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/large-array-memory.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./matplotlib/line-plot.html",
             "url": "https://gavinw.me/pythonic/./matplotlib/line-plot.html",
-            "title": "Line plot with Matplotlib",
+            "title": "Line Plot with Matplotlib",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>Below is a simple example of plotting a line using Matplotlib.</p><p><a href=\"https://gavinw.me/pythonic/./matplotlib/line-plot.html\">Continue reading...</a></p>"
         },
@@ -315,14 +315,14 @@
         {
             "id": "https://gavinw.me/pythonic/./matplotlib/contour-smoothing.html",
             "url": "https://gavinw.me/pythonic/./matplotlib/contour-smoothing.html",
-            "title": "Contour plot smoothing with Matplotlib",
+            "title": "Contour Plot Smoothing with Matplotlib",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>The example below generates a contour plot of sparse data.</p><p><a href=\"https://gavinw.me/pythonic/./matplotlib/contour-smoothing.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./matplotlib/mosaic-grid.html",
             "url": "https://gavinw.me/pythonic/./matplotlib/mosaic-grid.html",
-            "title": "Mosaic grid of plots with Matplotlib",
+            "title": "Mosaic Grid of Plots with Matplotlib",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>Example of using Matplotlib <code>subplot_mosaic()</code> to create a grid of plots.</p><p><a href=\"https://gavinw.me/pythonic/./matplotlib/mosaic-grid.html\">Continue reading...</a></p>"
         },
@@ -448,56 +448,56 @@
         {
             "id": "https://gavinw.me/pythonic/./numpy/clip-array.html",
             "url": "https://gavinw.me/pythonic/./numpy/clip-array.html",
-            "title": "Clip array values with NumPy",
+            "title": "Clip Array Values with NumPy",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>The <code>clip</code> function limits the values in an array based on a given interval or minimum or maximum value.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/clip-array.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/bool-index.html",
             "url": "https://gavinw.me/pythonic/./numpy/bool-index.html",
-            "title": "Boolean indexing with NumPy",
+            "title": "Boolean Indexing with NumPy",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>Use boolean indexing in NumPy arrays to assign values. The example below assigns a zero to array items that are less than zero.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/bool-index.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/full-array.html",
             "url": "https://gavinw.me/pythonic/./numpy/full-array.html",
-            "title": "Full array in NumPy",
+            "title": "Full Array in NumPy",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>Use the <code>full</code> function in NumPy to create a new array filled with a given value.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/full-array.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/maximum-array.html",
             "url": "https://gavinw.me/pythonic/./numpy/maximum-array.html",
-            "title": "Maximum array with NumPy",
+            "title": "Maximum Array with NumPy",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>The <code>maximum</code> function returns a new array that contains the maximum values of the two given arrays.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/maximum-array.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/difference.html",
             "url": "https://gavinw.me/pythonic/./numpy/difference.html",
-            "title": "Set difference of two NumPy arrays",
+            "title": "Set Difference of Two NumPy Arrays",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>The <code>setdiff1d</code> function returns the unique values in array 1 that are not in array 2.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/difference.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/loop-columns.html",
             "url": "https://gavinw.me/pythonic/./numpy/loop-columns.html",
-            "title": "Loop over columns with NumPy",
+            "title": "Loop Over Columns with NumPy",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>Loop over columns in an array by iterating over the transpose of the array.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/loop-columns.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/compare-inv-solve.html",
             "url": "https://gavinw.me/pythonic/./numpy/compare-inv-solve.html",
-            "title": "Compare inv and solve functions in NumPy",
+            "title": "Compare inv and solve Functions in NumPy",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>Solve equation <code>A*x=b</code> for <code>x</code> and compare results using the <code>np.linalg.solve()</code> function to the <code>np.linalg.inv()</code> approach.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/compare-inv-solve.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./numpy/save-load-arrays.html",
             "url": "https://gavinw.me/pythonic/./numpy/save-load-arrays.html",
-            "title": "Save and load NumPy arrays",
+            "title": "Save and Load NumPy Arrays",
             "date_published": "2022-11-07T00:00:00Z",
             "content_html": "<p>NumPy arrays can be saved and loaded using different file formats. Examples of using the NumPy file formats <code>.npy</code> and <code>.npz</code> as well as a plain text format are given below.</p><p><a href=\"https://gavinw.me/pythonic/./numpy/save-load-arrays.html\">Continue reading...</a></p>"
         },

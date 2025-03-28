@@ -1,5 +1,5 @@
 ---
-title: Boolean indexing with NumPy
+title: Boolean Indexing with NumPy
 date: November 7, 2022
 ---
 

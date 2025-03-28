@@ -1,5 +1,5 @@
 ---
-title: Contour plot smoothing with Matplotlib
+title: Contour Plot Smoothing with Matplotlib
 date: February 4, 2023
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Index of max value with NumPy
+title: Index of Max Value with NumPy
 date: February 6, 2023
 ---
 

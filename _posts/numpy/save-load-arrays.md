@@ -1,5 +1,5 @@
 ---
-title: Save and load NumPy arrays
+title: Save and Load NumPy Arrays
 date: November 7, 2022
 ---
 

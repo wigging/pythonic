@@ -1,5 +1,5 @@
 ---
-title: Mosaic grid of plots with Matplotlib
+title: Mosaic Grid of Plots with Matplotlib
 date: February 4, 2023
 ---
 

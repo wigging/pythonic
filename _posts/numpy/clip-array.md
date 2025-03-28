@@ -1,5 +1,5 @@
 ---
-title: Clip array values with NumPy
+title: Clip Array Values with NumPy
 date: November 7, 2022
 ---
 
