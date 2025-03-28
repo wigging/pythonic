@@ -1,5 +1,5 @@
 ---
-title: Sparse diagonal matrix with SciPy
+title: Sparse Diagonal Matrix with SciPy
 date: November 8, 2022
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Fizz buzz in Python
+title: Fizz Buzz in Python
 date: May 14, 2020
 ---
 

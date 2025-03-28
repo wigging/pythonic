@@ -1,5 +1,5 @@
 ---
-title: Sublime Text for Python projects
+title: Sublime Text for Python Projects
 date: November 25, 2023
 ---
 

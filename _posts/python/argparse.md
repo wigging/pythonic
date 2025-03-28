@@ -1,5 +1,5 @@
 ---
-title: Command-line arguments with Python
+title: Command-line Arguments with Python
 date: September 28, 2024
 ---
 

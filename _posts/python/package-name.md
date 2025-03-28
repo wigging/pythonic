@@ -1,5 +1,5 @@
 ---
-title: Python package name
+title: Python Package Name
 date: June 11, 2023
 ---
 

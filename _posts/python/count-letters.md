@@ -1,5 +1,5 @@
 ---
-title: Count letters with Python
+title: Count Letters with Python
 date: April 15, 2023
 ---
 

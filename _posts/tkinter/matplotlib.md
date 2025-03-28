@@ -1,5 +1,5 @@
 ---
-title: View data with Matplotlib in Tkinter
+title: View Data with Matplotlib in Tkinter
 date: February 4, 2023
 ---
 

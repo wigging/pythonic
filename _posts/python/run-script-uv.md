@@ -1,5 +1,5 @@
 ---
-title: Run Python scripts with uv
+title: Run Python Scripts with uv
 date: January 6, 2025
 ---
 

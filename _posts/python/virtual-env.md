@@ -1,5 +1,5 @@
 ---
-title: Virtual environments
+title: Virtual Environments
 date: February 16, 2024
 ---
 

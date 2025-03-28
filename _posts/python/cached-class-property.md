@@ -1,5 +1,5 @@
 ---
-title: Cached class property in Python
+title: Cached Class Property in Python
 date: January 13, 2024
 ---
 

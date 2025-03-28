@@ -1,5 +1,5 @@
 ---
-title: Version number in Python
+title: Version Number in Python
 date: November 30, 2023
 ---
 

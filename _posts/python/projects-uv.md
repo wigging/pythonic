@@ -1,5 +1,5 @@
 ---
-title: Python projects with uv
+title: Python Projects with uv
 date: January 7, 2025
 ---
 

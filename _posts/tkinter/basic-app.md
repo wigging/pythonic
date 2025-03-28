@@ -1,5 +1,5 @@
 ---
-title: Basic Tkinter application
+title: Basic Tkinter Application
 date: February 4, 2023
 ---
 

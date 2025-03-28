@@ -1,5 +1,5 @@
 ---
-title: Dedent text with Python
+title: Dedent Text with Python
 date: February 29, 2024
 ---
 

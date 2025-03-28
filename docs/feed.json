@@ -21,42 +21,42 @@
         {
             "id": "https://gavinw.me/pythonic/./python/projects-uv.html",
             "url": "https://gavinw.me/pythonic/./python/projects-uv.html",
-            "title": "Python projects with uv",
+            "title": "Python Projects with uv",
             "date_published": "2025-01-07T00:00:00Z",
             "content_html": "<p>Managing a virtual environment and its dependencies can be a hassle for Python projects. Choosing between the different techniques to install Python and different package managers can be a daunting task. Luckily, uv makes this process much easier.</p><p><a href=\"https://gavinw.me/pythonic/./python/projects-uv.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/run-script-uv.html",
             "url": "https://gavinw.me/pythonic/./python/run-script-uv.html",
-            "title": "Run Python scripts with uv",
+            "title": "Run Python Scripts with uv",
             "date_published": "2025-01-06T00:00:00Z",
             "content_html": "<p>A Python script is a file intended for standalone execution. The uv tool can be used to directly run a script even if other Python packages are needed to run it. This offers a more streamlined approach for running scripts compared to manually managing a virtual environment and its dependencies.</p><p><a href=\"https://gavinw.me/pythonic/./python/run-script-uv.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/virtual-env-uv.html",
             "url": "https://gavinw.me/pythonic/./python/virtual-env-uv.html",
-            "title": "Virtual environments with uv",
+            "title": "Virtual Environments with uv",
             "date_published": "2025-01-05T00:00:00Z",
             "content_html": "<p>The uv tool is a great option for installing Python and creating virtual environments. It will automatically install Python if it is not available on your system.</p><p><a href=\"https://gavinw.me/pythonic/./python/virtual-env-uv.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/package-data.html",
             "url": "https://gavinw.me/pythonic/./python/package-data.html",
-            "title": "Python package with data",
+            "title": "Python Package with Data",
             "date_published": "2024-11-24T00:00:00Z",
             "content_html": "<p>The file structure below represents a project for a Python package named <code>mypackage</code> that includes data files. The data files in this example are CSV text files located in the package's source directory at <code>src/mypackage/data/</code>. The package can be installed using <code>pip install .</code> from the root level of the project.</p><p><a href=\"https://gavinw.me/pythonic/./python/package-data.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/config-dataclass.html",
             "url": "https://gavinw.me/pythonic/./python/config-dataclass.html",
-            "title": "Configuration using a Python dataclass",
+            "title": "Configuration Using a Python dataclass",
             "date_published": "2024-11-21T00:00:00Z",
             "content_html": "<p>A data class in Python can be used to store configuration settings for an application or service. Default configuration values are assigned to fields on the data class. However, the user can overload those values by using a class method to load the configuration settings from a file.</p><p><a href=\"https://gavinw.me/pythonic/./python/config-dataclass.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/argparse.html",
             "url": "https://gavinw.me/pythonic/./python/argparse.html",
-            "title": "Command-line arguments with Python",
+            "title": "Command-line Arguments with Python",
             "date_published": "2024-09-28T00:00:00Z",
             "content_html": "<p>The <code>argparse</code> module provides an interface to write command-line programs in Python. It is part of the Python standard library so there's no need for external dependencies. A basic example is given below that demonstrates positional and optional arguments. The second example shows the use of subparsers to create subcommands.</p><p><a href=\"https://gavinw.me/pythonic/./python/argparse.html\">Continue reading...</a></p>"
         },
@@ -70,49 +70,49 @@
         {
             "id": "https://gavinw.me/pythonic/./python/makefiles.html",
             "url": "https://gavinw.me/pythonic/./python/makefiles.html",
-            "title": "Makefiles for Python projects",
+            "title": "Makefiles for Python Projects",
             "date_published": "2024-03-14T00:00:00Z",
             "content_html": "<p>Makefiles are typically used for C and C++ projects to build source code but they can be useful for Python projects too. A Makefile is just a text file used by the GNU Make tool to run commands. For a Python project, these commands can run unit tests, format your code, or publish a package to PyPI.</p><p><a href=\"https://gavinw.me/pythonic/./python/makefiles.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/textwrap-dedent.html",
             "url": "https://gavinw.me/pythonic/./python/textwrap-dedent.html",
-            "title": "Dedent text with Python",
+            "title": "Dedent Text with Python",
             "date_published": "2024-02-29T00:00:00Z",
             "content_html": "<p>Remove leading whitespace from every line in a string with the <code>textwrap.dedent()</code> function. The first example shown below prints a multiline string that is defined in a function. The second example prints the same string but removes the leading whitespace.</p><p><a href=\"https://gavinw.me/pythonic/./python/textwrap-dedent.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/virtual-env.html",
             "url": "https://gavinw.me/pythonic/./python/virtual-env.html",
-            "title": "Virtual environments",
+            "title": "Virtual Environments",
             "date_published": "2024-02-16T00:00:00Z",
             "content_html": "<p>The <code>venv</code> module included with Python is used to create and manage virtual environments. This page provides some useful commands for creating and working with virtual environments. A virtual environment should not be checked into source control via Git or other such systems.</p><p><a href=\"https://gavinw.me/pythonic/./python/virtual-env.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/cached-class-property.html",
             "url": "https://gavinw.me/pythonic/./python/cached-class-property.html",
-            "title": "Cached class property in Python",
+            "title": "Cached Class Property in Python",
             "date_published": "2024-01-13T00:00:00Z",
             "content_html": "<p>The <a href=\"https://docs.python.org/3/library/functools.html\">functools</a> module provides a <code>@cached_property</code> decorator to store the value of a class property.</p><p><a href=\"https://gavinw.me/pythonic/./python/cached-class-property.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/cache-function.html",
             "url": "https://gavinw.me/pythonic/./python/cache-function.html",
-            "title": "Cache function in Python",
+            "title": "Cache Function in Python",
             "date_published": "2024-01-13T00:00:00Z",
             "content_html": "<p>The <a href=\"https://docs.python.org/3/library/functools.html\">functools</a> module provides a <code>@cache</code> decorator to store the results of an expensive function; also known as memoize.</p><p><a href=\"https://gavinw.me/pythonic/./python/cache-function.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/version.html",
             "url": "https://gavinw.me/pythonic/./python/version.html",
-            "title": "Version number in Python",
+            "title": "Version Number in Python",
             "date_published": "2023-11-30T00:00:00Z",
             "content_html": "<p>Use the <a href=\"https://docs.python.org/3/library/importlib.metadata.html\">importlib.metadata</a> library in Python to get the version number of a package. The example below gets the version of the ipython package that has been installed in the environment.</p><p><a href=\"https://gavinw.me/pythonic/./python/version.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/sublime-project.html",
             "url": "https://gavinw.me/pythonic/./python/sublime-project.html",
-            "title": "Sublime Text for Python projects",
+            "title": "Sublime Text for Python Projects",
             "date_published": "2023-11-25T00:00:00Z",
             "content_html": "<p>Projects in <a href=\"https://www.sublimetext.com\">Sublime Text</a> are made up of two files: the <code>.sublime-project</code> file, which contains the project configuration, and the <code>.sublime-workspace</code> file, which contains user specific data such as the open files and the modifications to each file.</p><p><a href=\"https://gavinw.me/pythonic/./python/sublime-project.html\">Continue reading...</a></p>"
         },
@@ -140,14 +140,14 @@
         {
             "id": "https://gavinw.me/pythonic/./python/conda-env.html",
             "url": "https://gavinw.me/pythonic/./python/conda-env.html",
-            "title": "Conda environments",
+            "title": "Conda Environments",
             "date_published": "2023-06-15T00:00:00Z",
             "content_html": "<p>Similar to Python's <code>venv</code> module, Conda can also create virtual environments but these environments support languages other than Python.</p><p><a href=\"https://gavinw.me/pythonic/./python/conda-env.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./python/package-name.html",
             "url": "https://gavinw.me/pythonic/./python/package-name.html",
-            "title": "Python package name",
+            "title": "Python Package Name",
             "date_published": "2023-06-11T00:00:00Z",
             "content_html": "<p>The distribution name of a Python package can be different than the import name. Below is an example of a repository named <code>sklearn-model</code> which contains the <code>skmodel</code> package.</p><p><a href=\"https://gavinw.me/pythonic/./python/package-name.html\">Continue reading...</a></p>"
         },
@@ -168,7 +168,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/count-letters.html",
             "url": "https://gavinw.me/pythonic/./python/count-letters.html",
-            "title": "Count letters with Python",
+            "title": "Count Letters with Python",
             "date_published": "2023-04-15T00:00:00Z",
             "content_html": "<p>Given the string <code>Mary had a little Mommy lamb</code>, count the number of times a letter appears in the string. See the examples below for different approaches.</p><p><a href=\"https://gavinw.me/pythonic/./python/count-letters.html\">Continue reading...</a></p>"
         },
@@ -245,14 +245,14 @@
         {
             "id": "https://gavinw.me/pythonic/./python/sorted-list.html",
             "url": "https://gavinw.me/pythonic/./python/sorted-list.html",
-            "title": "Sorted list of items with Python",
+            "title": "Sorted List of Items with Python",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>A list of dictionaries can be sorted using the keys in the dictionaries, while a list of tuples can be sorted using the tuple's index.</p><p><a href=\"https://gavinw.me/pythonic/./python/sorted-list.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./tkinter/label.html",
             "url": "https://gavinw.me/pythonic/./tkinter/label.html",
-            "title": "Update label text in Tkinter",
+            "title": "Update Label Text in Tkinter",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>Example of updating a Label's text in Tkinter.</p><p><a href=\"https://gavinw.me/pythonic/./tkinter/label.html\">Continue reading...</a></p>"
         },
@@ -273,21 +273,21 @@
         {
             "id": "https://gavinw.me/pythonic/./tkinter/open-json-file.html",
             "url": "https://gavinw.me/pythonic/./tkinter/open-json-file.html",
-            "title": "Open JSON file in Tkinter",
+            "title": "Open JSON File in Tkinter",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>Example of opening a JSON file and reading its contents in a Tkinter app. See\nthe <a href=\"https://docs.python.org/3/library/dialog.html\">Python Tkinter docs</a> for\nmore information about file selection dialogs.</p><p><a href=\"https://gavinw.me/pythonic/./tkinter/open-json-file.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./tkinter/matplotlib.html",
             "url": "https://gavinw.me/pythonic/./tkinter/matplotlib.html",
-            "title": "View data with Matplotlib in Tkinter",
+            "title": "View Data with Matplotlib in Tkinter",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>Below is an example of using Matplotlib to plot data in a Tkinter app. The plot figure is shown in a separate window when the button is pressed.</p><p><a href=\"https://gavinw.me/pythonic/./tkinter/matplotlib.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./tkinter/basic-app.html",
             "url": "https://gavinw.me/pythonic/./tkinter/basic-app.html",
-            "title": "Basic Tkinter application",
+            "title": "Basic Tkinter Application",
             "date_published": "2023-02-04T00:00:00Z",
             "content_html": "<p>This example demonstrates the structure of a basic Tkinter application.</p><p><a href=\"https://gavinw.me/pythonic/./tkinter/basic-app.html\">Continue reading...</a></p>"
         },
@@ -371,7 +371,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/unittest-csv.html",
             "url": "https://gavinw.me/pythonic/./python/unittest-csv.html",
-            "title": "Unittest CSV files with Python",
+            "title": "Unittest CSV Files with Python",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>The example below demonstrates a unit test for a function that writes data in a dictionary to CSV files.</p><p><a href=\"https://gavinw.me/pythonic/./python/unittest-csv.html\">Continue reading...</a></p>"
         },
@@ -385,7 +385,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/prealloc-list.html",
             "url": "https://gavinw.me/pythonic/./python/prealloc-list.html",
-            "title": "Pre-allocate a Python list",
+            "title": "Pre-allocate a Python List",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>If the size of a list is known, then pre-allocating the list can provide performance improvements; especially for a large list. The example below measures the performance of appending items to an empty list. Pre-allocating a list of known size and assigning items to it gives better performance than appending to the list. The list comprehension approach (see Example 3) gives the best elapsed time.</p><p><a href=\"https://gavinw.me/pythonic/./python/prealloc-list.html\">Continue reading...</a></p>"
         },
@@ -399,7 +399,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/cprofile.html",
             "url": "https://gavinw.me/pythonic/./python/cprofile.html",
-            "title": "cProfile for Python code",
+            "title": "cProfile for Python Code",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>The <code>cProfile</code> module provides an interface to profile Python programs. A single function or an entire script or module can be profiled. As an example, the script shown below contains two functions that suspend execution for 2 and 4.5 seconds.</p><p><a href=\"https://gavinw.me/pythonic/./python/cprofile.html\">Continue reading...</a></p>"
         },
@@ -413,7 +413,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/test-examples.html",
             "url": "https://gavinw.me/pythonic/./python/test-examples.html",
-            "title": "Test examples with Python",
+            "title": "Test Examples with Python",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>Example scripts are often available for Python packages to demonstrate how to use the package. The examples are typically part of the repository where the package is developed. Tests should be written to ensure the examples continue to work with new versions of the package.</p><p><a href=\"https://gavinw.me/pythonic/./python/test-examples.html\">Continue reading...</a></p>"
         },
@@ -427,21 +427,21 @@
         {
             "id": "https://gavinw.me/pythonic/./scipy/sparse-diag.html",
             "url": "https://gavinw.me/pythonic/./scipy/sparse-diag.html",
-            "title": "Sparse diagonal matrix with SciPy",
+            "title": "Sparse Diagonal Matrix with SciPy",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>The <code>diags</code> function from SciPy can be used to create a sparse diagonal matrix. The matrix is constructed from lists or NumPy arrays that represent the diagonals of the matrix. The <code>offsets</code> argument sets the placement of the diagonals within the matrix where <code>k = 0</code> is the main diagonal, <code>k &lt; 0</code> is the kth lower diagonal, and <code>k &gt; 0</code> is the kth upper diagonal.</p><p><a href=\"https://gavinw.me/pythonic/./scipy/sparse-diag.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./ray/actors.html",
             "url": "https://gavinw.me/pythonic/./ray/actors.html",
-            "title": "Ray actors",
+            "title": "Ray Actors",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p><a href=\"https://www.ray.io\">Ray</a> actors are used to parallelize a class instance to perform stateful operations in parallel. Ray will start a remote instance of the class and then execute remote method calls and maintain its own internal state. The example below compares a parallel Ray actor approach to a standard class approach. A computationally expensive task is simulated by using the <code>sleep()</code> function.</p><p><a href=\"https://gavinw.me/pythonic/./ray/actors.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/pythonic/./ray/functions.html",
             "url": "https://gavinw.me/pythonic/./ray/functions.html",
-            "title": "Ray functions",
+            "title": "Ray Functions",
             "date_published": "2022-11-08T00:00:00Z",
             "content_html": "<p>To parallelize a function with the <a href=\"https://www.ray.io\">Ray</a> framework, decorate the function with <code>@ray.remote</code> to run the function remotely. Call the function with <code>.remote()</code> instead of calling it normally. The remote call yields a future that must be fetched with <code>ray.get</code>. The example below compares a parallel Ray function to a standard non-parallel function. A computationally expensive task is simulated by using the <code>sleep()</code> function.</p><p><a href=\"https://gavinw.me/pythonic/./ray/functions.html\">Continue reading...</a></p>"
         },
@@ -504,7 +504,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/fizzbuzz.html",
             "url": "https://gavinw.me/pythonic/./python/fizzbuzz.html",
-            "title": "Fizz buzz in Python",
+            "title": "Fizz Buzz in Python",
             "date_published": "2020-05-14T00:00:00Z",
             "content_html": "<p>This is the classic fizz buzz example where a number divisible by 3 is replaced with Fizz, a number divisible by 5 is replaced with Buzz, and a number divisible by both 3 and 5 (divisible by 15) is replaced with Fizz Buzz.</p><p><a href=\"https://gavinw.me/pythonic/./python/fizzbuzz.html\">Continue reading...</a></p>"
         }

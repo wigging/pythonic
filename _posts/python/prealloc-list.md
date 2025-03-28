@@ -1,5 +1,5 @@
 ---
-title: Pre-allocate a Python list
+title: Pre-allocate a Python List
 date: November 8, 2022
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: cProfile for Python code
+title: cProfile for Python Code
 date: November 8, 2022
 ---
 

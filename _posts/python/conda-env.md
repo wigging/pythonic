@@ -1,5 +1,5 @@
 ---
-title: Conda environments
+title: Conda Environments
 date: June 15, 2023
 ---
 

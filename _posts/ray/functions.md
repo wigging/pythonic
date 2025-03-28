@@ -1,5 +1,5 @@
 ---
-title: Ray functions
+title: Ray Functions
 date: November 8, 2022
 ---
 

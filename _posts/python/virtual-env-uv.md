@@ -1,5 +1,5 @@
 ---
-title: Virtual environments with uv
+title: Virtual Environments with uv
 date: January 5, 2025
 ---
 

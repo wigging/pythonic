@@ -1,5 +1,5 @@
 ---
-title: Ray actors
+title: Ray Actors
 date: November 8, 2022
 ---
 
