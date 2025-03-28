@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/./python/log-file.html",
+            "url": "https://gavinw.me/pythonic/./python/log-file.html",
+            "title": "Delay Log File Creation",
+            "date_published": "2025-03-27T00:00:00Z",
+            "content_html": "<p>Use the delay argument for Python's log file handler to avoid creating unnecessary log files. This ensures that a log file is created only for the desired log levels.</p><p><a href=\"https://gavinw.me/pythonic/./python/log-file.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/./flask/config.html",
             "url": "https://gavinw.me/pythonic/./flask/config.html",
             "title": "Flask app configuration",
