@@ -1,0 +1,14 @@
+[project]
+name = "call-objects"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.2",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"

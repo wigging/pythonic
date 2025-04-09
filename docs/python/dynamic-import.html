@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/pythonic/./python/dynamic-import.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pythonic Programming">
+    <meta property="og:description" content="Dynamic import and object resolution">
+    <meta property="og:image" content="https://gavinw.me/pythonic/images/opengraph.png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/pythonic/feed.json" rel="alternate" type="application/feed+json" title="Pythonic">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Pythonic Programming</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Dynamic import and object resolution</h1>
+        <h6>April 9, 2025</h6>
+        <hr>
+
+        <p>Use the <code>importlib</code> package to dynamically import a Python module by its name. Similarly, use the <code>getattr</code> function to get a class or function by name. This is useful in plugin architectures or when loading things based on configuration files.</p>
+<h2>Package</h2>
+<p>To demonstrate, suppose we have a package named pkg as shown below. This package provides a <code>Fruit</code> class and a <code>say_hello</code> function (also shown below).</p>
+<pre><code class="language-text">pkg/
+├── __init__.py
+├── fruit.py
+└── say_hello.py
+</code></pre>
+<pre><code class="language-python"># pkg/__init__.py
+
+from .fruit import Fruit
+from .say_hello import say_hello
+
+__all__ = [&quot;Fruit&quot;, &quot;say_hello&quot;]
+</code></pre>
+<pre><code class="language-python"># pkg/fruit.py
+
+class Fruit:
+
+    def __init__(self, name, qty, price):
+        self.name = name
+        self.qty = qty
+        self.price = price
+
+    def total(self):
+        tot = self.qty * self.price
+        return tot
+</code></pre>
+<pre><code class="language-python"># pkg/say_hello.py
+
+def say_hello(s: str):
+    greeting = f&quot;hello {s}&quot;
+    print(greeting)
+</code></pre>
+<h2>Example</h2>
+<p>The example given here imports the pkg package using the name of the package which is provided as a string to the <code>importlib.import_module</code>. The imported package can then be used like any other package. Next, the <code>getattr</code> function uses the name of a function or class in the package to get the corresponding object.</p>
+<pre><code class="language-python">import importlib
+
+# Import the package and access the say_hello function
+pkg = importlib.import_module(&quot;pkg&quot;)
+pkg.say_hello(&quot;bart&quot;)
+
+# Import the package and get the say_hello function
+pkg = importlib.import_module(&quot;pkg&quot;)
+say_hello = getattr(pkg, &quot;say_hello&quot;)
+say_hello(&quot;bart&quot;)
+
+# Import the package and get the Fruit class
+pkg = importlib.import_module(&quot;pkg&quot;)
+Fruit = getattr(pkg, &quot;Fruit&quot;)
+fruit = Fruit(&quot;apple&quot;, 10, 3.58)
+tot = fruit.total()
+print(&quot;Total is&quot;, tot)
+</code></pre>
+<p>The example code and package are available in the pythonic repo on GitHub at <a href="https://github.com/wigging/pythonic/tree/main/projects/dynamic-import">pythonic/projects/dynamic-import</a>.</p>
+<h2>Further reading</h2>
+<p>See the <a href="https://docs.python.org/3/library/importlib.html">importlib</a> and <a href="https://docs.python.org/3/library/functions.html#getattr">getattr</a> documentation for more details.</p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/pythonic/">Pythonic Programming</a> © 2025<br>
+            Built with <a href="https://github.com/wigging/genja">Genja</a> by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
