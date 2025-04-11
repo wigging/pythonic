@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/./pyzmq/request-reply.html",
+            "url": "https://gavinw.me/pythonic/./pyzmq/request-reply.html",
+            "title": "Request-Reply Pattern with PyZMQ",
+            "date_published": "2025-04-10T00:00:00Z",
+            "content_html": "<p>This demonstrates a simple request-reply pattern using the <a href=\"https://pyzmq.readthedocs.io/en/latest/\">PyZMQ</a> package for Python. In the example, the client sends a message to the server which replies back to the client.</p><p><a href=\"https://gavinw.me/pythonic/./pyzmq/request-reply.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/./python/dynamic-import.html",
             "url": "https://gavinw.me/pythonic/./python/dynamic-import.html",
             "title": "Dynamic import and object resolution",
