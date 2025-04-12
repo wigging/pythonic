@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="https://gavinw.me/pythonic/./pyzmq/client-server-test.html">
+    <meta property="og:url" content="https://gavinw.me/pythonic/./pyzmq/test-client-server.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Pythonic Programming">
-    <meta property="og:description" content="Testing client and server PyZMQ code">
+    <meta property="og:description" content="Testing a PyZMQ Client and Server">
     <meta property="og:image" content="https://gavinw.me/pythonic/images/opengraph.png">
 
     <!-- Bootstrap -->
@@ -32,11 +32,11 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>Testing client and server PyZMQ code</h1>
-        <h6>April 11, 2025</h6>
+        <h1>Testing a PyZMQ Client and Server</h1>
+        <h6>April 12, 2025</h6>
         <hr>
 
-        <p>The ZeroMQ context and socket for PyZMQ code can be patched and mocked using pytest and pytest-mock. This allows the code to be tested without having to run the server and connect the client. For the example discussed below, the client sends a request to the server, the request message is used by the server to execute a command, and finally the result of this command is sent back to the client.</p>
+        <p>The ZeroMQ context and socket for PyZMQ code can be patched and mocked using pytest and pytest-mock. This allows the code to be tested without having to run the server and connect the client. For the example discussed below, the client sends a request to the server, the request message is used by the server to execute a command, and the result of this command is sent back to the client. Finally, tests are demonstrated for the client and server codes.</p>
 <h2>Client</h2>
 <p>Here is a client class for sending messages to the server. The <code>get_serial_number</code> and <code>add_numbers</code> methods send a message where <code>"command"</code> is a method name on the <code>Commands</code> class (see next section).</p>
 <pre><code class="language-python"># client.py
@@ -154,10 +154,10 @@ if __name__ == &quot;__main__&quot;:
     main()
 </code></pre>
 <h2>Running the example</h2>
-<p>First, run the server with <code>uv run server.py</code> then in a separate terminal session run the client with <code>uv run client.py</code>.</p>
+<p>First, run the server with <code>uv run server.py</code> then in a separate terminal session run the client with <code>uv run client.py</code>. By the way, <a href="https://docs.astral.sh/uv/">uv</a> is an excellent tool for installing and running Python code, don't bother with other options.</p>
 <h2>Testing</h2>
 <p>The tests for the client code are shown here. The ZeroMQ context is patched with the mocked socket. This allows the client tests to run without having to run the server and connect to it.</p>
-<pre><code class="language-python"># test_client.py
+<pre class="pre1000"><code class="language-python"># test_client.py
 
 from client import Client
 from pytest_mock import MockerFixture
@@ -202,7 +202,7 @@ def test_add_numbers(mocker: MockerFixture):
     client.close()
 </code></pre>
 <p>The tests for the server code are shown next. As with the client, the ZeroMQ context is patched with the mocked socket. This allows the server tests to run without having to connect to the client.</p>
-<pre><code class="language-python"># test_server.py
+<pre class="pre1000"><code class="language-python"># test_server.py
 
 from server import Commands, Server
 from pytest_mock import MockerFixture
@@ -267,7 +267,7 @@ def test_add_numbers(mocker: MockerFixture):
     mock_socket.recv_json.assert_called_once()
     mock_socket.send_json.assert_called_once_with({&quot;result&quot;: 5})
 </code></pre>
-<p>The example code and tests are available in the pythonic repo on GitHub at <a href="https://github.com/wigging/pythonic/tree/main/projects/pyzmq-client-server-test">pythonic/projects/pyzmq-client-server-test</a>.</p>
+<p>The example code and tests are available in the pythonic repo on GitHub at <a href="https://github.com/wigging/pythonic/tree/main/projects/pyzmq-test-client-server">pythonic/projects/pyzmq-test-client-server</a>.</p>
 <h2>Further reading</h2>
 <p>See the <a href="https://docs.pytest.org/en/stable/">pytest</a> and <a href="https://pytest-mock.readthedocs.io/en/latest/">pytest-mock</a> documentation for more information about developing and running tests in Python. See the <a href="https://pyzmq.readthedocs.io/en/latest/">PyZMQ</a> documentation to learn more about using ZeroMQ with Python.</p>
 

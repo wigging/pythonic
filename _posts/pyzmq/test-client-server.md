@@ -1,9 +1,9 @@
 ---
-title: Testing client and server PyZMQ code
-date: April 11, 2025
+title: Testing a PyZMQ Client and Server
+date: April 12, 2025
 ---
 
-The ZeroMQ context and socket for PyZMQ code can be patched and mocked using pytest and pytest-mock. This allows the code to be tested without having to run the server and connect the client. For the example discussed below, the client sends a request to the server, the request message is used by the server to execute a command, and finally the result of this command is sent back to the client.
+The ZeroMQ context and socket for PyZMQ code can be patched and mocked using pytest and pytest-mock. This allows the code to be tested without having to run the server and connect the client. For the example discussed below, the client sends a request to the server, the request message is used by the server to execute a command, and the result of this command is sent back to the client. Finally, tests are demonstrated for the client and server codes.
 
 ## Client
 
@@ -131,13 +131,13 @@ if __name__ == "__main__":
 
 ## Running the example
 
-First, run the server with `uv run server.py` then in a separate terminal session run the client with `uv run client.py`.
+First, run the server with `uv run server.py` then in a separate terminal session run the client with `uv run client.py`. By the way, [uv](https://docs.astral.sh/uv/) is an excellent tool for installing and running Python code, don't bother with other options.
 
 ## Testing
 
 The tests for the client code are shown here. The ZeroMQ context is patched with the mocked socket. This allows the client tests to run without having to run the server and connect to it.
 
-```python
+```{.python .pre1000}
 # test_client.py
 
 from client import Client
@@ -185,7 +185,7 @@ def test_add_numbers(mocker: MockerFixture):
 
 The tests for the server code are shown next. As with the client, the ZeroMQ context is patched with the mocked socket. This allows the server tests to run without having to connect to the client.
 
-```python
+```{.python .pre1000}
 # test_server.py
 
 from server import Commands, Server
@@ -252,7 +252,7 @@ def test_add_numbers(mocker: MockerFixture):
     mock_socket.send_json.assert_called_once_with({"result": 5})
 ```
 
-The example code and tests are available in the pythonic repo on GitHub at [pythonic/projects/pyzmq-client-server-test](https://github.com/wigging/pythonic/tree/main/projects/pyzmq-client-server-test).
+The example code and tests are available in the pythonic repo on GitHub at [pythonic/projects/pyzmq-test-client-server](https://github.com/wigging/pythonic/tree/main/projects/pyzmq-test-client-server).
 
 ## Further reading
 
