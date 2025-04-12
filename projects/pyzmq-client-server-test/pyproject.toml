@@ -1,0 +1,20 @@
+[project]
+name = "zeromq-example"
+version = "0.1.0"
+description = "ZeroMQ client and server testing"
+requires-python = ">=3.13"
+dependencies = [
+    "pytest>=8.3.5",
+    "pytest-mock>=3.14.0",
+    "pyzmq>=26.2.0",
+    "ruff>=0.9.4",
+]
+
+[tool.pyright]
+pythonPlatform = "All"
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 100

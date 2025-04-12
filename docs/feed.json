@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/./pyzmq/client-server-test.html",
+            "url": "https://gavinw.me/pythonic/./pyzmq/client-server-test.html",
+            "title": "Testing client and server PyZMQ code",
+            "date_published": "2025-04-11T00:00:00Z",
+            "content_html": "<p>The ZeroMQ context and socket for PyZMQ code can be patched and mocked using pytest and pytest-mock. This allows the code to be tested without having to run the server and connect the client. For the example discussed below, the client sends a request to the server, the request message is used by the server to execute a command, and finally the result of this command is sent back to the client.</p><p><a href=\"https://gavinw.me/pythonic/./pyzmq/client-server-test.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/./pyzmq/request-reply.html",
             "url": "https://gavinw.me/pythonic/./pyzmq/request-reply.html",
             "title": "Request-Reply Pattern with PyZMQ",
