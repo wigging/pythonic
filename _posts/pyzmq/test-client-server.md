@@ -252,7 +252,7 @@ def test_add_numbers(mocker: MockerFixture):
     mock_socket.send_json.assert_called_once_with({"result": 5})
 ```
 
-The example code and tests are available in the pythonic repo on GitHub at [pythonic/projects/pyzmq-test-client-server](https://github.com/wigging/pythonic/tree/main/projects/pyzmq-test-client-server).
+Run the tests with the `uv run pytest` command. The example code and tests are available in the pythonic repo on GitHub at [pythonic/projects/pyzmq-test-client-server](https://github.com/wigging/pythonic/tree/main/projects/pyzmq-test-client-server).
 
 ## Further reading
 
