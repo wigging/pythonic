@@ -1,0 +1,16 @@
+title = "Config for benchmarks"
+
+[[benchmark]]
+name = "alpha"
+
+[[benchmark]]
+name = "bravo"
+weight = 23.1
+age = 89
+
+[[benchmark]]
+name = "roger"
+weight = 14.95
+
+[[benchmark]]
+name = "charlie"

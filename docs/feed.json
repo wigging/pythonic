@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/pythonic/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/pythonic/./python/dynamic-config.html",
+            "url": "https://gavinw.me/pythonic/./python/dynamic-config.html",
+            "title": "Dynamic Python Class from TOML",
+            "date_published": "2025-04-21T00:00:00Z",
+            "content_html": "<p>Python's standard library provides functionality to read a TOML configuration file and dynamically create class instances based on the parameters defined in that file. This is useful for command line tools and web applications.</p><p><a href=\"https://gavinw.me/pythonic/./python/dynamic-config.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/pythonic/./pyzmq/test-client-server.html",
             "url": "https://gavinw.me/pythonic/./pyzmq/test-client-server.html",
             "title": "Testing a PyZMQ Client and Server",
@@ -21,7 +28,7 @@
         {
             "id": "https://gavinw.me/pythonic/./python/dynamic-import.html",
             "url": "https://gavinw.me/pythonic/./python/dynamic-import.html",
-            "title": "Dynamic import and object resolution",
+            "title": "Dynamic Package Import in Python",
             "date_published": "2025-04-09T00:00:00Z",
             "content_html": "<p>Use the <code>importlib</code> package to dynamically import a Python module by its name. Similarly, use the <code>getattr</code> function to get a class or function by name. This is useful in plugin architectures or when loading things based on configuration files.</p><p><a href=\"https://gavinw.me/pythonic/./python/dynamic-import.html\">Continue reading...</a></p>"
         },

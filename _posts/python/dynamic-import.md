@@ -1,5 +1,5 @@
 ---
-title: Dynamic import and object resolution
+title: Dynamic Package Import in Python
 date: April 9, 2025
 ---
 
