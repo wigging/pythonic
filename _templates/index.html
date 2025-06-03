@@ -53,7 +53,7 @@
         <h2>Categories</h2>
         <hr>
 
-        <h3>Dask and Ray</h3>
+        <h4>Dask and Ray</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'dask' or post.category == 'ray' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -67,7 +67,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Flask</h3>
+        <h4>Flask</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'flask' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -81,7 +81,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Matplotlib</h3>
+        <h4>Matplotlib</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'matplotlib' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -95,7 +95,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>NumPy and SciPy</h3>
+        <h4>NumPy and SciPy</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'numpy' or post.category == 'scipy' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -109,7 +109,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Python</h3>
+        <h4>Python</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'python' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -123,7 +123,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>PyZMQ</h3>
+        <h4>PyZMQ</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'pyzmq' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -137,7 +137,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Tkinter</h3>
+        <h4>Tkinter</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'tkinter' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
