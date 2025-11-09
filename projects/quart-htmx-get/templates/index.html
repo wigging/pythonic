@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+    <title>Example of htmx</title>
+  </head>
+  <body>
+    <main>
+      <h1>Hello World</h1>
+
+      <p>Click button to add HTML snippet.</p>
+
+      <div id="results"></div>
+
+      <button hx-get="/snippet" hx-target="#results" hx-swap="afterend">
+        Get Snippet
+      </button>
+    </main>
+  </body>
+</html>

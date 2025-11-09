@@ -1,0 +1,30 @@
+html {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui;
+  font-size: 1.2rem;
+  line-height: 1.4:whitej;
+}
+
+button {
+  background-color: #1f83ef;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+  padding: 0.6rem 1rem;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+main {
+  max-width: min(70ch, 100% - 4rem);
+  margin-inline: auto;
+}

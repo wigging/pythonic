@@ -34,6 +34,7 @@ Example code is located in the `projects` and `scripts` directories. Notes about
 - [Flask App Configuration with Dotenv](https://gavinw.me/notes/python/flask-config.html)
 - [Form Input with Htmx and Flask](https://gavinw.me/notes/python/flask-form-input.html)
 - [Full Array in NumPy](https://gavinw.me/notes/python/numpy-full-array.html)
+- [GET Request with Quart and htmx](https://gavinw.me/notes/python/quart-htmx-get.html)
 - [Gauss-Legendre Points and Weights with NumPy](https://gavinw.me/notes/python/numpy-gauss.html)
 - [Imshow Plot with Matplotlib](https://gavinw.me/notes/python/matplotlib-imshow-plot.html)
 - [Index of Max Value with NumPy](https://gavinw.me/notes/python/numpy-index-max.html)
