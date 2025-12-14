@@ -1,0 +1,12 @@
+<p>X values are: {{ data['x'] }}</p>
+
+<p>Y values are: {{ data['y'] }}</p>
+
+<div
+  id="retain"
+  style="max-height: 480px; max-width: 600px"
+  data-labels="{{ data['x'] | tojson }}"
+  data-values="{{ data['y'] | tojson }}"
+>
+  <canvas id="myChart" hx-preserve></canvas>
+</div>

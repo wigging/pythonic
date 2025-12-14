@@ -57,6 +57,7 @@ Example code is located in the `projects` and `scripts` directories. Notes about
 - [Python Projects with uv](https://gavinw.me/notes/python/uv-projects.html)
 - [Ray Actors](https://gavinw.me/notes/python/ray-actors.html)
 - [Ray Functions](https://gavinw.me/notes/python/ray-functions.html)
+- [Render a Chart.js Graph with Quart and htmx](https://gavinw.me/notes/python/htmx-chartjs.html)
 - [Request-Reply Pattern with PyZMQ](https://gavinw.me/notes/python/pyzmq-request-reply.html)
 - [Run Dask Code as a Script](https://gavinw.me/notes/python/dask-script.html)
 - [Run Python Scripts with uv](https://gavinw.me/notes/python/uv-scripts.html)
