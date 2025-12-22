@@ -55,6 +55,7 @@ Example code is located in the `projects` and `scripts` directories. Notes about
 - [Python Package Name](https://gavinw.me/notes/python/package-name.html)
 - [Python Package with Data](https://gavinw.me/notes/python/package-data.html)
 - [Python Projects with uv](https://gavinw.me/notes/python/uv-projects.html)
+- [Quart Application with HTTPX Client](https://gavinw.me/notes/python/quart-httpx.html)
 - [Ray Actors](https://gavinw.me/notes/python/ray-actors.html)
 - [Ray Functions](https://gavinw.me/notes/python/ray-functions.html)
 - [Render a Chart.js Graph with Quart and htmx](https://gavinw.me/notes/python/htmx-chartjs.html)
@@ -84,7 +85,7 @@ Example code is located in the `projects` and `scripts` directories. Notes about
 
 ## Contributing
 
-If you have questions or find errors in the code examples then please submit an issue. Pull requests for new code examples are not accepted because this repository is for my own personal notes. However, pull requests to fix errors in existing code are welcome.
+If you have questions or find errors in the code examples then please submit an issue. Pull requests for new code examples are not accepted because this repository is for my personal notes. However, pull requests to fix errors in existing code are welcome.
 
 ## Support
 
