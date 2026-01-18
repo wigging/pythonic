@@ -1,44 +1,46 @@
-"""Main entry for Quart application."""
+"""Main entrypoint for the Quart application.
 
-import httpx
+Run with the following command:
+uv run quart --app quart_httpx.main run
+"""
+
 from quart import Quart
 
-app = Quart(__name__)
+from .http_client import init_client, get_client, close_client
 
-state: dict[str, httpx.AsyncClient] = {}
+
+app = Quart(__name__)
 
 
 @app.before_serving
 async def startup():
-    state["client"] = httpx.AsyncClient(base_url="https://httpbin.org", timeout=20)
-
-
-@app.get("/")
-async def root():
-    return {"message": "hello there", "routes": ["/sample", "/delay4"]}
-
-
-@app.get("/sample")
-async def sample():
-    client = state["client"]
-    response = await client.get("/json")
-    return response.json()
-
-
-@app.get("/delay4")
-async def delay4():
-    client = state["client"]
-    response = await client.get("/delay/4")
-    return response.json()
+    """Create a global HTTP async client before serving."""
+    init_client()
 
 
 @app.after_serving
 async def shutdown():
-    client = state["client"]
-    await client.aclose()
-    state.clear()
-    print("\nClosed client and shutdown server")
+    """Clean up resources after serving."""
+    await close_client()
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.get("/")
+async def root():
+    """Return server status."""
+    return {"status": "ok", "message": "Server is running"}
+
+
+@app.get("/users")
+async def get_users():
+    """Fetch and return user data from JSONPlaceholder API."""
+    client = get_client()
+    response = await client.get("https://jsonplaceholder.typicode.com/users")
+    return response.json()
+
+
+@app.get("/posts")
+async def get_posts():
+    """Fetch and return posts data from JSONPlaceholder API."""
+    client = get_client()
+    response = await client.get("https://jsonplaceholder.typicode.com/posts")
+    return response.json()

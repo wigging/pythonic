@@ -1,1 +1,1 @@
-"""Package for the Quart application."""
+"""Package for Quart app."""
