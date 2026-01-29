@@ -79,6 +79,7 @@ Example code is located in the `projects` and `scripts` directories. Notes about
 - [Unittest CSV Files with Python](https://gavinw.me/notes/python/unittest-csv.html)
 - [Update a Webpage with Ajax and Flask](https://gavinw.me/notes/python/flask-ajax.html)
 - [Update Label Text in Tkinter](https://gavinw.me/notes/python/tkinter-label.html)
+- [Use Sets and Dictionaries for Fast Lookup](https://gavinw.me/notes/python/set-lookup.html)
 - [Version Number in Python](https://gavinw.me/notes/python/version.html)
 - [View Data with Matplotlib in Tkinter](https://gavinw.me/notes/python/tkinter-matplotlib.html)
 - [Virtual Environments](https://gavinw.me/notes/python/virtual-env.html)
