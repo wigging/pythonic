@@ -1,8 +1,4 @@
-"""Module for configuration settings.
-
-This assumes that a `.env` file is available and it contains `BASE_URL` and
-`TIMEOUT` environment variables.
-"""
+"""Module for configuration settings."""
 
 import os
 from dataclasses import dataclass
@@ -12,7 +8,7 @@ from dotenv import load_dotenv
 
 @dataclass(frozen=True, slots=True)
 class Config:
-    """Configuration settings."""
+    """Configuration settings object."""
 
     base_url: str
     timeout: int
@@ -27,8 +23,8 @@ def get_config() -> Config:
 
     if _config is None:
         load_dotenv()
-        _config = Config(
-            base_url=os.environ["BASE_URL"], timeout=int(os.environ["TIMEOUT"])
-        )
+        base_url = os.environ["BASE_URL"]
+        timeout = os.environ["TIMEOUT"]
+        _config = Config(base_url=base_url, timeout=int(timeout))
 
     return _config

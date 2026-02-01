@@ -5,24 +5,14 @@ import pytest_asyncio
 import respx
 from httpx import Response
 
-from quart_httpx.main import app
-from quart_httpx import config
-from quart_httpx.http_client import init_client, close_client
-
-
-MOCK_USERS = [
-    {"id": 1, "name": "John Doe", "email": "john@example.com"},
-    {"id": 2, "name": "Jane Doe", "email": "jane@example.com"},
-]
-
-MOCK_POSTS = [
-    {"id": 1, "title": "First Post", "body": "Hello world", "userId": 1},
-    {"id": 2, "title": "Second Post", "body": "Another post", "userId": 1},
-]
+from myapp.main import app
+from myapp import config
+from myapp.http_client import init_client, close_client
 
 
 @pytest_asyncio.fixture
-async def client(mock_env_vars):
+async def client():
+    """Initialize the HTTP client and yield an app client."""
     config._config = None
     init_client()
     test_client = app.test_client()
@@ -32,6 +22,7 @@ async def client(mock_env_vars):
 
 @pytest.mark.asyncio
 async def test_root(client):
+    """Test the root endpoint."""
     response = await client.get("/")
     assert response.status_code == 200
 
@@ -41,9 +32,15 @@ async def test_root(client):
 
 @pytest.mark.asyncio
 @respx.mock
-async def test_get_users(client):
+async def test_users(client):
+    """Test the users endpoint."""
+    mock_users = [
+        {"id": 1, "name": "John Doe", "email": "john@example.com"},
+        {"id": 2, "name": "Jane Doe", "email": "jane@example.com"},
+    ]
+
     respx.get("https://jsonplaceholder.typicode.com/users").mock(
-        return_value=Response(200, json=MOCK_USERS)
+        return_value=Response(200, json=mock_users)
     )
 
     response = await client.get("/users")
@@ -59,9 +56,15 @@ async def test_get_users(client):
 
 @pytest.mark.asyncio
 @respx.mock
-async def test_get_posts(client):
+async def test_posts(client):
+    """Test the posts endpoint."""
+    mock_posts = [
+        {"id": 1, "title": "First Post", "body": "Hello world", "userId": 1},
+        {"id": 2, "title": "Second Post", "body": "Another post", "userId": 1},
+    ]
+
     respx.get("https://jsonplaceholder.typicode.com/posts").mock(
-        return_value=Response(200, json=MOCK_POSTS)
+        return_value=Response(200, json=mock_posts)
     )
 
     response = await client.get("/posts")

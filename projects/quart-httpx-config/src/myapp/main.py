@@ -1,7 +1,7 @@
 """Main entrypoint for the Quart application.
 
 Run with the following command:
-uv run quart --app quart_httpx.main run
+uv run quart --app myapp.main run
 """
 
 from quart import Quart

@@ -1,7 +1,6 @@
 [project]
-name = "quart-httpx"
+name = "myapp"
 version = "0.1.0"
-description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
     "httpx>=0.28.1",
@@ -17,6 +16,11 @@ build-backend = "uv_build"
 dev = [
     "pytest>=9.0.2",
     "pytest-asyncio>=1.0.0",
+    "pytest-env>=1.2.0",
     "respx>=0.22.0",
     "ruff>=0.14.11",
 ]
+
+[tool.pytest_env]
+BASE_URL = "https://example.com"
+TIMEOUT = 40
