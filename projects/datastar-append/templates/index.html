@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.7/bundles/datastar.js"
+    ></script>
+    <title>Example of Datastar</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <p>Click button to append HTML snippet.</p>
+
+    <button data-on:click="@get('/snippet')">Get snippet</button>
+
+    <div id="hal"></div>
+  </body>
+</html>

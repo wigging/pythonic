@@ -7,6 +7,7 @@ Python is a great programming language for all ages and skill levels. It's ecosy
 Example code is located in the `projects` and `scripts` directories. Notes about the examples are provided below:
 
 - [Animation with Matplotlib](https://gavinw.me/notes/python/matplotlib-animation.html)
+- [Append HTML with Datastar and Quart](https://gavinw.me/notes/python/datastar-append.html)
 - [Bokeh Graphs and Htmx with Flask](https://gavinw.me/notes/python/flask-bokeh-graph.html)
 - [Boolean Indexing with NumPy](https://gavinw.me/notes/python/numpy-bool-index.html)
 - [Cache Function in Python](https://gavinw.me/notes/python/cache-function.html)
