@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Example</title>
+    <style>
+      #editor {
+        min-height: 20rem;
+        max-width: 40rem;
+      }
+      #saved {
+        white-space: pre-wrap;
+      }
+    </style>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"
+      integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.43.6/src-min-noconflict/ace.min.js"></script>
+  </head>
+  <body>
+    <h1>Example</h1>
+
+    <button type="button" hx-get="/update" hx-target="#status">
+      Update Content
+    </button>
+
+    <button
+      type="button"
+      hx-post="/save"
+      hx-target="#status"
+      hx-vals="js:{content: editor.getValue()}"
+    >
+      Save Content
+    </button>
+
+    <p id="status"><strong>Status:</strong> Default status message</p>
+
+    <div id="editor">Enter some text</div>
+
+    <p><strong>Saved content shown below:</strong></p>
+
+    <p id="saved">Here</p>
+
+    <script>
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/monokai");
+
+      async function loadEditorValue() {
+        const response = await fetch("/update-editor");
+        const data = await response.json();
+        editor.setValue(data.content);
+        editor.clearSelection();
+      }
+
+      document.body.addEventListener("htmx:afterSwap", async function (event) {
+        const responseUrl = new URL(event.detail.xhr.responseURL);
+
+        if (responseUrl.pathname === "/update") {
+          await loadEditorValue();
+        }
+      });
+    </script>
+  </body>
+</html>
